@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Jinser&#39;s Blog">
 <meta property="og:description" content="关于QQ机器人五十弦(strings-bot)的FAQQ：机器人是怎么做的？ A：基于酷Q和cqhttp 和 nonebot 的QQ机器人，具体实现代码已开源于GitHub。  Q：机器人是用什么语言写的？ A：python。  Q：机器人有什么用？ A：除了活跃之外，没用。  Q：机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？ A：由于机器人使用了图灵机器人的接口（用于在接收到">
 <meta property="article:published_time" content="2020-01-26T04:35:36.000Z">
-<meta property="article:modified_time" content="2020-02-13T07:58:06.871Z">
+<meta property="article:modified_time" content="2020-02-28T08:23:13.193Z">
 <meta property="article:author" content="jinser">
 <meta property="article:tag" content="readme">
 <meta name="twitter:card" content="summary">
@@ -102,7 +102,7 @@
 <p><strong>A：</strong>除了活跃之外，没用。</p>
 <hr>
 <p><strong>Q：</strong>机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？</p>
-<p><strong>A：</strong>由于机器人使用了图灵机器人的接口（用于在接收到无法处理，即机器人不支持的指令时调用）。免费的图灵接口是有调用次数限制的，100条/天(现在有五百条了)，这就意味着在一天中机器人最多只能回复<del>一百次</del>五百次，这<del>一百次</del>五百次是对于机器人而言的（所以你可能今天一句话都没有和它说过但调用次数已经超限了）。当调用次数超限后机器人就无法调用图灵接口了，这时就会向你返回“请求次数超限制!”的提示。事实上，图灵机器人的对话只是可有可无的，在我原来的计划中并不存在。</p>
+<p><strong>A：</strong>由于机器人使用了图灵机器人的接口（用于在接收到无法处理，即机器人不支持的指令时调用）。免费的图灵接口是有调用次数限制的，100条/天(现在有一千条了)，这就意味着在一天中机器人最多只能回复<del>一百次</del>一千次，这<del>一百次</del>一千次是对于机器人而言的（所以你可能今天一句话都没有和它说过但调用次数已经超限了）。当调用次数超限后机器人就无法调用图灵接口了，这时就会向你返回“请求次数超限制!”的提示。事实上，图灵机器人的对话只是可有可无的，在我原来的计划中并不存在。</p>
 <hr>
 <p><strong>Q：</strong>在使用过程中有疑问怎么办？</p>
 <p><strong>A：</strong>大多数的问题都可以在 <a href="https://jinser.xyz/2020/01/12/strings-bot-README/" target="_blank" rel="noopener">strings-bot-README</a> 中得到解决。如果还是有疑问可以向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送邮件。</p>
