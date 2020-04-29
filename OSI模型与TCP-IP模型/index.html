@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Web," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="OSI ( Open System Interconnection Reference Model ) 概念模型 开放式系统互联模型（英语：Open System Interconnection Model，缩写：OSI；简称为OSI模型）是一种概念模型，由国际标准化组织提出，一个试图使各种计算机在世界范围内互连为网络的标准框架。定义于ISO&#x2F;IEC 7498-1。  第7层 应用层应用层（App">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSI模型与TCP-IP模型">
+<meta property="og:url" content="http://yoursite.com/OSI%E6%A8%A1%E5%9E%8B%E4%B8%8ETCP-IP%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Jinser&#39;s Blog">
+<meta property="og:description" content="OSI ( Open System Interconnection Reference Model ) 概念模型 开放式系统互联模型（英语：Open System Interconnection Model，缩写：OSI；简称为OSI模型）是一种概念模型，由国际标准化组织提出，一个试图使各种计算机在世界范围内互连为网络的标准框架。定义于ISO&#x2F;IEC 7498-1。  第7层 应用层应用层（App">
+<meta property="og:image" content="http://yoursite.com/image/OSI.png">
+<meta property="og:image" content="http://yoursite.com/image/OSI&TCP-IP.jpg">
+<meta property="og:image" content="http://yoursite.com/image/PDU.png">
+<meta property="og:image" content="http://yoursite.com/image/how_data_is_processed.jpg">
+<meta property="article:published_time" content="2020-04-29T08:39:27.000Z">
+<meta property="article:modified_time" content="2020-04-29T09:54:00.073Z">
+<meta property="article:author" content="jinser">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/image/OSI.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/OSI模型与TCP-IP模型/"/>
+
+
+
+
+
+  <title>OSI模型与TCP-IP模型 | Jinser's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinser's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">building...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/OSI%E6%A8%A1%E5%9E%8B%E4%B8%8ETCP-IP%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">OSI模型与TCP-IP模型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-29T16:39:27+08:00">
+                2020-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="OSI-Open-System-Interconnection-Reference-Model-概念模型"><a href="#OSI-Open-System-Interconnection-Reference-Model-概念模型" class="headerlink" title="OSI ( Open System Interconnection Reference Model ) 概念模型"></a>OSI ( Open System Interconnection Reference Model ) 概念模型</h3><blockquote>
+<p><strong>开放式系统互联模型</strong>（英语：<strong>O</strong>pen <strong>S</strong>ystem <strong>I</strong>nterconnection Model，缩写：OSI；简称为<strong>OSI模型</strong>）是一种<a href="https://zh.wikipedia.org/wiki/概念模型" target="_blank" rel="noopener">概念模型</a>，由<a href="https://zh.wikipedia.org/wiki/国际标准化组织" target="_blank" rel="noopener">国际标准化组织</a>提出，一个试图使各种计算机在世界范围内互连为网络的标准框架。定义于ISO/IEC 7498-1。</p>
+</blockquote>
+<h4 id="第7层-应用层"><a href="#第7层-应用层" class="headerlink" title="第7层 应用层"></a>第7层 应用层</h4><p>应用层（Application Layer）提供为应用软件而设的接口，以设置与另一应用软件之间的通信。例如: HTTP、HTTPS、FTP、TELNET、SSH、SMTP、POP3、HTML等。</p>
+<h4 id="第6层-表达层"><a href="#第6层-表达层" class="headerlink" title="第6层 表达层"></a>第6层 表达层</h4><p>表达层（Presentation Layer）把数据转换为能与接收者的系统格式兼容并适合传输的格式。</p>
+<h4 id="第5层-会话层"><a href="#第5层-会话层" class="headerlink" title="第5层 会话层"></a>第5层 会话层</h4><p>会话层（Session Layer）负责在数据传输中设置和维护计算机网络中两台计算机之间的通信连接。</p>
+<h4 id="第4层-传输层"><a href="#第4层-传输层" class="headerlink" title="第4层 传输层"></a>第4层 传输层</h4><p>传输层（Transport Layer）把传输表头（TH）加至数据以形成数据包。传输表头包含了所使用的协议等发送信息。例如:传输控制协议（TCP）等。</p>
+<h4 id="第3层-网络层"><a href="#第3层-网络层" class="headerlink" title="第3层 网络层"></a>第3层 网络层</h4><p>网络层（Network Layer）决定数据的路径选择和转寄，将网络表头（NH）加至数据包，以形成报文。网络表头包含了网络数据。例如:互联网协议（IP）等。</p>
+<h4 id="第2层-数据链接层（数据链路层）"><a href="#第2层-数据链接层（数据链路层）" class="headerlink" title="第2层 数据链接层（数据链路层）"></a>第2层 数据链接层（数据链路层）</h4><p>数据链路层（Data Link Layer）负责网络寻址、错误侦测和改错。当表头和表尾被加至数据包时，会形成信息框（Data Frame）。数据链表头（DLH）是包含了物理地址和错误侦测及改错的方法。数据链表尾（DLT）是一串指示数据包末端的字符串。例如以太网、无线局域网（Wi-Fi）和通用分组无线服务（GPRS）等。</p>
+<p>分为两个子层：逻辑链路控制（logical link control，LLC）子层和介质访问控制（Media access control，MAC）子层。</p>
+<h4 id="第1层-物理层"><a href="#第1层-物理层" class="headerlink" title="第1层 物理层"></a>第1层 物理层</h4><p>物理层（Physical Layer）在局部局域网上传送数据帧（Data Frame），它负责管理电脑通信设备和网络媒体之间的互通。包括了针脚、电压、线缆规范、集线器、中继器、网卡、主机接口卡等。</p>
+<p><img src="../image/OSI.png" alt="OSI"></p>
+<h3 id="TCP-IP-模型"><a href="#TCP-IP-模型" class="headerlink" title="TCP-IP 模型"></a>TCP-IP 模型</h3><p><img src="../image/OSI&TCP-IP.jpg" alt="OSI&amp;TCP-IP"></p>
+<h4 id="第4层-应用层"><a href="#第4层-应用层" class="headerlink" title="第4层 应用层"></a>第4层 应用层</h4><p>例如<a href="https://zh.wikipedia.org/wiki/超文本传输协议" target="_blank" rel="noopener">HTTP</a>、<a href="https://zh.wikipedia.org/wiki/文件传输协议" target="_blank" rel="noopener">FTP</a>、<a href="https://zh.wikipedia.org/wiki/DNS" target="_blank" rel="noopener">DNS</a></p>
+<p><em>（如 <a href="https://zh.wikipedia.org/wiki/边界网关协议" target="_blank" rel="noopener">BGP</a> 和 <a href="https://zh.wikipedia.org/wiki/路由信息协议" target="_blank" rel="noopener">RIP</a> 这样的路由协议，尽管由于各种各样的原因它们分别运行在 TCP 和 UDP 上，仍然可以将它们看作网络层的一部分）</em></p>
+<h4 id="第3层-传输层"><a href="#第3层-传输层" class="headerlink" title="第3层 传输层"></a>第3层 传输层</h4><p>例如<a href="https://zh.wikipedia.org/wiki/传输控制协议" target="_blank" rel="noopener">TCP</a>、<a href="https://zh.wikipedia.org/wiki/用户数据报协议" target="_blank" rel="noopener">UDP</a>、<a href="https://zh.wikipedia.org/wiki/RTP" target="_blank" rel="noopener">RTP</a>、<a href="https://zh.wikipedia.org/wiki/SCTP" target="_blank" rel="noopener">SCTP</a><br><em>（如<a href="https://zh.wikipedia.org/wiki/OSPF" target="_blank" rel="noopener">OSPF</a>这样的路由协议，尽管运行在IP上也可以看作是网络层的一部分）</em></p>
+<h4 id="第2层-网络互连层"><a href="#第2层-网络互连层" class="headerlink" title="第2层 网络互连层"></a>第2层 网络互连层</h4><p>对于TCP/IP来说这是<a href="https://zh.wikipedia.org/wiki/因特网协议" target="_blank" rel="noopener">因特网协议</a>（IP）<br><em>（如 <a href="https://zh.wikipedia.org/wiki/互联网控制消息协议" target="_blank" rel="noopener">ICMP</a>和 <a href="https://zh.wikipedia.org/wiki/因特网组管理协议" target="_blank" rel="noopener">IGMP</a> 这样的必须协议尽管运行在 IP 上，也仍然可以看作是网络互连层的一部分；<a href="https://zh.wikipedia.org/wiki/地址解析协议" target="_blank" rel="noopener">ARP</a>不运行在IP上）</em></p>
+<h4 id="第1层-网络访问-链接-层"><a href="#第1层-网络访问-链接-层" class="headerlink" title="第1层 网络访问(链接)层"></a>第1层 网络访问(链接)层</h4><p>例如<a href="https://zh.wikipedia.org/wiki/以太网" target="_blank" rel="noopener">以太网</a>、<a href="https://zh.wikipedia.org/wiki/Wi-Fi" target="_blank" rel="noopener">Wi-Fi</a>、<a href="https://zh.wikipedia.org/wiki/多协议标签交换" target="_blank" rel="noopener">MPLS</a>等。</p>
+<p><strong>分层</strong>：</p>
+<ul>
+<li><p>好处：良好的封装，可扩展性，互不影响。</p>
+</li>
+<li><p>网络互连层 ipv4 -&gt; ipv6 进展缓慢，应用层飞速发展。</p>
+</li>
+<li><p>坏处：数据延迟。</p>
+<ul>
+<li><p>为了解决性能问题，有 DPDK 这样的组件出现。绕过一些层以提高网络性能，某些系统的 debug 工具在开启后无法使用。</p>
+<blockquote>
+<p><strong>DPDK</strong>（英语：Data Plane Development Kit），是一组快速处理<a href="https://zh.wikipedia.org/wiki/数据包" target="_blank" rel="noopener">数据包</a>的开发平台及接口。运行于<a href="https://zh.wikipedia.org/wiki/X86" target="_blank" rel="noopener">Intel X86</a>与arm平台上（最新版本也开始支持<a href="https://zh.wikipedia.org/wiki/PowerPC" target="_blank" rel="noopener">PowerPC</a>）。该平台采用<a href="https://zh.wikipedia.org/wiki/BSD许可证" target="_blank" rel="noopener">BSD许可证</a>发布。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../image/PDU.png" alt="PDU"></p>
+<h3 id="报文头部"><a href="#报文头部" class="headerlink" title="报文头部"></a>报文头部</h3><p><img src="../image/how_data_is_processed.jpg" alt="how data is processed"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E5%9F%BA%E4%BA%8EABNF%E8%AF%AD%E4%B9%89%E5%AE%9A%E4%B9%89%E7%9A%84HTTP%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F/" rel="next" title="基于ABNF语义定义的HTTP消息格式">
+                <i class="fa fa-chevron-left"></i> 基于ABNF语义定义的HTTP消息格式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/HTTP%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/" rel="prev" title="HTTP解决了什么问题">
+                HTTP解决了什么问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5"
+                alt="jinser" />
+            
+              <p class="site-author-name" itemprop="name">jinser</p>
+              <p class="site-description motion-element" itemprop="description">个人学习的博客, 或是其他的什么</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI-Open-System-Interconnection-Reference-Model-概念模型"><span class="nav-number">1.</span> <span class="nav-text">OSI ( Open System Interconnection Reference Model ) 概念模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第7层-应用层"><span class="nav-number">1.1.</span> <span class="nav-text">第7层 应用层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第6层-表达层"><span class="nav-number">1.2.</span> <span class="nav-text">第6层 表达层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第5层-会话层"><span class="nav-number">1.3.</span> <span class="nav-text">第5层 会话层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第4层-传输层"><span class="nav-number">1.4.</span> <span class="nav-text">第4层 传输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第3层-网络层"><span class="nav-number">1.5.</span> <span class="nav-text">第3层 网络层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第2层-数据链接层（数据链路层）"><span class="nav-number">1.6.</span> <span class="nav-text">第2层 数据链接层（数据链路层）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第1层-物理层"><span class="nav-number">1.7.</span> <span class="nav-text">第1层 物理层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-模型"><span class="nav-number">2.</span> <span class="nav-text">TCP-IP 模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第4层-应用层"><span class="nav-number">2.1.</span> <span class="nav-text">第4层 应用层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第3层-传输层"><span class="nav-number">2.2.</span> <span class="nav-text">第3层 传输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第2层-网络互连层"><span class="nav-number">2.3.</span> <span class="nav-text">第2层 网络互连层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第1层-网络访问-链接-层"><span class="nav-number">2.4.</span> <span class="nav-text">第1层 网络访问(链接)层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报文头部"><span class="nav-number">3.</span> <span class="nav-text">报文头部</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jinser</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
