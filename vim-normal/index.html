@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Web," />
+  <meta name="keywords" content="工具," />
 
 
 
@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="在这之前Roy Thomas Fielding 与 HTTP&#x2F;1.1 参与制订 HTTP&#x2F;1.0 规范（1996.5） 参与制订 URI 规范（1998.8） 主导制订 HTTP&#x2F;1.1 规范（1999.6） 2000 年发布指导 HTTP&#x2F;1.1 规范制订的论文 《Architectural Styles and the Design of Network-based Software Arch">
+<meta name="description" content="Vim insertNORMAL 模式下：  i 在光标处进入插入模式 I 光标移至当前行首位，进入插入模式 a 光标后移一位，进入插入模式 A 光标移至当前行末位，进入插入模式 o  在当前行下添加一个空行，光标在空行开始，进入插入模式 O  在当前行上添加一个空行，光标在空行开始，进入插入模式  复制，剪切和粘贴复制NORMAL 模式下：  y 在使用 v 模式选定区域时，复制选定块 yy 复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP解决了什么问题">
-<meta property="og:url" content="http://yoursite.com/HTTP%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="vim">
+<meta property="og:url" content="http://yoursite.com/vim-normal/index.html">
 <meta property="og:site_name" content="Jinser&#39;s Blog">
-<meta property="og:description" content="在这之前Roy Thomas Fielding 与 HTTP&#x2F;1.1 参与制订 HTTP&#x2F;1.0 规范（1996.5） 参与制订 URI 规范（1998.8） 主导制订 HTTP&#x2F;1.1 规范（1999.6） 2000 年发布指导 HTTP&#x2F;1.1 规范制订的论文 《Architectural Styles and the Design of Network-based Software Arch">
-<meta property="og:image" content="http://yoursite.com/image/URI.png">
-<meta property="article:published_time" content="2020-04-29T09:55:11.000Z">
-<meta property="article:modified_time" content="2020-04-29T12:17:38.281Z">
+<meta property="og:description" content="Vim insertNORMAL 模式下：  i 在光标处进入插入模式 I 光标移至当前行首位，进入插入模式 a 光标后移一位，进入插入模式 A 光标移至当前行末位，进入插入模式 o  在当前行下添加一个空行，光标在空行开始，进入插入模式 O  在当前行上添加一个空行，光标在空行开始，进入插入模式  复制，剪切和粘贴复制NORMAL 模式下：  y 在使用 v 模式选定区域时，复制选定块 yy 复">
+<meta property="article:published_time" content="2020-04-30T02:04:55.000Z">
+<meta property="article:modified_time" content="2020-04-30T13:24:26.869Z">
 <meta property="article:author" content="jinser">
-<meta property="article:tag" content="Web">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/image/URI.png">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/HTTP解决了什么问题/"/>
+  <link rel="canonical" href="http://yoursite.com/vim-normal/"/>
 
 
 
 
 
-  <title>HTTP解决了什么问题 | Jinser's Blog</title>
+  <title>vim | Jinser's Blog</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/HTTP%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim-normal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jinser">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP解决了什么问题</h1>
+          <h1 class="post-title" itemprop="name headline">vim</h1>
         
 
         <div class="post-meta">
@@ -263,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-29T17:55:11+08:00">
-                2020-04-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T10:04:55+08:00">
+                2020-04-30
               </time>
             
 
@@ -301,48 +299,64 @@
       
 
       
-        <h3 id="在这之前"><a href="#在这之前" class="headerlink" title="在这之前"></a>在这之前</h3><h4 id="Roy-Thomas-Fielding-与-HTTP-1-1"><a href="#Roy-Thomas-Fielding-与-HTTP-1-1" class="headerlink" title="Roy Thomas Fielding 与 HTTP/1.1"></a>Roy Thomas Fielding 与 HTTP/1.1</h4><ul>
-<li>参与制订 HTTP/1.0 规范（1996.5）</li>
-<li>参与制订 URI 规范（1998.8）</li>
-<li>主导制订 HTTP/1.1 规范（1999.6）</li>
-<li>2000 年发布指导 HTTP/1.1 规范制订的论文<ul>
-<li>《Architectural Styles and the Design of Network-based Software Architectures》（架构风格与基于网络的软件架构设计），即 <font color=red>Representational State Transfer（REST）架构</font>。</li>
-</ul>
-</li>
-<li>Apache 基金会（The Apache Software Foundation）共同创始人。<ul>
-<li>参与开发 Apache httpd 服务。</li>
-</ul>
-</li>
-</ul>
-<h4 id="Form-Follows-Function"><a href="#Form-Follows-Function" class="headerlink" title="Form Follows Function"></a>Form Follows Function</h4><ul>
-<li>HTTP 协议<ul>
-<li>Roy Thomas Fielding：HTTP 主要作者，REST 架构作者。</li>
-</ul>
-</li>
-<li>URI：统一资源标识符<br><img src="../image/URI.png" alt="URI"></li>
-</ul>
-<h3 id="HTTP-解决了什么问题"><a href="#HTTP-解决了什么问题" class="headerlink" title="HTTP 解决了什么问题"></a>HTTP 解决了什么问题</h3><h4 id="解决-WWW-信息交互必须面对的需求："><a href="#解决-WWW-信息交互必须面对的需求：" class="headerlink" title="解决 WWW 信息交互必须面对的需求："></a>解决 WWW 信息交互必须面对的需求：</h4><ul>
-<li><p>低门槛</p>
+        <h3 id="Vim-insert"><a href="#Vim-insert" class="headerlink" title="Vim insert"></a>Vim insert</h3><p>NORMAL 模式下：</p>
 <ul>
-<li>例子：java applet 门槛过高</li>
+<li><code>i</code> <strong>在光标处</strong>进入插入模式</li>
+<li><code>I</code> <strong>光标移至当前行首位</strong>，进入插入模式</li>
+<li><code>a</code> <strong>光标后移一位</strong>，进入插入模式</li>
+<li><code>A</code> <strong>光标移至当前行末位</strong>，进入插入模式</li>
+<li><code>o</code>  <strong>在当前行下添加一个空行</strong>，光标在空行开始，进入插入模式</li>
+<li><code>O</code>  <strong>在当前行上添加一个空行</strong>，光标在空行开始，进入插入模式</li>
 </ul>
-</li>
-<li><p>可扩展性：巨大的用户群体，超长的寿命</p>
-</li>
-<li><p>分布式系统下的 Hypermedia：大粒度数据的网络传输</p>
-</li>
-<li><p>Internet 规模</p>
+<h3 id="复制，剪切和粘贴"><a href="#复制，剪切和粘贴" class="headerlink" title="复制，剪切和粘贴"></a>复制，剪切和粘贴</h3><h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a><font color=red>复制</font></h4><p>NORMAL 模式下：</p>
 <ul>
-<li>无法控制的 scalability<ul>
-<li>不可预测的负载、非法格式的数据、恶意消息</li>
-<li>客户端不能保证所有服务器信息，服务器不能保持多个请求间的状态信息。</li>
+<li><code>y</code> 在使用 v 模式选定区域时，<font color=red>复制</font>选定块</li>
+<li><code>yy</code> <font color=red>复制</font>整行</li>
+<li><code>nyy / yny</code> 从当前光标向下<font color=red>复制</font> n 行</li>
+<li><code>y^</code> <font color=red>复制</font>当前行光标到首位的内容</li>
+<li><code>y$</code> <font color=red>复制</font>当前行光标到末位的内容</li>
+<li><code>yw</code> <font color=red>复制</font>当前 <em>word</em></li>
+<li><code>yG</code> <font color=red>复制</font>当前光标到文件末位的内容</li>
+<li><code>nyG / ynG</code> 将光标移至第 n 行，再<font color=red>复制</font>到文件末位的内容</li>
+</ul>
+<h4 id="剪切"><a href="#剪切" class="headerlink" title="剪切"></a><font color=gree>剪切</font></h4><p>NORMAL 模式下：</p>
+<ul>
+<li><code>d</code> 在使用 v 模式选定区域时，<font color=gree>剪切</font>选定块</li>
+<li><code>dd</code> <font color=gree>剪切</font>整行</li>
+<li><code>ndd / dnd</code> 从当前光标向下<font color=gree>剪切</font> n 行</li>
+<li><code>d^</code> <font color=gree>剪切</font>当前行光标到首位的内容</li>
+<li><code>d$</code> <font color=gree>剪切</font>当前行光标到末位的内容</li>
+<li><code>dw</code> <font color=gree>剪切</font>当前 <em>word</em></li>
+<li><code>dG</code> <font color=gree>剪切</font>当前光标到文件末位的内容</li>
+<li><code>ndG / dnG</code> 将光标移至第 n 行，再<font color=gree>剪切</font>到文件末位的内容</li>
+</ul>
+<h4 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a><font color=lighblue>粘贴</font></h4><p>NORMAL 模式下：</p>
+<ul>
+<li><p><code>P</code> <font color=lighblue>粘贴</font>至光标后（下）</p>
+</li>
+<li><p><code>p</code> <font color=lighblue>粘贴</font>至光标前（上）</p>
+<p><em>整行<font color=lighblue>粘贴</font>时在光标 上 / 下，非整行<font color=lighblue>粘贴</font>时在光标 前 / 后</em></p>
+</li>
+</ul>
+<blockquote>
+<p>命令前面加数字表示重复的次数，加字母表示使用的缓冲区名称。使用英文句号 <strong><code>.</code></strong> 可以重复上一个命令。</p>
+</blockquote>
+<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><p>NORMAL 模式下：</p>
+<ul>
+<li><code>u</code> 撤销</li>
+<li><code>ctrl + r</code> 重做</li>
+</ul>
+<h3 id="NORMAL-模式其他"><a href="#NORMAL-模式其他" class="headerlink" title="NORMAL 模式其他"></a>NORMAL 模式其他</h3><ul>
+<li><code>x</code> 删除光标处的字符</li>
+<li><code>r</code> 按下之后再输入一个字符，替换掉光标处的字符</li>
+<li><code>g</code> 移动当前行到第一行</li>
+<li><code>G</code> 移动当前行到最后一行</li>
+<li><code>ng</code> 移动当前行到第 n 行<ul>
+<li><em>命令模式输入 <code>set nu</code> 显示行数</em></li>
 </ul>
 </li>
-<li>独立的组件部署：新老组件并存</li>
-</ul>
-</li>
-<li><p>向前兼容：自 1993 年起 HTTP0.9\1.0（1996）已经被广泛使用。</p>
-</li>
+<li><code>^</code> 光标移至当前行首位</li>
+<li><code>$</code> 光标移至当前行末位</li>
 </ul>
 
       
@@ -361,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
           
         </div>
       
@@ -374,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/OSI%E6%A8%A1%E5%9E%8B%E4%B8%8ETCP-IP%E6%A8%A1%E5%9E%8B/" rel="next" title="OSI模型与TCP-IP模型">
-                <i class="fa fa-chevron-left"></i> OSI模型与TCP-IP模型
+              <a href="/HTTP%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/" rel="next" title="HTTP解决了什么问题">
+                <i class="fa fa-chevron-left"></i> HTTP解决了什么问题
               </a>
             
           </div>
@@ -384,8 +398,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/vim-normal/" rel="prev" title="vim">
-                vim <i class="fa fa-chevron-right"></i>
+              <a href="/vim-command/" rel="prev" title="vim command">
+                vim command <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -513,7 +527,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在这之前"><span class="nav-number">1.</span> <span class="nav-text">在这之前</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Roy-Thomas-Fielding-与-HTTP-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">Roy Thomas Fielding 与 HTTP&#x2F;1.1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Form-Follows-Function"><span class="nav-number">1.2.</span> <span class="nav-text">Form Follows Function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-解决了什么问题"><span class="nav-number">2.</span> <span class="nav-text">HTTP 解决了什么问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决-WWW-信息交互必须面对的需求："><span class="nav-number">2.1.</span> <span class="nav-text">解决 WWW 信息交互必须面对的需求：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vim-insert"><span class="nav-number">1.</span> <span class="nav-text">Vim insert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制，剪切和粘贴"><span class="nav-number">2.</span> <span class="nav-text">复制，剪切和粘贴</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#复制"><span class="nav-number">2.1.</span> <span class="nav-text">复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#剪切"><span class="nav-number">2.2.</span> <span class="nav-text">剪切</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#粘贴"><span class="nav-number">2.3.</span> <span class="nav-text">粘贴</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销和重做"><span class="nav-number">3.</span> <span class="nav-text">撤销和重做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NORMAL-模式其他"><span class="nav-number">4.</span> <span class="nav-text">NORMAL 模式其他</span></a></li></ol></div>
             
 
           </div>

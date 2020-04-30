@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jinser">
@@ -251,7 +251,417 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/vim/" itemprop="url">vim</a></h1>
+                <a class="post-title-link" href="/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/" itemprop="url">用户和用户组管理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T22:00:48+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p><code>useradd {用户名}</code></p>
+<p>没有指定组时，会自动创建一个同用户名的组</p>
+<h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p><code>id {用户名}</code> </p>
+<p>​    <em>不提供用户名时查看当前用户</em></p>
+<p>root 用户的家目录是 <code>/root</code></p>
+<p>其他用户的家目录是 <code>/home/用户名</code></p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p><code>passwd [用户名]</code></p>
+<p><em>没有指定用户时修改当前用户的密码</em></p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>userdel {用户名} [-r]</code></p>
+<p><em>加 -r 表示将配置文件也删除，包括 /home/用户名 文件夹</em></p>
+<h3 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h3><ul>
+<li><code>usermod</code><ul>
+<li><code>-d {目录} {用户名}</code> 设定家目录</li>
+<li><code>-g {组名} {用户名}</code> 修改用户到用户组</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h3 id="chage"><a href="#chage" class="headerlink" title="chage"></a>chage</h3><p>…</p>
+<h2 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h2><h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><p><code>groupadd {组名}</code></p>
+<h3 id="修改用户到用户组"><a href="#修改用户到用户组" class="headerlink" title="修改用户到用户组"></a>修改用户到用户组</h3><p><code>usermod -g {组名} {用户名}</code></p>
+<h3 id="在创建用户时添加到组"><a href="#在创建用户时添加到组" class="headerlink" title="在创建用户时添加到组"></a>在创建用户时添加到组</h3><p><code>useradd -g {组名} {用户名}</code></p>
+<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><ul>
+<li><p><code>su - {用户名}</code> 切换用户</p>
+</li>
+<li><p><code>su {用户名}</code> 不完全切换，目录没有移动到用户的家目录</p>
+<p> <em>普通用户之间切换需要密码, root 切换到普通用户不需要密码</em></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim-visual/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vim-visual/" itemprop="url">vim visual</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T21:48:42+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="vim-visual"><a href="#vim-visual" class="headerlink" title="vim visual"></a>vim visual</h3><p>normal 模式下：</p>
+<ul>
+<li><code>v</code> 进入可视模式 ( VISUAL )</li>
+<li><code>V (shift + v)</code> 进入行可视模式 ( VISUAL LINE )</li>
+<li><code>ctrl + v</code> 进入块可视模式 ( VISUAL BLOCK )</li>
+</ul>
+<p><em>其实就是选中</em></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vim-command/" itemprop="url">vim command</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T21:28:43+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li><code>w</code> 保存文件，vim打开时没有指定文件需要提供文件名: <code>w filename</code></li>
+<li><code>q</code> 退出</li>
+<li><code>q!</code> 强制退出</li>
+<li><code>!command</code> 执行 shell 命令 ( command )</li>
+<li><code>/word</code> 查找 word<ul>
+<li><code>n</code> 查找下一个</li>
+<li><code>shift + n</code> 查找上一个</li>
+</ul>
+</li>
+<li><code>s/before/after</code> 将光标所在行的 before 替换为 after</li>
+<li><code>%s/before/after</code> 将文件中的 before 替换为 after</li>
+<li><code>%s/before/after/g</code> 将文件中的所有 before 替换为 after ( global )</li>
+<li><code>x, ys/before/after[/g]</code> 将第 x 行到第 y 行的 [所有] before 替换为 after</li>
+<li><code>set nu / nonu</code> 打开 / 关闭行号</li>
+<li><code>set hlsearch / nohlsearch</code> 打开 / 关闭搜索高亮</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim-normal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vim-normal/" itemprop="url">vim</a></h1>
         
 
         <div class="post-meta">
@@ -345,9 +755,22 @@
 <blockquote>
 <p>命令前面加数字表示重复的次数，加字母表示使用的缓冲区名称。使用英文句号 <strong><code>.</code></strong> 可以重复上一个命令。</p>
 </blockquote>
-<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><ul>
+<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><p>NORMAL 模式下：</p>
+<ul>
 <li><code>u</code> 撤销</li>
 <li><code>ctrl + r</code> 重做</li>
+</ul>
+<h3 id="NORMAL-模式其他"><a href="#NORMAL-模式其他" class="headerlink" title="NORMAL 模式其他"></a>NORMAL 模式其他</h3><ul>
+<li><code>x</code> 删除光标处的字符</li>
+<li><code>r</code> 按下之后再输入一个字符，替换掉光标处的字符</li>
+<li><code>g</code> 移动当前行到第一行</li>
+<li><code>G</code> 移动当前行到最后一行</li>
+<li><code>ng</code> 移动当前行到第 n 行<ul>
+<li><em>命令模式输入 <code>set nu</code> 显示行数</em></li>
+</ul>
+</li>
+<li><code>^</code> 光标移至当前行首位</li>
+<li><code>$</code> 光标移至当前行末位</li>
 </ul>
 
           
@@ -1363,494 +1786,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/strings-bot-README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jinser">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jinser's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/strings-bot-README/" itemprop="url">strings_bot_README</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-12T13:06:45+08:00">
-                2020-01-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="strings-bot"><a href="#strings-bot" class="headerlink" title="strings_bot"></a>strings_bot</h1><p><strong>一个基于 <a href="https://cqp.cc/" target="_blank" rel="noopener">酷Q</a> 及其插件 <a href="https://github.com/richardchien/coolq-http-api" target="_blank" rel="noopener">cqhttp</a> 和 <a href="https://github.com/richardchien/nonebot" target="_blank" rel="noopener">nonebot</a> 的QQ机器人</strong></p>
-<h3 id="机器人的设定："><a href="#机器人的设定：" class="headerlink" title="机器人的设定："></a>机器人的设定：</h3><pre><code>名字：五十弦 / 弦 / hi / Hi / hello / Hello
-性别：女
-年龄：19
-能力：智障聊天程度的能力</code></pre><h3 id="目前实现的功能有："><a href="#目前实现的功能有：" class="headerlink" title="目前实现的功能有："></a>目前实现的功能有：</h3><h4 id="新番"><a href="#新番" class="headerlink" title="新番"></a>新番</h4><ul>
-<li><h5 id="新番-1"><a href="#新番-1" class="headerlink" title="新番"></a>新番</h5><ul>
-<li>指令: <strong>新番</strong> / <strong>新番时间表</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>新番</strong></li>
-<li>会话：否</li>
-<li>说明：返回 bilibili 的新番时间表</li>
-</ul>
-</li>
-</ul>
-<h4 id="随机"><a href="#随机" class="headerlink" title="随机"></a>随机</h4><ul>
-<li><h5 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h5><ul>
-<li>指令：<strong>随机数</strong></li>
-<li>参数（可选）：【开始数字】 和 【结束数字】, 起始范围为<strong>（-10000, 10000）</strong>，若无参数则为 <strong>（1, 100）</strong></li>
-<li>例子：<strong>随机数 10 999</strong></li>
-<li>会话：否</li>
-<li>说明：返回一个随机数字</li>
-</ul>
-</li>
-<li><h5 id="打乱"><a href="#打乱" class="headerlink" title="打乱"></a>打乱</h5><ul>
-<li>指令：<strong>打乱</strong></li>
-<li>参数：想要打乱的字符串（注意需要空格），若加入 <strong>-r</strong> 参数则随机打乱后跟的数字</li>
-<li>例子：<strong>打乱 有 一 说 一 ， 确 实</strong> / <strong>打乱 -r 10 999</strong></li>
-<li>会话：否</li>
-<li>说明：返回打乱后的字符串</li>
-</ul>
-</li>
-<li><h5 id="抽签"><a href="#抽签" class="headerlink" title="抽签"></a>抽签</h5><ul>
-<li>指令: <strong>抽签</strong></li>
-<li>参数: 想要抽签的内容（需要空格）</li>
-<li>例子：<strong>抽签 斯 卡 雷 特 姐 妹 真 可 爱</strong> / <strong>抽签 打游戏 写作业 睡觉</strong></li>
-<li>会话：否</li>
-<li>说明：返回随机一个字符串</li>
-</ul>
-</li>
-<li><h5 id="乐子"><a href="#乐子" class="headerlink" title="乐子"></a>乐子</h5><ul>
-<li>指令：<strong>找点乐子</strong> / <strong>找点事做</strong> / <strong>没事找事</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>找点乐子</strong></li>
-<li>会话：否</li>
-<li>说明：返回一个关于现在可以做什么的建议</li>
-</ul>
-</li>
-</ul>
-<h4 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h4><ul>
-<li><h5 id="腾讯翻译"><a href="#腾讯翻译" class="headerlink" title="腾讯翻译"></a>腾讯翻译</h5><ul>
-<li>指令：<strong>翻译</strong> / <strong>腾讯翻译</strong> / <strong>fanyi</strong> / <strong>translate</strong></li>
-<li>参数：要翻译的内容</li>
-<li>例子：翻译</li>
-<li>会话：是</li>
-<li>说明：返回翻译后的内容 </li>
-<li><strong>暂时出现了bug，无法正常使用</strong></li>
-</ul>
-</li>
-</ul>
-<h4 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h4><ul>
-<li><h5 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h5><ul>
-<li>指令：<strong>注册</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>注册</strong></li>
-<li>会话：否</li>
-<li>说明：用于初始化持久化保存数据</li>
-</ul>
-</li>
-<li><h5 id="签到-1"><a href="#签到-1" class="headerlink" title="签到"></a>签到</h5><ul>
-<li>指令：<strong>签到</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>签到</strong></li>
-<li>会话：否</li>
-<li>说明：返回签到图片，累加数值</li>
-</ul>
-</li>
-</ul>
-<h4 id="报时"><a href="#报时" class="headerlink" title="报时"></a>报时</h4><ul>
-<li><h5 id="零点报时"><a href="#零点报时" class="headerlink" title="零点报时"></a>零点报时</h5><ul>
-<li>指令：无</li>
-<li>参数：无</li>
-<li>例子：无</li>
-<li>会话：无</li>
-<li>说明：零点整报时</li>
-</ul>
-</li>
-</ul>
-<h4 id="send"><a href="#send" class="headerlink" title="send"></a>send</h4><ul>
-<li><h5 id="发送私聊消息"><a href="#发送私聊消息" class="headerlink" title="发送私聊消息"></a>发送私聊消息</h5><ul>
-<li>暂时未开放</li>
-</ul>
-</li>
-<li><h5 id="发送群聊消息"><a href="#发送群聊消息" class="headerlink" title="发送群聊消息"></a>发送群聊消息</h5><ul>
-<li>暂时未开放</li>
-</ul>
-</li>
-</ul>
-<h4 id="日历"><a href="#日历" class="headerlink" title="日历"></a>日历</h4><ul>
-<li><h5 id="今日历"><a href="#今日历" class="headerlink" title="今日历"></a>今日历</h5><ul>
-<li>指令：<strong>今日历</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>今日历</strong></li>
-<li>会话：否</li>
-<li>说明：返回今天的日历</li>
-</ul>
-</li>
-<li><h5 id="日历-1"><a href="#日历-1" class="headerlink" title="日历"></a>日历</h5><ul>
-<li>指令：<strong>日历</strong></li>
-<li>参数：日期， 可以是 <strong>明天</strong> 或 <strong>后天</strong></li>
-<li>例子；<strong>日历 明天</strong></li>
-<li>会话：是</li>
-<li>说明：返回指定的日历</li>
-</ul>
-</li>
-</ul>
-<h4 id="回应"><a href="#回应" class="headerlink" title="回应"></a>回应</h4><ul>
-<li><h5 id="应激反应，包括但不仅限于（其中大部分概率响应）"><a href="#应激反应，包括但不仅限于（其中大部分概率响应）" class="headerlink" title="应激反应，包括但不仅限于（其中大部分概率响应）"></a>应激反应，包括但不仅限于（其中大部分概率响应）</h5><ul>
-<li><strong>嘤一下</strong> / <strong>嘤一个</strong> / <strong>来嘤</strong></li>
-<li><strong>喵一下</strong> / <strong>喵一个</strong> / <strong>来喵</strong></li>
-<li><strong>草</strong></li>
-<li><strong>机屑人</strong></li>
-<li><strong>五十弦</strong></li>
-<li><strong>mua</strong></li>
-</ul>
-</li>
-</ul>
-<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><ul>
-<li><h5 id="百度搜索"><a href="#百度搜索" class="headerlink" title="百度搜索"></a>百度搜索</h5><ul>
-<li>指令：<strong>百度</strong> / <strong>百度一下</strong></li>
-<li>参数：要百度的内容</li>
-<li>例子：<strong>百度 土能吃吗</strong> / <strong>百度一下 失恋了怎么办</strong></li>
-<li>会话：是</li>
-<li>说明：返回 百度 的短链接， 调用了微博的短链接服务</li>
-</ul>
-</li>
-<li><h5 id="bing搜索"><a href="#bing搜索" class="headerlink" title="bing搜索"></a>bing搜索</h5><ul>
-<li>指令：<strong>bing</strong> / <strong>必应</strong></li>
-<li>参数：要必应的内容</li>
-<li>例子：<strong>bing ajax</strong> / <strong>bing nonebot</strong></li>
-<li>会话：是</li>
-<li>说明：返回 bing 的短链接， 调用了微博的短链接服务</li>
-</ul>
-</li>
-<li><h5 id="不会百度么"><a href="#不会百度么" class="headerlink" title="不会百度么"></a>不会百度么</h5><ul>
-<li>指令：<strong>不会百度吗</strong> / <strong>不会百度么</strong></li>
-<li>参数：要搜索的内容</li>
-<li>例子：<strong>不会百度吗 bios怎么开啊</strong> / <strong>不会百度么 可以给我发一份吗</strong></li>
-<li>会话：是</li>
-<li>说明：返回 不会百度么 的短链接， 调用了微博的短链接服务</li>
-</ul>
-</li>
-</ul>
-<h4 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h4><ul>
-<li><h5 id="scp-1"><a href="#scp-1" class="headerlink" title="scp"></a>scp</h5><ul>
-<li>指令：<strong>scp</strong> / <strong>Scp</strong> / <strong>SCP</strong></li>
-<li>参数：<strong>最近翻译</strong> / <strong>最近原创</strong> / <strong>随机</strong></li>
-<li>例子：<strong>scp 最近翻译</strong> / <strong>SCP 随机</strong></li>
-<li>会话：是</li>
-<li>说明：返回相应的条目</li>
-</ul>
-</li>
-</ul>
-<h4 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h4><ul>
-<li><h5 id="历史上的今天"><a href="#历史上的今天" class="headerlink" title="历史上的今天"></a>历史上的今天</h5><ul>
-<li>指令：<strong>历史上的今天</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>历史上的今天</strong></li>
-<li>会话：否</li>
-<li>说明：返回随机一条 历史上今天发生过的某事</li>
-</ul>
-</li>
-<li><h5 id="每日一句"><a href="#每日一句" class="headerlink" title="每日一句"></a>每日一句</h5><ul>
-<li>指令：<strong>每日一句</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>每日一句</strong></li>
-<li>会话：否</li>
-<li>说明：返回 扇贝单词 的 每日一句（中英文）</li>
-</ul>
-</li>
-<li><h5 id="five语录"><a href="#five语录" class="headerlink" title="five语录"></a>five语录</h5><ul>
-<li>指令：<strong>five语录</strong> / <strong>废物语录</strong> / <strong>二次元语录</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>five语录</strong></li>
-<li>会话：否</li>
-<li>说明：返回一条语录</li>
-</ul>
-</li>
-<li><h5 id="垃圾分类"><a href="#垃圾分类" class="headerlink" title="垃圾分类"></a>垃圾分类</h5><ul>
-<li>指令：<strong>垃圾分类</strong> / <strong>分类</strong></li>
-<li>参数：要分类的垃圾</li>
-<li>例子：<strong>分类 垃圾袋</strong> / <strong><del>垃圾分类 我</del></strong></li>
-<li>会话：是</li>
-<li>说明：返回垃圾的分类</li>
-</ul>
-</li>
-<li><h5 id="段子"><a href="#段子" class="headerlink" title="段子"></a>段子</h5><ul>
-<li>指令：<strong>joke</strong> / <strong>段子</strong> / <strong>笑话</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>段子</strong></li>
-<li>会话：否</li>
-<li>说明：返回一条<del>无聊的</del>笑话</li>
-</ul>
-</li>
-<li><h5 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h5><ul>
-<li>指令：<strong>news</strong> / <strong>新闻</strong> / <strong>近闻</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>新闻</strong></li>
-<li>会话：否</li>
-<li>说明：返回一条新闻</li>
-</ul>
-</li>
-<li><h5 id="天气查询"><a href="#天气查询" class="headerlink" title="天气查询"></a>天气查询</h5><ul>
-<li>指令：<strong>天气</strong> / <strong>查天气</strong> / <strong>最近什么天气</strong> / <strong>最近天气怎么样</strong></li>
-<li>参数：【城市】和【日期】</li>
-<li>例子：<strong>天气 福州 明天</strong> / <strong>查天气 湖州</strong></li>
-<li>会话：是</li>
-<li>说明：返回指定的天气信息</li>
-<li>备注：现在支持NLP式的调用，@或叫机器人的名字后 直接询问城市的 <strong>天气</strong> （天气是关键字），由于分词能力的限制，仅支持省市级。调用方法如：hi，福州的天气怎么样？（确保消息中存在<strong>城市</strong>和<strong>天气</strong>即可）</li>
-</ul>
-</li>
-<li><h5 id="知乎日报"><a href="#知乎日报" class="headerlink" title="知乎日报"></a>知乎日报</h5><ul>
-<li>指令：<strong>daily_zhihu</strong> / <strong>daily</strong> / <strong>知乎日报</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>知乎日报</strong></li>
-<li>会话：否</li>
-<li>说明：随机返回一条知乎日报</li>
-</ul>
-</li>
-<li><h5 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h5><ul>
-<li>指令：<strong>gank</strong> / <strong>干货</strong> / <strong>整活</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>整活</strong></li>
-<li>会话：否</li>
-<li>说明：随机返回一条干货</li>
-</ul>
-</li>
-<li><h5 id="steam-sale"><a href="#steam-sale" class="headerlink" title="steam sale"></a>steam sale</h5><ul>
-<li>指令：<strong>steam_sale</strong> / <strong>steam促销</strong> / <strong>steam优惠</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>steam优惠</strong></li>
-<li>会话：否</li>
-<li>说明：随机返回一条steam优惠信息</li>
-</ul>
-</li>
-<li><h5 id="steam-sales"><a href="#steam-sales" class="headerlink" title="steam sales"></a>steam sales</h5><ul>
-<li>指令：<strong>steam_sales</strong> / <strong>steam促销列表</strong> / <strong>steam优惠列表</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>steam促销列表</strong></li>
-<li>会话：否</li>
-<li>说明：随机返回三天steam优惠信息</li>
-</ul>
-</li>
-</ul>
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><ul>
-<li><h5 id="提交tips"><a href="#提交tips" class="headerlink" title="提交tips"></a>提交tips</h5><ul>
-<li>指令：<strong>提交tips</strong> / <strong>tips提交</strong> / <strong>提交</strong></li>
-<li>参数：要提交的tips</li>
-<li>例子：<strong>提交 肚子饿了</strong></li>
-<li>会话：是</li>
-<li>说明：tips即签到图下的小字。向服务器提交一条tip，待审核后即加入数据库。消耗 <strong>20</strong> 铜币</li>
-</ul>
-</li>
-<li><h5 id="删除tips"><a href="#删除tips" class="headerlink" title="删除tips"></a>删除tips</h5><ul>
-<li>指令：<strong>删除tips</strong> / <strong>tips删除</strong> / <strong>删除</strong></li>
-<li>参数：已提交的 正在审核中的 要删除的 <strong>tips的id</strong></li>
-<li>例子：<strong>删除 33</strong> / <strong>删除</strong></li>
-<li>会话：是</li>
-<li>说明：删除一条 已提交的 正在审核中的 要删除的 tip</li>
-</ul>
-</li>
-<li><h5 id="修改tips"><a href="#修改tips" class="headerlink" title="修改tips"></a>修改tips</h5><ul>
-<li>指令：<strong>修改tips</strong> / <strong>tips修改</strong> / <strong>修改</strong></li>
-<li>参数：要修改的已提交的 <strong>tips的id</strong> 和 <strong>tips</strong></li>
-<li>例子：<strong>修改 12</strong> / <strong>修改tips</strong></li>
-<li>会话：是</li>
-<li>说明：修改已提交的一条tip。消耗 <strong>5</strong> 铜币</li>
-</ul>
-</li>
-<li><h5 id="查询tips"><a href="#查询tips" class="headerlink" title="查询tips"></a>查询tips</h5><ul>
-<li>指令：<strong>check</strong> / <strong>查询tips</strong> / <strong>tips查询</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>查询tips</strong></li>
-<li>会话：否</li>
-<li>说明：查询 已经提交的 正在审核中的 tips</li>
-</ul>
-</li>
-<li><h5 id="历史提交"><a href="#历史提交" class="headerlink" title="历史提交"></a>历史提交</h5><ul>
-<li>指令：<strong>历史提交tips</strong> / <strong>tips历史提交</strong> / <strong>历史提交</strong></li>
-<li>参数：无</li>
-<li>例子：<strong>历史提交</strong></li>
-<li>会话：否</li>
-<li>说明：<del>查看所有提交过的tips</del> 查看所有提交成功的tips</li>
-</ul>
-</li>
-</ul>
-<p><strong><em>解释</em></strong>：<strong>会话</strong> 即 <strong>交互式对话</strong>，可以将 <strong>指令</strong> 和 <strong>参数</strong> 分开输入。形式如下：</p>
-<blockquote>
-<p>user：天气</p>
-<p>bot：你想查哪个城市?</p>
-<p>user：厦门</p>
-<p>bot：你想查哪一天?</p>
-<p>user：今天</p>
-<p>bot：厦门  晴  15日星期天<br>         当前温度 17℃<br>         东风  3-4级<br>         最高温度23℃<br>         最低温度15℃<br>         各项气象条件适宜，无明显降温过程，发生感冒机率较低。</p>
-</blockquote>
-<hr>
-<h3 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h3><ul>
-<li>插件开发者：<a href="https://github.com/richardchien" target="_blank" rel="noopener">rc</a></li>
-<li>服务器提供 + 技术支持：<a href="https://github.com/zhufree" target="_blank" rel="noopener">柚子君</a></li>
-<li><del>水群</del>给予我帮助的群友们</li>
-<li>投以热心的同学们</li>
-</ul>
-<h4 id="捐赠列表（按时间先后顺序）"><a href="#捐赠列表（按时间先后顺序）" class="headerlink" title="捐赠列表（按时间先后顺序）"></a>捐赠列表（按时间先后顺序）</h4><table>
-<thead>
-<tr>
-<th align="center">捐赠人</th>
-<th align="center">捐赠金额（￥）</th>
-<th align="center">捐赠渠道</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">川泽黎丶</td>
-<td align="center">5.20</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">R4VEN</td>
-<td align="center">5.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">sym1018</td>
-<td align="center">12.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">gongzhangjun</td>
-<td align="center">10.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">周树人</td>
-<td align="center">5.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">ICM-尘封蓝调</td>
-<td align="center">7.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">不写不久van了呗</td>
-<td align="center">1.00</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">ICM-尘封蓝调</td>
-<td align="center">3.39</td>
-<td align="center">微信</td>
-</tr>
-<tr>
-<td align="center">50弦Plus pro</td>
-<td align="center">2.50</td>
-<td align="center">微信</td>
-</tr>
-</tbody></table>
-<h3 id="捐赠入口"><a href="#捐赠入口" class="headerlink" title="捐赠入口"></a>捐赠入口</h3><p><img src="https://raw.githubusercontent.com/jinserrr/jinserrr.github.io/master/image/wechat_donation_code.png" alt="微信赞赏码"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1898,7 +1840,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1911,7 +1853,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
