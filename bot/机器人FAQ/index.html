@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="工具," />
+  <meta name="keywords" content="readme," />
 
 
 
@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="常用命令 w 保存文件，vim打开时没有指定文件需要提供文件名: w filename q 退出 q! 强制退出 !command 执行 shell 命令 ( command ) &#x2F;word 查找 word n 查找下一个 shift + n 查找上一个   s&#x2F;before&#x2F;after 将光标所在行的 before 替换为 after %s&#x2F;before&#x2F;after 将文件中的 before 替">
+<meta name="description" content="关于QQ机器人五十弦(strings-bot)的FAQQ：机器人是怎么做的？ A：基于酷Q和cqhttp 和 nonebot 的QQ机器人，具体实现代码已开源于GitHub。  Q：机器人是用什么语言写的？ A：python。  Q：机器人有什么用？ A：除了活跃之外，没用。  Q：机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？ A：由于机器人使用了图灵机器人的接口（用于在接收到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim command">
-<meta property="og:url" content="http://yoursite.com/vim-command/index.html">
+<meta property="og:title" content="机器人FAQ">
+<meta property="og:url" content="http://yoursite.com/bot/%E6%9C%BA%E5%99%A8%E4%BA%BAFAQ/index.html">
 <meta property="og:site_name" content="Jinser&#39;s Blog">
-<meta property="og:description" content="常用命令 w 保存文件，vim打开时没有指定文件需要提供文件名: w filename q 退出 q! 强制退出 !command 执行 shell 命令 ( command ) &#x2F;word 查找 word n 查找下一个 shift + n 查找上一个   s&#x2F;before&#x2F;after 将光标所在行的 before 替换为 after %s&#x2F;before&#x2F;after 将文件中的 before 替">
-<meta property="article:published_time" content="2020-04-30T13:28:43.000Z">
-<meta property="article:modified_time" content="2020-04-30T13:48:47.536Z">
+<meta property="og:description" content="关于QQ机器人五十弦(strings-bot)的FAQQ：机器人是怎么做的？ A：基于酷Q和cqhttp 和 nonebot 的QQ机器人，具体实现代码已开源于GitHub。  Q：机器人是用什么语言写的？ A：python。  Q：机器人有什么用？ A：除了活跃之外，没用。  Q：机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？ A：由于机器人使用了图灵机器人的接口（用于在接收到">
+<meta property="article:published_time" content="2020-01-26T04:35:36.000Z">
+<meta property="article:modified_time" content="2020-02-28T08:23:13.193Z">
 <meta property="article:author" content="jinser">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="readme">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/vim-command/"/>
+  <link rel="canonical" href="http://yoursite.com/bot/机器人FAQ/"/>
 
 
 
 
 
-  <title>vim command | Jinser's Blog</title>
+  <title>机器人FAQ | Jinser's Blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim-command/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/bot/%E6%9C%BA%E5%99%A8%E4%BA%BAFAQ/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jinser">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim command</h1>
+          <h1 class="post-title" itemprop="name headline">机器人FAQ</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T21:28:43+08:00">
-                2020-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-26T12:35:36+08:00">
+                2020-01-26
               </time>
             
 
@@ -299,23 +299,23 @@
       
 
       
-        <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li><code>w</code> 保存文件，vim打开时没有指定文件需要提供文件名: <code>w filename</code></li>
-<li><code>q</code> 退出</li>
-<li><code>q!</code> 强制退出</li>
-<li><code>!command</code> 执行 shell 命令 ( command )</li>
-<li><code>/word</code> 查找 word<ul>
-<li><code>n</code> 查找下一个</li>
-<li><code>shift + n</code> 查找上一个</li>
-</ul>
-</li>
-<li><code>s/before/after</code> 将光标所在行的 before 替换为 after</li>
-<li><code>%s/before/after</code> 将文件中的 before 替换为 after</li>
-<li><code>%s/before/after/g</code> 将文件中的所有 before 替换为 after ( global )</li>
-<li><code>x, ys/before/after[/g]</code> 将第 x 行到第 y 行的 [所有] before 替换为 after</li>
-<li><code>set nu / nonu</code> 打开 / 关闭行号</li>
-<li><code>set hlsearch / nohlsearch</code> 打开 / 关闭搜索高亮</li>
-</ul>
+        <h1 id="关于QQ机器人五十弦-strings-bot-的FAQ"><a href="#关于QQ机器人五十弦-strings-bot-的FAQ" class="headerlink" title="关于QQ机器人五十弦(strings-bot)的FAQ"></a>关于QQ机器人五十弦(strings-bot)的FAQ</h1><p><strong>Q：</strong>机器人是怎么做的？</p>
+<p><strong>A：</strong>基于<a href="https://cqp.cc/" target="_blank" rel="noopener">酷Q</a>和<a href="https://github.com/richardchien/coolq-http-api" target="_blank" rel="noopener">cqhttp</a> 和 <a href="https://github.com/richardchien/nonebot" target="_blank" rel="noopener">nonebot</a> 的QQ机器人，具体实现代码已开源于<a href="https://github.com/jinserrr/strings" target="_blank" rel="noopener">GitHub</a>。</p>
+<hr>
+<p><strong>Q：</strong>机器人是用什么语言写的？</p>
+<p><strong>A：</strong>python。</p>
+<hr>
+<p><strong>Q：</strong>机器人有什么用？</p>
+<p><strong>A：</strong>除了活跃之外，没用。</p>
+<hr>
+<p><strong>Q：</strong>机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？</p>
+<p><strong>A：</strong>由于机器人使用了图灵机器人的接口（用于在接收到无法处理，即机器人不支持的指令时调用）。免费的图灵接口是有调用次数限制的，100条/天(现在有一千条了)，这就意味着在一天中机器人最多只能回复<del>一百次</del>一千次，这<del>一百次</del>一千次是对于机器人而言的（所以你可能今天一句话都没有和它说过但调用次数已经超限了）。当调用次数超限后机器人就无法调用图灵接口了，这时就会向你返回“请求次数超限制!”的提示。事实上，图灵机器人的对话只是可有可无的，在我原来的计划中并不存在。</p>
+<hr>
+<p><strong>Q：</strong>在使用过程中有疑问怎么办？</p>
+<p><strong>A：</strong>大多数的问题都可以在 <a href="https://jinser.xyz/2020/01/12/strings-bot-README/" target="_blank" rel="noopener">strings-bot-README</a> 中得到解决。如果还是有疑问可以向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送邮件。</p>
+<hr>
+<p><strong>Q：</strong>遇到bug怎么办？</p>
+<p><strong>A：</strong>可以在GitHub的机器人仓库中提交issue；如果你愿意，也欢迎提交pull requests。或者也可以向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送邮件。</p>
 
       
     </div>
@@ -333,7 +333,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+            <a href="/tags/readme/" rel="tag"># readme</a>
           
         </div>
       
@@ -346,8 +346,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/vim-normal/" rel="next" title="vim">
-                <i class="fa fa-chevron-left"></i> vim
+              <a href="/bot/strings-bot-README/" rel="next" title="strings_bot_README">
+                <i class="fa fa-chevron-left"></i> strings_bot_README
               </a>
             
           </div>
@@ -356,8 +356,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/vim-visual/" rel="prev" title="vim visual">
-                vim visual <i class="fa fa-chevron-right"></i>
+              <a href="/love/%E6%88%91%E7%88%B1%E5%A4%8F%E5%A6%B9/" rel="prev" title="我爱夏妹">
+                我爱夏妹 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -485,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于QQ机器人五十弦-strings-bot-的FAQ"><span class="nav-number">1.</span> <span class="nav-text">关于QQ机器人五十弦(strings-bot)的FAQ</span></a></li></ol></div>
             
 
           </div>

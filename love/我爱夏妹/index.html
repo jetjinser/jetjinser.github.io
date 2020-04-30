@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="私货," />
 
 
 
@@ -79,16 +79,14 @@
 
 
 
-<meta name="description" content="用户新建用户useradd {用户名} 没有指定组时，会自动创建一个同用户名的组 查看用户id {用户名}  ​    不提供用户名时查看当前用户 root 用户的家目录是 &#x2F;root 其他用户的家目录是 &#x2F;home&#x2F;用户名 修改密码passwd [用户名] 没有指定用户时修改当前用户的密码 删除用户userdel {用户名} [-r] 加 -r 表示将配置文件也删除，包括 &#x2F;home&#x2F;用户名 文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用户和用户组管理">
-<meta property="og:url" content="http://yoursite.com/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="我爱夏妹">
+<meta property="og:url" content="http://yoursite.com/love/%E6%88%91%E7%88%B1%E5%A4%8F%E5%A6%B9/index.html">
 <meta property="og:site_name" content="Jinser&#39;s Blog">
-<meta property="og:description" content="用户新建用户useradd {用户名} 没有指定组时，会自动创建一个同用户名的组 查看用户id {用户名}  ​    不提供用户名时查看当前用户 root 用户的家目录是 &#x2F;root 其他用户的家目录是 &#x2F;home&#x2F;用户名 修改密码passwd [用户名] 没有指定用户时修改当前用户的密码 删除用户userdel {用户名} [-r] 加 -r 表示将配置文件也删除，包括 &#x2F;home&#x2F;用户名 文">
-<meta property="article:published_time" content="2020-04-30T14:00:48.000Z">
-<meta property="article:modified_time" content="2020-04-30T14:25:45.295Z">
+<meta property="article:published_time" content="2020-02-09T12:12:29.000Z">
+<meta property="article:modified_time" content="2020-02-09T12:56:33.451Z">
 <meta property="article:author" content="jinser">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="私货">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/用户和用户组管理/"/>
+  <link rel="canonical" href="http://yoursite.com/love/我爱夏妹/"/>
 
 
 
 
 
-  <title>用户和用户组管理 | Jinser's Blog</title>
+  <title>我爱夏妹 | Jinser's Blog</title>
   
 
 
@@ -232,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/love/%E6%88%91%E7%88%B1%E5%A4%8F%E5%A6%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jinser">
@@ -249,7 +247,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用户和用户组管理</h1>
+          <h1 class="post-title" itemprop="name headline">我爱夏妹</h1>
         
 
         <div class="post-meta">
@@ -261,8 +259,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T22:00:48+08:00">
-                2020-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-09T20:12:29+08:00">
+                2020-02-09
               </time>
             
 
@@ -299,35 +297,8 @@
       
 
       
-        <h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p><code>useradd {用户名}</code></p>
-<p>没有指定组时，会自动创建一个同用户名的组</p>
-<h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p><code>id {用户名}</code> </p>
-<p>​    <em>不提供用户名时查看当前用户</em></p>
-<p>root 用户的家目录是 <code>/root</code></p>
-<p>其他用户的家目录是 <code>/home/用户名</code></p>
-<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p><code>passwd [用户名]</code></p>
-<p><em>没有指定用户时修改当前用户的密码</em></p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>userdel {用户名} [-r]</code></p>
-<p><em>加 -r 表示将配置文件也删除，包括 /home/用户名 文件夹</em></p>
-<h3 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h3><ul>
-<li><code>usermod</code><ul>
-<li><code>-d {目录} {用户名}</code> 设定家目录</li>
-<li><code>-g {组名} {用户名}</code> 修改用户到用户组</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-<h3 id="chage"><a href="#chage" class="headerlink" title="chage"></a>chage</h3><p>…</p>
-<h2 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h2><h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><p><code>groupadd {组名}</code></p>
-<h3 id="修改用户到用户组"><a href="#修改用户到用户组" class="headerlink" title="修改用户到用户组"></a>修改用户到用户组</h3><p><code>usermod -g {组名} {用户名}</code></p>
-<h3 id="在创建用户时添加到组"><a href="#在创建用户时添加到组" class="headerlink" title="在创建用户时添加到组"></a>在创建用户时添加到组</h3><p><code>useradd -g {组名} {用户名}</code></p>
-<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><ul>
-<li><p><code>su - {用户名}</code> 切换用户</p>
-</li>
-<li><p><code>su {用户名}</code> 不完全切换，目录没有移动到用户的家目录</p>
-<p> <em>普通用户之间切换需要密码, root 切换到普通用户不需要密码</em></p>
-</li>
-</ul>
+        <iframe src="//player.bilibili.com/player.html?aid=80215402&cid=137271866&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="560" width="100%"> </iframe>
+
 
       
     </div>
@@ -345,7 +316,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/%E7%A7%81%E8%B4%A7/" rel="tag"># 私货</a>
           
         </div>
       
@@ -358,8 +329,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/vim-visual/" rel="next" title="vim visual">
-                <i class="fa fa-chevron-left"></i> vim visual
+              <a href="/bot/%E6%9C%BA%E5%99%A8%E4%BA%BAFAQ/" rel="next" title="机器人FAQ">
+                <i class="fa fa-chevron-left"></i> 机器人FAQ
               </a>
             
           </div>
@@ -367,6 +338,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/bot/%E5%85%B3%E4%BA%8E%E6%94%B6%E8%B4%B9%E5%92%8Ctoken/" rel="prev" title="关于收费和token">
+                关于收费和token <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -418,17 +393,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,22 +449,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户"><span class="nav-number">1.</span> <span class="nav-text">用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建用户"><span class="nav-number">1.1.</span> <span class="nav-text">新建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看用户"><span class="nav-number">1.2.</span> <span class="nav-text">查看用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改密码"><span class="nav-number">1.3.</span> <span class="nav-text">修改密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除用户"><span class="nav-number">1.4.</span> <span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户"><span class="nav-number">1.5.</span> <span class="nav-text">配置用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chage"><span class="nav-number">1.6.</span> <span class="nav-text">chage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户组"><span class="nav-number">2.</span> <span class="nav-text">用户组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建用户组"><span class="nav-number">2.1.</span> <span class="nav-text">新建用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改用户到用户组"><span class="nav-number">2.2.</span> <span class="nav-text">修改用户到用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在创建用户时添加到组"><span class="nav-number">2.3.</span> <span class="nav-text">在创建用户时添加到组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换用户"><span class="nav-number">3.</span> <span class="nav-text">切换用户</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
