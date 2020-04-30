@@ -232,6 +232,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/vim/" itemprop="url">vim</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T10:04:55+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Vim-insert"><a href="#Vim-insert" class="headerlink" title="Vim insert"></a>Vim insert</h3><p>NORMAL 模式下：</p>
+<ul>
+<li><code>i</code> <strong>在光标处</strong>进入插入模式</li>
+<li><code>I</code> <strong>光标移至当前行首位</strong>，进入插入模式</li>
+<li><code>a</code> <strong>光标后移一位</strong>，进入插入模式</li>
+<li><code>A</code> <strong>光标移至当前行末位</strong>，进入插入模式</li>
+<li><code>o</code>  <strong>在当前行下添加一个空行</strong>，光标在空行开始，进入插入模式</li>
+<li><code>O</code>  <strong>在当前行上添加一个空行</strong>，光标在空行开始，进入插入模式</li>
+</ul>
+<h3 id="复制，剪切和粘贴"><a href="#复制，剪切和粘贴" class="headerlink" title="复制，剪切和粘贴"></a>复制，剪切和粘贴</h3><h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a><font color=red>复制</font></h4><p>NORMAL 模式下：</p>
+<ul>
+<li><code>y</code> 在使用 v 模式选定区域时，<font color=red>复制</font>选定块</li>
+<li><code>yy</code> <font color=red>复制</font>整行</li>
+<li><code>nyy / yny</code> 从当前光标向下<font color=red>复制</font> n 行</li>
+<li><code>y^</code> <font color=red>复制</font>当前行光标到首位的内容</li>
+<li><code>y$</code> <font color=red>复制</font>当前行光标到末位的内容</li>
+<li><code>yw</code> <font color=red>复制</font>当前 <em>word</em></li>
+<li><code>yG</code> <font color=red>复制</font>当前光标到文件末位的内容</li>
+<li><code>nyG / ynG</code> 将光标移至第 n 行，再<font color=red>复制</font>到文件末位的内容</li>
+</ul>
+<h4 id="剪切"><a href="#剪切" class="headerlink" title="剪切"></a><font color=gree>剪切</font></h4><p>NORMAL 模式下：</p>
+<ul>
+<li><code>d</code> 在使用 v 模式选定区域时，<font color=gree>剪切</font>选定块</li>
+<li><code>dd</code> <font color=gree>剪切</font>整行</li>
+<li><code>ndd / dnd</code> 从当前光标向下<font color=gree>剪切</font> n 行</li>
+<li><code>d^</code> <font color=gree>剪切</font>当前行光标到首位的内容</li>
+<li><code>d$</code> <font color=gree>剪切</font>当前行光标到末位的内容</li>
+<li><code>dw</code> <font color=gree>剪切</font>当前 <em>word</em></li>
+<li><code>dG</code> <font color=gree>剪切</font>当前光标到文件末位的内容</li>
+<li><code>ndG / dnG</code> 将光标移至第 n 行，再<font color=gree>剪切</font>到文件末位的内容</li>
+</ul>
+<h4 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a><font color=lighblue>粘贴</font></h4><p>NORMAL 模式下：</p>
+<ul>
+<li><p><code>P</code> <font color=lighblue>粘贴</font>至光标后（下）</p>
+</li>
+<li><p><code>p</code> <font color=lighblue>粘贴</font>至光标前（上）</p>
+<p><em>整行<font color=lighblue>粘贴</font>时在光标 上 / 下，非整行<font color=lighblue>粘贴</font>时在光标 前 / 后</em></p>
+</li>
+</ul>
+<blockquote>
+<p>命令前面加数字表示重复的次数，加字母表示使用的缓冲区名称。使用英文句号 <strong><code>.</code></strong> 可以重复上一个命令。</p>
+</blockquote>
+<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><ul>
+<li><code>u</code> 撤销</li>
+<li><code>ctrl + r</code> 重做</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/HTTP%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1733,7 +1898,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1746,7 +1911,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
