@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Web," />
 
 
 
@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="用户新建用户useradd {用户名} 没有指定组时，会自动创建一个同用户名的组 查看用户id {用户名}  ​    不提供用户名时查看当前用户 root 用户的家目录是 &#x2F;root 其他用户的家目录是 &#x2F;home&#x2F;用户名 修改密码passwd [用户名] 没有指定用户时修改当前用户的密码 删除用户userdel {用户名} [-r] 加 -r 表示将配置文件也删除，包括 &#x2F;home&#x2F;用户名 文">
+<meta name="description" content="过滤器：属性过滤 domain：仅显示来自制定域的资源。可以使用通配符 *。 has-response-header：显示包含指定 HTTP 响应标头的资源 is is:running：查找 WebSocket 资源 is:from-cache：查找缓存读出的资源   larger-than：显示大于指定大小的资源（单位字节）。1000 &#x3D;&#x3D; 1k method：显示通过指定 HTTP 方法类型检">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用户和用户组管理">
-<meta property="og:url" content="http://yoursite.com/Linux/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="Chrome的Network面板">
+<meta property="og:url" content="http://yoursite.com/Web/Chrome%E7%9A%84Network%E9%9D%A2%E6%9D%BF/index.html">
 <meta property="og:site_name" content="Jinser&#39;s Blog">
-<meta property="og:description" content="用户新建用户useradd {用户名} 没有指定组时，会自动创建一个同用户名的组 查看用户id {用户名}  ​    不提供用户名时查看当前用户 root 用户的家目录是 &#x2F;root 其他用户的家目录是 &#x2F;home&#x2F;用户名 修改密码passwd [用户名] 没有指定用户时修改当前用户的密码 删除用户userdel {用户名} [-r] 加 -r 表示将配置文件也删除，包括 &#x2F;home&#x2F;用户名 文">
-<meta property="article:published_time" content="2020-04-30T14:00:48.000Z">
-<meta property="article:modified_time" content="2020-04-30T14:25:45.295Z">
+<meta property="og:description" content="过滤器：属性过滤 domain：仅显示来自制定域的资源。可以使用通配符 *。 has-response-header：显示包含指定 HTTP 响应标头的资源 is is:running：查找 WebSocket 资源 is:from-cache：查找缓存读出的资源   larger-than：显示大于指定大小的资源（单位字节）。1000 &#x3D;&#x3D; 1k method：显示通过指定 HTTP 方法类型检">
+<meta property="article:published_time" content="2020-05-01T11:51:16.000Z">
+<meta property="article:modified_time" content="2020-05-01T15:02:32.681Z">
 <meta property="article:author" content="jinser">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Linux/用户和用户组管理/"/>
+  <link rel="canonical" href="http://yoursite.com/Web/Chrome的Network面板/"/>
 
 
 
 
 
-  <title>用户和用户组管理 | Jinser's Blog</title>
+  <title>Chrome的Network面板 | Jinser's Blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Web/Chrome%E7%9A%84Network%E9%9D%A2%E6%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jinser">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用户和用户组管理</h1>
+          <h1 class="post-title" itemprop="name headline">Chrome的Network面板</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T22:00:48+08:00">
-                2020-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T19:51:16+08:00">
+                2020-05-01
               </time>
             
 
@@ -299,34 +299,139 @@
       
 
       
-        <h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p><code>useradd {用户名}</code></p>
-<p>没有指定组时，会自动创建一个同用户名的组</p>
-<h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p><code>id {用户名}</code> </p>
-<p>​    <em>不提供用户名时查看当前用户</em></p>
-<p>root 用户的家目录是 <code>/root</code></p>
-<p>其他用户的家目录是 <code>/home/用户名</code></p>
-<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p><code>passwd [用户名]</code></p>
-<p><em>没有指定用户时修改当前用户的密码</em></p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>userdel {用户名} [-r]</code></p>
-<p><em>加 -r 表示将配置文件也删除，包括 /home/用户名 文件夹</em></p>
-<h3 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h3><ul>
-<li><code>usermod</code><ul>
-<li><code>-d {目录} {用户名}</code> 设定家目录</li>
-<li><code>-g {组名} {用户名}</code> 修改用户到用户组</li>
+        <h2 id="过滤器：属性过滤"><a href="#过滤器：属性过滤" class="headerlink" title="过滤器：属性过滤"></a>过滤器：属性过滤</h2><ul>
+<li><strong>domain</strong>：仅显示来自制定域的资源。可以使用通配符 <code>*</code>。</li>
+<li><strong>has-response-header</strong>：显示包含指定 <strong>HTTP</strong> 响应标头的资源</li>
+<li><strong>is</strong><ul>
+<li><strong>is:running</strong>：查找 <strong>WebSocket</strong> 资源</li>
+<li><strong>is:from-cache</strong>：查找缓存读出的资源</li>
+</ul>
+</li>
+<li><strong>larger-than</strong>：显示大于指定大小的资源（单位字节）。1000 == 1k</li>
+<li><strong>method</strong>：显示通过指定 <strong>HTTP</strong> 方法类型检索的资源</li>
+<li><strong>mime-type</strong>：显示指定 <strong>MIME</strong> 类型的资源</li>
+<li><strong>mixed-content</strong><ul>
+<li><strong>mixed-content:all</strong>：显示所有混合内容资源</li>
+<li><strong>mixed-content:displayed</strong>：仅显示当前显示的资源</li>
+</ul>
+</li>
+<li><strong>scheme</strong><ul>
+<li><strong>scheme:http</strong>：显示通过未保护 <strong>HTTP</strong> 检索的资源</li>
+<li><strong>scheme:https</strong>：显示受保护 <strong>HTTPS</strong> 检索的资源</li>
+</ul>
+</li>
+<li><strong>set-cookie-domain</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且 <strong>Domain</strong> 属性与指定值匹配的资源</li>
+<li><strong>set-cookie-name</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且名称与指定值匹配的资源</li>
+<li><strong>set-cookie-value</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且值与指定值匹配的资源</li>
+<li><strong>status-code</strong>：显示 <strong>HTTP</strong> 状态码与指定码匹配的资源</li>
+</ul>
+<p><em>多属性间通过空格来实现 AND 方法</em></p>
+<h2 id="请求列表的排序"><a href="#请求列表的排序" class="headerlink" title="请求列表的排序"></a>请求列表的排序</h2><ul>
+<li><strong>时间排序</strong>，默认</li>
+<li><strong>按列排序</strong></li>
+<li>按活动时间排序<ul>
+<li><strong>Start Time</strong>：发出的第一个请求位于顶部</li>
+<li><strong>Response Time</strong>：开始下载的第一个请求位于顶部</li>
+<li><strong>End Time</strong>：完成的第一个请求位于顶部</li>
+<li><strong>Total Duration</strong>：连接设置时间和请求 / 响应时间最短的请求位于顶部</li>
+<li><strong>Latency</strong>：等待最短响应时间的请求位于顶部</li>
+</ul>
+</li>
+</ul>
+<h2 id="请求列表"><a href="#请求列表" class="headerlink" title="请求列表"></a>请求列表</h2><ul>
+<li><strong>Name</strong>：资源的名称</li>
+<li><strong>Status</strong>：HTTP 状态码</li>
+<li><strong>Type</strong>：请求的资源的 MIME 类型<ul>
+<li>script</li>
+<li>webp</li>
+<li>xhr</li>
+<li>document</li>
+<li>jpeg</li>
 <li>…</li>
 </ul>
 </li>
+<li><strong>Initiator</strong>：发起请求的对象或进程。可能有以下几种值<ul>
+<li><strong>Parser（解析器）</strong>：Chrome 的 HTML 解析器发起了请求<ul>
+<li>鼠标悬停显示 JS 脚本</li>
 </ul>
-<h3 id="chage"><a href="#chage" class="headerlink" title="chage"></a>chage</h3><p>…</p>
-<h2 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h2><h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><p><code>groupadd {组名}</code></p>
-<h3 id="修改用户到用户组"><a href="#修改用户到用户组" class="headerlink" title="修改用户到用户组"></a>修改用户到用户组</h3><p><code>usermod -g {组名} {用户名}</code></p>
-<h3 id="在创建用户时添加到组"><a href="#在创建用户时添加到组" class="headerlink" title="在创建用户时添加到组"></a>在创建用户时添加到组</h3><p><code>useradd -g {组名} {用户名}</code></p>
-<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><ul>
-<li><p><code>su - {用户名}</code> 切换用户</p>
 </li>
-<li><p><code>su {用户名}</code> 不完全切换，目录没有移动到用户的家目录</p>
-<p> <em>普通用户之间切换需要密码, root 切换到普通用户不需要密码</em></p>
+<li><strong>Redirect（重定向）</strong>：HTTP 重定向启动了请求</li>
+<li><strong>Script（脚本）</strong>：脚本启动了请求</li>
+<li><strong>Other（其他）</strong>：一些其他进程或动作发起请求<ul>
+<li>用户点击链接跳转到页面</li>
+<li>在地址栏中输入网址</li>
+</ul>
 </li>
+</ul>
+</li>
+<li><strong>Size</strong>：服务器返回的响应大小（包括头部和包体），可显示解压后大小</li>
+<li><strong>Time</strong>：总持续时间，从请求的开始到接收响应中的最后一个字节</li>
+<li><strong>Waterfall</strong>：各请求相关活动的直观分析图</li>
+</ul>
+<h2 id="预览请求内容"><a href="#预览请求内容" class="headerlink" title="预览请求内容"></a>预览请求内容</h2><ul>
+<li><p>查看头部</p>
+</li>
+<li><p>查看 cookie</p>
+</li>
+<li><p>预览响应正文：查看图像</p>
+</li>
+<li><p>时间详细分布</p>
+</li>
+<li><p>导出数据为 HAR 格式</p>
+</li>
+<li><p>查看未压缩的资源大小：Use Large Request Rows</p>
+</li>
+<li><p>浏览器加载时间（概览、概要、请求列表）</p>
+<ul>
+<li><strong><font color=blue>DOMContentLoaded 事件</font></strong>：颜色设置为<font color=blue>蓝色</font></li>
+<li><strong><font color=red>load事件</font></strong> 颜色设置为<font color=red>红色</font></li>
+</ul>
+</li>
+<li><p>将请求数据复制到剪贴板</p>
+<ul>
+<li><strong>Copy Link Address</strong>：将请求的网址复制到剪贴板</li>
+<li><strong>Copy Response</strong>：将响应包体复制到剪贴板</li>
+<li><strong>Copy as cURL</strong>：以一系列 cURL 命令形式复制所有请求</li>
+<li><strong>Copy All as HAR</strong>：以 HAR 数据形式复制所有请求</li>
+</ul>
+</li>
+<li><p>查看请求上下游（按住 shift 悬停在请求上）</p>
+<ul>
+<li><font color=green>绿色</font>是上游</li>
+<li><font color=red>红色</font>是下游</li>
+<li>因为<font color=green>一个请求</font>而访问<font color=red>另一个请求</font></li>
+</ul>
+</li>
+</ul>
+<h2 id="浏览器加载时间"><a href="#浏览器加载时间" class="headerlink" title="浏览器加载时间"></a>浏览器加载时间</h2><p><strong>触发流程</strong></p>
+<ol>
+<li><p>解析 HTML 结构</p>
+</li>
+<li><p>加载外部脚本和样式表文件</p>
+</li>
+<li><p>解析并执行脚本代码  </p>
+<p>// 部分脚本会阻塞页面的加载</p>
+</li>
+<li><p>DOM 树构建完成  </p>
+<p>// <font color=blue>DOMContentLoaded 事件</font></p>
+</li>
+<li><p>加载图片等外部文件</p>
+</li>
+<li><p>页面加载完毕</p>
+<p>// <font color=red>load 事件</font></p>
+</li>
+</ol>
+<h2 id="请求时间详细分布"><a href="#请求时间详细分布" class="headerlink" title="请求时间详细分布"></a>请求时间详细分布</h2><ul>
+<li><strong>Queueing</strong>：浏览器在以下情况下对请求排队<ul>
+<li>存在更高优先级的请求</li>
+<li>此源已打开六个 TCP 链接，达到限值，仅适用于 HTTP/1.0 和 HTTP/1.1</li>
+<li>浏览器正在短暂分配磁盘缓存中的空间</li>
+</ul>
+</li>
+<li><strong>Stalled</strong>：请求可能会因 <strong>Queueing</strong> 中描述的任何原因而停止</li>
+<li><strong>DNS Lookup</strong>：浏览器正在解析请求的 IP 地址</li>
+<li><strong>Proxy Negotiation</strong>：浏览器正在与代理服务器协商请求</li>
+<li>…</li>
 </ul>
 
       
@@ -345,7 +450,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/Web/" rel="tag"># Web</a>
           
         </div>
       
@@ -358,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Linux/vim-visual/" rel="next" title="vim visual">
-                <i class="fa fa-chevron-left"></i> vim visual
+              <a href="/Web/%E4%BB%8E%E4%BA%94%E7%A7%8D%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E6%8E%A8%E5%AF%BC%E5%87%BAHTTP%E7%9A%84REST%E6%9E%B6%E6%9E%84/" rel="next" title="从五种架构风格推导出HTTP的REST架构">
+                <i class="fa fa-chevron-left"></i> 从五种架构风格推导出HTTP的REST架构
               </a>
             
           </div>
@@ -367,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Web/%E8%AF%84%E4%BC%B0Web%E6%9E%B6%E6%9E%84%E7%9A%84%E4%B8%83%E5%A4%A7%E5%85%B3%E9%94%AE%E5%B1%9E%E6%80%A7/" rel="prev" title="评估Web架构的七大关键属性">
-                评估Web架构的七大关键属性 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户"><span class="nav-number">1.</span> <span class="nav-text">用户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建用户"><span class="nav-number">1.1.</span> <span class="nav-text">新建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看用户"><span class="nav-number">1.2.</span> <span class="nav-text">查看用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改密码"><span class="nav-number">1.3.</span> <span class="nav-text">修改密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除用户"><span class="nav-number">1.4.</span> <span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户"><span class="nav-number">1.5.</span> <span class="nav-text">配置用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chage"><span class="nav-number">1.6.</span> <span class="nav-text">chage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户组"><span class="nav-number">2.</span> <span class="nav-text">用户组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建用户组"><span class="nav-number">2.1.</span> <span class="nav-text">新建用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改用户到用户组"><span class="nav-number">2.2.</span> <span class="nav-text">修改用户到用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在创建用户时添加到组"><span class="nav-number">2.3.</span> <span class="nav-text">在创建用户时添加到组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换用户"><span class="nav-number">3.</span> <span class="nav-text">切换用户</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤器：属性过滤"><span class="nav-number">1.</span> <span class="nav-text">过滤器：属性过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求列表的排序"><span class="nav-number">2.</span> <span class="nav-text">请求列表的排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求列表"><span class="nav-number">3.</span> <span class="nav-text">请求列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预览请求内容"><span class="nav-number">4.</span> <span class="nav-text">预览请求内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器加载时间"><span class="nav-number">5.</span> <span class="nav-text">浏览器加载时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求时间详细分布"><span class="nav-number">6.</span> <span class="nav-text">请求时间详细分布</span></a></li></ol></div>
             
 
           </div>

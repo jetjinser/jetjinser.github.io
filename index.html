@@ -232,6 +232,695 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Web/Chrome%E7%9A%84Network%E9%9D%A2%E6%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Web/Chrome%E7%9A%84Network%E9%9D%A2%E6%9D%BF/" itemprop="url">Chrome的Network面板</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T19:51:16+08:00">
+                2020-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="过滤器：属性过滤"><a href="#过滤器：属性过滤" class="headerlink" title="过滤器：属性过滤"></a>过滤器：属性过滤</h2><ul>
+<li><strong>domain</strong>：仅显示来自制定域的资源。可以使用通配符 <code>*</code>。</li>
+<li><strong>has-response-header</strong>：显示包含指定 <strong>HTTP</strong> 响应标头的资源</li>
+<li><strong>is</strong><ul>
+<li><strong>is:running</strong>：查找 <strong>WebSocket</strong> 资源</li>
+<li><strong>is:from-cache</strong>：查找缓存读出的资源</li>
+</ul>
+</li>
+<li><strong>larger-than</strong>：显示大于指定大小的资源（单位字节）。1000 == 1k</li>
+<li><strong>method</strong>：显示通过指定 <strong>HTTP</strong> 方法类型检索的资源</li>
+<li><strong>mime-type</strong>：显示指定 <strong>MIME</strong> 类型的资源</li>
+<li><strong>mixed-content</strong><ul>
+<li><strong>mixed-content:all</strong>：显示所有混合内容资源</li>
+<li><strong>mixed-content:displayed</strong>：仅显示当前显示的资源</li>
+</ul>
+</li>
+<li><strong>scheme</strong><ul>
+<li><strong>scheme:http</strong>：显示通过未保护 <strong>HTTP</strong> 检索的资源</li>
+<li><strong>scheme:https</strong>：显示受保护 <strong>HTTPS</strong> 检索的资源</li>
+</ul>
+</li>
+<li><strong>set-cookie-domain</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且 <strong>Domain</strong> 属性与指定值匹配的资源</li>
+<li><strong>set-cookie-name</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且名称与指定值匹配的资源</li>
+<li><strong>set-cookie-value</strong>：显示具有 <strong>Set-Cookie</strong> 表头并且值与指定值匹配的资源</li>
+<li><strong>status-code</strong>：显示 <strong>HTTP</strong> 状态码与指定码匹配的资源</li>
+</ul>
+<p><em>多属性间通过空格来实现 AND 方法</em></p>
+<h2 id="请求列表的排序"><a href="#请求列表的排序" class="headerlink" title="请求列表的排序"></a>请求列表的排序</h2><ul>
+<li><strong>时间排序</strong>，默认</li>
+<li><strong>按列排序</strong></li>
+<li>按活动时间排序<ul>
+<li><strong>Start Time</strong>：发出的第一个请求位于顶部</li>
+<li><strong>Response Time</strong>：开始下载的第一个请求位于顶部</li>
+<li><strong>End Time</strong>：完成的第一个请求位于顶部</li>
+<li><strong>Total Duration</strong>：连接设置时间和请求 / 响应时间最短的请求位于顶部</li>
+<li><strong>Latency</strong>：等待最短响应时间的请求位于顶部</li>
+</ul>
+</li>
+</ul>
+<h2 id="请求列表"><a href="#请求列表" class="headerlink" title="请求列表"></a>请求列表</h2><ul>
+<li><strong>Name</strong>：资源的名称</li>
+<li><strong>Status</strong>：HTTP 状态码</li>
+<li><strong>Type</strong>：请求的资源的 MIME 类型<ul>
+<li>script</li>
+<li>webp</li>
+<li>xhr</li>
+<li>document</li>
+<li>jpeg</li>
+<li>…</li>
+</ul>
+</li>
+<li><strong>Initiator</strong>：发起请求的对象或进程。可能有以下几种值<ul>
+<li><strong>Parser（解析器）</strong>：Chrome 的 HTML 解析器发起了请求<ul>
+<li>鼠标悬停显示 JS 脚本</li>
+</ul>
+</li>
+<li><strong>Redirect（重定向）</strong>：HTTP 重定向启动了请求</li>
+<li><strong>Script（脚本）</strong>：脚本启动了请求</li>
+<li><strong>Other（其他）</strong>：一些其他进程或动作发起请求<ul>
+<li>用户点击链接跳转到页面</li>
+<li>在地址栏中输入网址</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Size</strong>：服务器返回的响应大小（包括头部和包体），可显示解压后大小</li>
+<li><strong>Time</strong>：总持续时间，从请求的开始到接收响应中的最后一个字节</li>
+<li><strong>Waterfall</strong>：各请求相关活动的直观分析图</li>
+</ul>
+<h2 id="预览请求内容"><a href="#预览请求内容" class="headerlink" title="预览请求内容"></a>预览请求内容</h2><ul>
+<li><p>查看头部</p>
+</li>
+<li><p>查看 cookie</p>
+</li>
+<li><p>预览响应正文：查看图像</p>
+</li>
+<li><p>时间详细分布</p>
+</li>
+<li><p>导出数据为 HAR 格式</p>
+</li>
+<li><p>查看未压缩的资源大小：Use Large Request Rows</p>
+</li>
+<li><p>浏览器加载时间（概览、概要、请求列表）</p>
+<ul>
+<li><strong><font color=blue>DOMContentLoaded 事件</font></strong>：颜色设置为<font color=blue>蓝色</font></li>
+<li><strong><font color=red>load事件</font></strong> 颜色设置为<font color=red>红色</font></li>
+</ul>
+</li>
+<li><p>将请求数据复制到剪贴板</p>
+<ul>
+<li><strong>Copy Link Address</strong>：将请求的网址复制到剪贴板</li>
+<li><strong>Copy Response</strong>：将响应包体复制到剪贴板</li>
+<li><strong>Copy as cURL</strong>：以一系列 cURL 命令形式复制所有请求</li>
+<li><strong>Copy All as HAR</strong>：以 HAR 数据形式复制所有请求</li>
+</ul>
+</li>
+<li><p>查看请求上下游（按住 shift 悬停在请求上）</p>
+<ul>
+<li><font color=green>绿色</font>是上游</li>
+<li><font color=red>红色</font>是下游</li>
+<li>因为<font color=green>一个请求</font>而访问<font color=red>另一个请求</font></li>
+</ul>
+</li>
+</ul>
+<h2 id="浏览器加载时间"><a href="#浏览器加载时间" class="headerlink" title="浏览器加载时间"></a>浏览器加载时间</h2><p><strong>触发流程</strong></p>
+<ol>
+<li><p>解析 HTML 结构</p>
+</li>
+<li><p>加载外部脚本和样式表文件</p>
+</li>
+<li><p>解析并执行脚本代码  </p>
+<p>// 部分脚本会阻塞页面的加载</p>
+</li>
+<li><p>DOM 树构建完成  </p>
+<p>// <font color=blue>DOMContentLoaded 事件</font></p>
+</li>
+<li><p>加载图片等外部文件</p>
+</li>
+<li><p>页面加载完毕</p>
+<p>// <font color=red>load 事件</font></p>
+</li>
+</ol>
+<h2 id="请求时间详细分布"><a href="#请求时间详细分布" class="headerlink" title="请求时间详细分布"></a>请求时间详细分布</h2><ul>
+<li><strong>Queueing</strong>：浏览器在以下情况下对请求排队<ul>
+<li>存在更高优先级的请求</li>
+<li>此源已打开六个 TCP 链接，达到限值，仅适用于 HTTP/1.0 和 HTTP/1.1</li>
+<li>浏览器正在短暂分配磁盘缓存中的空间</li>
+</ul>
+</li>
+<li><strong>Stalled</strong>：请求可能会因 <strong>Queueing</strong> 中描述的任何原因而停止</li>
+<li><strong>DNS Lookup</strong>：浏览器正在解析请求的 IP 地址</li>
+<li><strong>Proxy Negotiation</strong>：浏览器正在与代理服务器协商请求</li>
+<li>…</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Web/%E4%BB%8E%E4%BA%94%E7%A7%8D%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E6%8E%A8%E5%AF%BC%E5%87%BAHTTP%E7%9A%84REST%E6%9E%B6%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Web/%E4%BB%8E%E4%BA%94%E7%A7%8D%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E6%8E%A8%E5%AF%BC%E5%87%BAHTTP%E7%9A%84REST%E6%9E%B6%E6%9E%84/" itemprop="url">从五种架构风格推导出HTTP的REST架构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T16:48:32+08:00">
+                2020-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="mermaid.min.js"></script> <script>mermaid.initialize({startOnLoad:true});</script>
+
+<h2 id="5-种架构风格"><a href="#5-种架构风格" class="headerlink" title="5 种架构风格"></a>5 种架构风格</h2><ul>
+<li><strong>数据流风格 <em>Data-flow Styles</em></strong><ul>
+<li>优点：简单性、可进化性、可扩展性、可配置性、可重用性</li>
+<li>如 <em>协议分层</em></li>
+</ul>
+</li>
+<li><strong>复制风格 <em>Replication Style</em></strong><ul>
+<li>优点：用户可察觉的性能、可伸缩性，网络效率、可靠性也可以得到提升</li>
+</ul>
+</li>
+<li><strong>分层风格 <em>Hierarchical Style</em></strong><ul>
+<li>优点：简单性、可进化性、可伸缩性</li>
+</ul>
+</li>
+<li><strong>移动代码风格 <em>Mobile Code Style</em></strong><ul>
+<li>优点：可移植性、可扩展性、网络效率</li>
+</ul>
+</li>
+<li><strong>点对点风格 <em>Peer-to-Peer Style</em></strong><ul>
+<li>优点：可进化性、可重用性、可扩展性、可配置性</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据流风格-Data-flow-Style"><a href="#数据流风格-Data-flow-Style" class="headerlink" title="数据流风格 Data-flow Style"></a><strong>数据流风格 <em>Data-flow Style</em></strong></h3><ul>
+<li><strong>管道与过滤器 <em>Pipe And Filter<em>，</em>PF</em></strong><ul>
+<li>每个 Filter 都有输入端和输出端，只能从输入端读取数据，处理后再从输入端产生数据</li>
+</ul>
+</li>
+<li><strong>统一接口的管道与过滤器 <em>Uniform Pipe And Filter<em>，</em>UPF</em></strong><ul>
+<li>在 PF 上增加了统一接口的约束，所有 Filter 过滤器必须具备同样的接口</li>
+</ul>
+</li>
+</ul>
+<h3 id="分层风格-Hierarchical-Style"><a href="#分层风格-Hierarchical-Style" class="headerlink" title="分层风格 Hierarchical Style"></a><strong>分层风格 <em>Hierarchical Style</em></strong></h3><ul>
+<li><strong>客户端服务器 <em>Client-Server<em>，</em>CS</em></strong><ul>
+<li>由 <em>Client</em> 触发请求，<em>Server</em> 监听到请求后产生响应，<em>Client</em> 一直等待收到响应后，会话结束</li>
+<li>分离关注点隐藏细节，良好的简单性、可伸缩性、可进化性</li>
+</ul>
+</li>
+<li><strong>分层系统 <em>Layered System<em>，</em>LS</em></strong><ul>
+<li>每一层为其之上的层服务，并使用在其之下的的层所提供的服务。例如 <em>TCP/IP</em></li>
+</ul>
+</li>
+<li><strong>分层客户端服务器 <em>Layered Client-Server<em>，</em>LCS</em></strong><ul>
+<li><em>LS</em> + <em>CS</em></li>
+<li>例如正向代理和反向代理，从空间上分为外部层与内部层</li>
+</ul>
+</li>
+<li><strong>无状态、客户端服务器 <em>Client-Stateless-Server<em>，</em>CSS</em></strong><ul>
+<li>基于 <em>CS*，服务器上不允许有 *session state</em> 会话状态</li>
+<li>提升了可见性、可伸缩性、可靠性，但重复数据导致网络性能降低</li>
+</ul>
+</li>
+<li><strong>缓存、无状态、客户端服务器 <em>Client-Cache-Stateless-Server<em>，</em>C$SS</em></strong><ul>
+<li>提升性能</li>
+</ul>
+</li>
+<li><strong>分层、缓存、无状态、客户端服务器 <em>Layered-Client-Cache-Stateless-Server<em>，</em>LC$SS</em></strong></li>
+</ul>
+<h4 id="分层风格-Hierarchical-Style（二）"><a href="#分层风格-Hierarchical-Style（二）" class="headerlink" title="分层风格 Hierarchical Style（二）"></a><strong>分层风格 <em>Hierarchical Style</em></strong>（二）</h4><blockquote>
+<p>REST 不使用</p>
+</blockquote>
+<ul>
+<li><strong>远程会话 <em>Remote Session<em>，</em>RS</em></strong><ul>
+<li><em>CS</em> 变体，服务器保存 <em>Application State</em> 应用状态<ul>
+<li>如 <em>FTP*，需要保存 *Application State</em> 应用状态</li>
+</ul>
+</li>
+<li>可伸缩性、可见性</li>
+</ul>
+</li>
+<li><strong>远程数据访问 <em>Remote Data Access<em>，</em>RDA</em></strong><ul>
+<li><em>CS</em> 变体，<em>Application state</em> 应用状态同时分布在客户端与服务器</li>
+<li>巨大的数据集有可能通过迭代而减少</li>
+<li>简单性、可伸缩性差<ul>
+<li>如 <em>SQL curser</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="移动代码风格-Mobile-Code-Style"><a href="#移动代码风格-Mobile-Code-Style" class="headerlink" title="移动代码风格 Mobile Code Style"></a>移动代码风格 Mobile Code Style</h3><ul>
+<li><strong>虚拟机 <em>Virtual Machine<em>，</em>VM</em></strong><ul>
+<li>分离指令与实现</li>
+<li>云服务器 和 <em>JVM</em></li>
+</ul>
+</li>
+<li><strong>远程求值 <em>Remote Evaluation<em>，</em>REV</em></strong><ul>
+<li>基于 <em>CS</em> 的 <em>VM</em>，将代码发送至服务器执行</li>
+</ul>
+</li>
+<li><strong>按需代码 <em>Code on Demand<em>，</em>COD</em></strong><ul>
+<li>服务器在响应中发回处理代码，在客户端执行</li>
+<li>优秀的可扩展性和可配置性，提升用户可察觉性能和网络效率</li>
+<li><em>JavaScript</em>，需要时访问代码</li>
+</ul>
+</li>
+<li><strong>分层、按需代码、缓存、无状态、客户端服务器 <em>Layered-Code-on-Demand-Client-Cache-Stateless-Server<em>，</em>LCODC$SS</em></strong><ul>
+<li>LC$SS + COD</li>
+</ul>
+</li>
+<li><strong>移动代理 <em>Mobile Agent<em>，</em>MA</em></strong><ul>
+<li>相当于 <em>REV</em> + <em>COD</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="点对点风格-Peer-to-Peer-Style"><a href="#点对点风格-Peer-to-Peer-Style" class="headerlink" title="点对点风格 Peer-to-Peer Style"></a><strong>点对点风格 <em>Peer-to-Peer Style</em></strong></h3><blockquote>
+<p>REST 不使用</p>
+</blockquote>
+<ul>
+<li><p><strong><em>Event-based Integration<em>，</em>EBI</em></strong></p>
+<ul>
+<li>基于事件集成系统<ul>
+<li>如用类似 <em>Kafka</em> 这样的消息系统 + 分发订阅来消除耦合</li>
+</ul>
+</li>
+<li>优秀的可重用性、可扩展性、可进化性</li>
+<li>缺乏可理解性</li>
+<li>由于消息广播等因素造成的信息风暴，可伸缩性差</li>
+</ul>
+</li>
+<li><p><strong><em>Chiron-2<em>，</em>C2</em></strong></p>
+<blockquote>
+<p><a href="https://users.soe.ucsc.edu/~ejw/papers/c2-icse17.pdf" target="_blank" rel="noopener">《A Component- and Message-Based Architectural Style for GUI Software》</a></p>
+</blockquote>
+<ul>
+<li>相当于 EBI + LCS，控制了消息的方向</li>
+</ul>
+</li>
+<li><p><strong><em>Distributed Objects<em>，</em>DO</em></strong></p>
+<ul>
+<li>组件结对交互</li>
+<li><em>难以使用</em></li>
+</ul>
+</li>
+<li><p><strong><em>Brokered Distributed Objects<em>，</em>BDO</em></strong></p>
+<ul>
+<li>引入名字解析组件来简化 <em>DO</em><ul>
+<li>如 <em>CORBA</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="演变过程"><a href="#演变过程" class="headerlink" title="演变过程"></a>演变过程</h2><p><img src="../../image/REST.png" alt="REST"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">	S((START)) --replicated--&gt; RR((RR))</span><br><span class="line">	RR --&quot;on-demaind&quot;--&gt; ca(($))</span><br><span class="line">	ca --cacheable--&gt; cas((C$SS))</span><br><span class="line">	cas --scalable--&gt; lc((LC$SS))</span><br><span class="line">	</span><br><span class="line">	S --separated--&gt; cs((CS))</span><br><span class="line">	cs --stateless--&gt; css((CSS))</span><br><span class="line">	cs --intermediate processing--&gt; lcs</span><br><span class="line">	cs --mobile--&gt; cod((COD))</span><br><span class="line">	lcs --shared--&gt; lc</span><br><span class="line">	lc --multiorg--&gt; lco</span><br><span class="line">	css --reliable--&gt; cas</span><br><span class="line">	</span><br><span class="line">	S --layered--&gt; ls((LS))</span><br><span class="line">	ls --&gt; lcs((LCS))</span><br><span class="line">	</span><br><span class="line">	S --programmable--&gt; vm((VM))</span><br><span class="line">	vm --&gt; cod</span><br><span class="line">	cod --extensible--&gt; lco((LCODC$SS))</span><br><span class="line">	lco --&gt; rest((REST))</span><br><span class="line">	</span><br><span class="line">	S --uniform interface--&gt; u((U))</span><br><span class="line">	u --&quot;simple visible reusable&quot;--&gt; rest</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Web/%E8%AF%84%E4%BC%B0Web%E6%9E%B6%E6%9E%84%E7%9A%84%E4%B8%83%E5%A4%A7%E5%85%B3%E9%94%AE%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jinser">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinser's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Web/%E8%AF%84%E4%BC%B0Web%E6%9E%B6%E6%9E%84%E7%9A%84%E4%B8%83%E5%A4%A7%E5%85%B3%E9%94%AE%E5%B1%9E%E6%80%A7/" itemprop="url">评估Web架构的七大关键属性</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T12:16:04+08:00">
+                2020-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="评估Web架构的七大关键属性"><a href="#评估Web架构的七大关键属性" class="headerlink" title="评估Web架构的七大关键属性"></a>评估Web架构的七大关键属性</h2><h3 id="HTTP-协议应当在一下属性中取得可接受的均衡："><a href="#HTTP-协议应当在一下属性中取得可接受的均衡：" class="headerlink" title="HTTP 协议应当在一下属性中取得可接受的均衡："></a>HTTP 协议应当在一下属性中取得可接受的均衡：</h3><ol>
+<li><em>*性能 *Performance</em> **：影响高可用的关键因素</li>
+<li><strong>可伸缩性 <em>Scalability</em></strong>：支持部署可以互相交互的大量组件</li>
+<li><strong>简单性 <em>Simplicity</em></strong>：易理解、易实现、易验证</li>
+<li><strong>可见性 <em>Visible</em></strong>：对两个组件间的交互进行简书或者仲裁的能力。如缓存，分层设计等</li>
+<li><strong>可移植性 <em>Portability</em></strong>：在不同的环境下运行的能力</li>
+<li><strong>可靠性 <em>Reliability</em></strong>：出现部分故障时，对整体影响的程度</li>
+<li><strong>可修改性 <em>Modifiability</em></strong>：对系统做出修改的难易程度，由<strong>可进化性</strong>，<strong>可定制性</strong>，<strong>可扩展性</strong>，<strong>可配置性</strong>，<strong>可重用性</strong>构成</li>
+</ol>
+<h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><ul>
+<li><strong>网络性能 <em>Network Performance</em></strong><ul>
+<li><em>Throughput</em> 吞吐量：小于等于带宽 <em>bandwidth</em></li>
+<li><em>Overhead</em> 开销：首次开销</li>
+</ul>
+</li>
+<li><strong>用户感知到的性能 <em>User-perceived Performance</em></strong><ul>
+<li><em>Latency</em> 延迟：发起请求到响应的时间<ul>
+<li><em>图片开始加载，每接收到一部分数据就渲染一一部分</em></li>
+</ul>
+</li>
+<li><em>Completion</em> 完成时间：完成一个应用动作所花费的时间<ul>
+<li><em>图片加载完成</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>网络效率 <em>Network Efficiency</em></strong><ul>
+<li>重用缓存，减少交互次数，数据传输距离更近 ( CDN )，COD</li>
+</ul>
+</li>
+</ul>
+<h4 id="可修改性"><a href="#可修改性" class="headerlink" title="可修改性"></a>可修改性</h4><ul>
+<li><strong>可进化型 <em>Evolvability</em></strong>：一个组件独立升级而不影响其他组件<ul>
+<li>浏览器升级，服务端不变，正常使用</li>
+</ul>
+</li>
+<li><strong>可扩展性 <em>Extensibility</em></strong>：向系统添加功能，而不会影响到系统的其他组件<ul>
+<li><em>SSL</em> 加密，不使用 <em>SSL</em> 加密的网站正常使用</li>
+</ul>
+</li>
+<li><strong>可定制性 <em>Customizability</em></strong>：临时性、定制性地更改某一要素来提供服务，不对常规客户产生影响</li>
+<li><strong>可配置性 <em>Configurability</em></strong>：应用部署后可通过修改配置提供新的功能<ul>
+<li><em>nginx*， *apache</em></li>
+</ul>
+</li>
+<li><strong>可重用性 <em>Reusability</em></strong>：组件可以不做修改在其他应用使用<ul>
+<li><em>WebKit</em> 渲染引擎</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux/%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1387,405 +2076,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/bot/%E5%85%B3%E4%BA%8E%E6%94%B6%E8%B4%B9%E5%92%8Ctoken/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jinser">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jinser's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/bot/%E5%85%B3%E4%BA%8E%E6%94%B6%E8%B4%B9%E5%92%8Ctoken/" itemprop="url">关于收费和token</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-22T21:24:06+08:00">
-                2020-02-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="很遗憾的通知：从2020-02-23开始，机器人将开始收费。"><a href="#很遗憾的通知：从2020-02-23开始，机器人将开始收费。" class="headerlink" title="很遗憾的通知：从2020-02-23开始，机器人将开始收费。"></a>很遗憾的通知：从2020-02-23开始，机器人将开始收费。</h1><h3 id="收费的原因"><a href="#收费的原因" class="headerlink" title="收费的原因"></a>收费的原因</h3><p>最近机器人频繁<strong>暴毙</strong>， 且响应速度明显<strong>变慢</strong>，为了填补一部分资金投入，也为了限制机器人的加群数，故决定开始收费。机器人将有<strong>三天的试用期</strong>，三天后即需要<strong>付费</strong>获取 <strong>token</strong> 来租用机器人。</p>
-<h3 id="收费规则"><a href="#收费规则" class="headerlink" title="收费规则"></a>收费规则</h3><ul>
-<li><del>9元（人民币）可租用机器人一个月（31天）</del>现暂降低为 5元（人民币）/1个月（31天），结束时间暂未定。</li>
-<li>50元（人民币）可租用机器人一年（366天）</li>
-<li>机器人的租用是分群的，付费后获取的<strong>token</strong>只能用于一个群。</li>
-</ul>
-<blockquote>
-<p>插入: 有一位来自微信 “舰长**犹大” 的朋友通过微信捐赠码给我恰了五元但是没有留下联系方式，请尽快联络我。若是捐赠我会写在感谢名单中；若是购买token请尽快向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送消息，并带上微信捐赠中的留言（以便验证身份）。</p>
-</blockquote>
-<h3 id="如何租用"><a href="#如何租用" class="headerlink" title="如何租用"></a>如何租用</h3><p>可通过微信捐赠码：</p>
-<p><img src="https://jinser.xyz/image/wechat_donation_code.png" alt="wechat"></p>
-<p>或支付宝店铺:</p>
-<p><img src="https://jinser.xyz/image/alipay.jpg" alt="alipay"></p>
-<p style=font-size:60px>！: 请留言你的邮箱以及需要机器人加入的群号。我将在验证后尽快回复 token。</p>
-
-<h3 id="关于token"><a href="#关于token" class="headerlink" title="关于token"></a>关于token</h3><ul>
-<li>token是租用机器人的<strong>唯一</strong>凭证。</li>
-<li>token只能使用一次，使用后即<strong>删除</strong>，不再使用。</li>
-<li>使用token的方法：<ul>
-<li>在<strong><em>要租用机器人的群内</em> @机器人</strong> 说 <strong>token</strong>，再回复 获取到的 <strong>token</strong>，即可租用机器人，延长<strong>token</strong>相应的时间。</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/love/%E6%88%91%E7%88%B1%E5%A4%8F%E5%A6%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jinser">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jinser's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/love/%E6%88%91%E7%88%B1%E5%A4%8F%E5%A6%B9/" itemprop="url">我爱夏妹</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-09T20:12:29+08:00">
-                2020-02-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <iframe src="//player.bilibili.com/player.html?aid=80215402&cid=137271866&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="560" width="100%"> </iframe>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/bot/%E6%9C%BA%E5%99%A8%E4%BA%BAFAQ/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jinser">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2301583973&spec=5">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jinser's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/bot/%E6%9C%BA%E5%99%A8%E4%BA%BAFAQ/" itemprop="url">机器人FAQ</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-26T12:35:36+08:00">
-                2020-01-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="关于QQ机器人五十弦-strings-bot-的FAQ"><a href="#关于QQ机器人五十弦-strings-bot-的FAQ" class="headerlink" title="关于QQ机器人五十弦(strings-bot)的FAQ"></a>关于QQ机器人五十弦(strings-bot)的FAQ</h1><p><strong>Q：</strong>机器人是怎么做的？</p>
-<p><strong>A：</strong>基于<a href="https://cqp.cc/" target="_blank" rel="noopener">酷Q</a>和<a href="https://github.com/richardchien/coolq-http-api" target="_blank" rel="noopener">cqhttp</a> 和 <a href="https://github.com/richardchien/nonebot" target="_blank" rel="noopener">nonebot</a> 的QQ机器人，具体实现代码已开源于<a href="https://github.com/jinserrr/strings" target="_blank" rel="noopener">GitHub</a>。</p>
-<hr>
-<p><strong>Q：</strong>机器人是用什么语言写的？</p>
-<p><strong>A：</strong>python。</p>
-<hr>
-<p><strong>Q：</strong>机器人有什么用？</p>
-<p><strong>A：</strong>除了活跃之外，没用。</p>
-<hr>
-<p><strong>Q：</strong>机器人回复 “请求次数超限制!” 或只会回复 “？”是什么意思？</p>
-<p><strong>A：</strong>由于机器人使用了图灵机器人的接口（用于在接收到无法处理，即机器人不支持的指令时调用）。免费的图灵接口是有调用次数限制的，100条/天(现在有一千条了)，这就意味着在一天中机器人最多只能回复<del>一百次</del>一千次，这<del>一百次</del>一千次是对于机器人而言的（所以你可能今天一句话都没有和它说过但调用次数已经超限了）。当调用次数超限后机器人就无法调用图灵接口了，这时就会向你返回“请求次数超限制!”的提示。事实上，图灵机器人的对话只是可有可无的，在我原来的计划中并不存在。</p>
-<hr>
-<p><strong>Q：</strong>在使用过程中有疑问怎么办？</p>
-<p><strong>A：</strong>大多数的问题都可以在 <a href="https://jinser.xyz/2020/01/12/strings-bot-README/" target="_blank" rel="noopener">strings-bot-README</a> 中得到解决。如果还是有疑问可以向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送邮件。</p>
-<hr>
-<p><strong>Q：</strong>遇到bug怎么办？</p>
-<p><strong>A：</strong>可以在GitHub的机器人仓库中提交issue；如果你愿意，也欢迎提交pull requests。或者也可以向我的邮箱（<a href="mailto:jin_ser@qq.com">jin_ser@qq.com</a>）发送邮件。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1840,7 +2130,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
