@@ -425,17 +425,23 @@
 <p>// <font color=red>load 事件</font></p>
 </li>
 </ol>
-<h2 id="请求时间详细分布"><a href="#请求时间详细分布" class="headerlink" title="请求时间详细分布"></a>请求时间详细分布</h2><ul>
+<h2 id="请求时间详细分布"><a href="#请求时间详细分布" class="headerlink" title="请求时间详细分布"></a>请求时间详细分布</h2><p><em>Timing 界面中</em></p>
+<ul>
 <li><strong>Queueing</strong>：浏览器在以下情况下对请求排队<ul>
 <li>存在更高优先级的请求</li>
-<li>此源已打开六个 TCP 链接，达到限值，仅适用于 HTTP/1.0 和 HTTP/1.1</li>
+<li>此源已打开六个 <em>TCP</em> 链接，达到限值，仅适用于 <strong>HTTP/1.0</strong> 和 <strong>HTTP/1.1</strong></li>
 <li>浏览器正在短暂分配磁盘缓存中的空间</li>
 </ul>
 </li>
 <li><strong>Stalled</strong>：请求可能会因 <strong>Queueing</strong> 中描述的任何原因而停止</li>
 <li><strong>DNS Lookup</strong>：浏览器正在解析请求的 IP 地址</li>
 <li><strong>Proxy Negotiation</strong>：浏览器正在与代理服务器协商请求</li>
-<li>…</li>
+<li><strong>Request sent</strong>：正在发生请求</li>
+<li><strong>ServiceWorker Prepara</strong>：浏览器正在启动 <strong>Service Worker</strong></li>
+<li><strong>Request to ServiceWorker</strong>：正在将请求发送到 <strong>Service Worker</strong></li>
+<li><strong>Waiting（TTFB）</strong>：浏览器正在等待响应的第一个字节。<strong>TTFB</strong> 表示 <em>Time To First Byte</em> （至第一个字节的时间）；包括 <em>1</em> 次往返延迟时间及服务器准备响应所用的时间</li>
+<li><strong>Content Download</strong>：浏览器正在通过 <strong>HTTP/2</strong> 服务器推送接收次响应的数据</li>
+<li><strong>Reading Push</strong>：浏览器正在读取之前收到的本地数据</li>
 </ul>
 
           
