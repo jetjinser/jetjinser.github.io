@@ -1,6 +1,13 @@
 # The URL the site will be built for
 base_url = "https://www.jinser.icu/"
 
+title = "Jet >>= pure JS"
+theme = "even"
+taxonomies = [
+    {name = "categories", rss = true},
+    {name = "tags", rss = true},
+]
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -13,4 +20,5 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+even_title = "宝，我的宝"
+author = "jinser"
