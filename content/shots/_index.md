@@ -1,5 +1,6 @@
 +++
 title = "Bonjour"
+date = 2021-12-3
 +++
 
 ## 0x00
@@ -11,3 +12,4 @@ fn main() {
     println!("Hello, world!");
 }
 '''
+*goodbye*
