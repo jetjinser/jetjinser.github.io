@@ -10,9 +10,9 @@ tags = ["shots"]
 🎏
 test
 ---
-'''rust
+```rust
 fn main() {
     println!("Hello, world!");
 }
-'''
+```
 *goodbye*
