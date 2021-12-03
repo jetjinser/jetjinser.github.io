@@ -2,7 +2,7 @@
 base_url = "https://www.jinser.icu/"
 
 title = "Jet >>= pure JS"
-theme = "even"
+theme = "anpu"
 taxonomies = [
     {name = "categories", rss = true},
     {name = "tags", rss = true},
@@ -20,5 +20,7 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-even_title = "宝，我的宝"
-author = "jinser"
+anpu_menu_links = [
+    { url = "$BASE_URL/about/", name = "About" },
+]
+anpu_date_format = "%e %B %Y"
