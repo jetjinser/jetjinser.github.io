@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://www.jinser.icu/"
+base_url = "https://www.purejs.icu/"
 
 title = "Jet >>= pure JS"
 theme = "anpu"
