@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://www.purejs.icu/"
 
-title = "Jet >>= pure JS"
+title = "pure >>= js"
 theme = "anpu"
 taxonomies = [
     {name = "categories", rss = true},
