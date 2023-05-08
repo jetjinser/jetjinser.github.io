@@ -28,14 +28,19 @@ jobs:
         uses: taiki-e/install-action@v2
         with:
           tool: zola@0.17.1
-      - name: Checkout master
+
+      - name: Checkout repository and submodules
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
       - name: Build with Zola
         run: zola build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./publish
+          path: ./public
   deploy:
     environment:
       name: github-pages
