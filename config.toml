@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://www.purejs.icu/"
+base_url = "https://www.purejs.icu"
 
 title = "pure >>= js"
 theme = "anpu"
