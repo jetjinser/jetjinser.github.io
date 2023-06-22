@@ -4,10 +4,10 @@ title = "pure >>= js"
 description = "jinser's blog"
 default_language = "zh-cn"
 
-theme = "anpu"
+theme = "apollo"
 taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
+    { name = "categories", feed = true, render = true },
+    { name = "tags", feed = true, render = true },
 ]
 
 compile_sass = true
@@ -18,8 +18,24 @@ generate_feed = true
 highlight_code = true
 
 [extra]
-anpu_menu_links = [
-    { url = "$BASE_URL/about/", name = "About" },
-    { url = "$BASE_URL/tags/", name = "Tags" },
+copyright = "jinser"
+
+menus = [
+    { name = "Home", url = "/", weight = 2 },
+    { name = "All posts", url = "/posts", weight = 2 },
+    { name = "About", url = "/about", weight = 3 },
+    { name = "Tags", url = "/tags", weight = 4 },
 ]
-anpu_date_format = "%e %B %Y"
+
+mathjax = true
+mathjax_dollar_inline_enable = true
+
+[[extra.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/jetjinser"
+
+[[extra.social]]
+icon = "twitter"
+name = "Twitter"
+url = "https://twitter.com/jinser_"
