@@ -1,6 +1,4 @@
 +++
 title = "About"
-date = 2023-05-09
+path = "about"
 +++
-
-This is Jinser Kafka.

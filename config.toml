@@ -4,7 +4,6 @@ title = "pure >>= js"
 description = "jinser's blog"
 default_language = "zh-cn"
 
-theme = "apollo"
 taxonomies = [
     { name = "categories", feed = true, render = true },
     { name = "tags", feed = true, render = true },
@@ -19,23 +18,21 @@ highlight_code = true
 
 [extra]
 copyright = "jinser"
+theme = "auto"
 
-menus = [
-    { name = "Home", url = "/", weight = 2 },
-    { name = "All posts", url = "/posts", weight = 2 },
-    { name = "About", url = "/about", weight = 3 },
-    { name = "Tags", url = "/tags", weight = 4 },
+menu = [
+    { name = "/projects", url = "/projects", weight = 1 },
+    { name = "/about", url = "/about", weight = 2 },
 ]
 
-mathjax = true
-mathjax_dollar_inline_enable = true
+stylesheets = [
+    "override.css",
+]
 
-[[extra.social]]
-icon = "github"
-name = "GitHub"
-url = "https://github.com/jetjinser"
+# mathjax = true
+# mathjax_dollar_inline_enable = true
 
-[[extra.social]]
-icon = "twitter"
-name = "Twitter"
-url = "https://twitter.com/jinser_"
+socials = [
+    { name = "Twitter", url = "https://twitter.com/jinser_", icon = "twitter" },
+    { name = "Github", url = "https://github.com/jetjinser", icon = "github" },
+]
