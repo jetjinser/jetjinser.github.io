@@ -4,8 +4,10 @@ date = 2021-12-04
 
 [taxonomy]
 categories = ["article"]
-tags = ["blog", "shots"]
+tags = ["blog"]
 +++
+
+> 2022-06-22 更新：过时的文章，而且没写完，有空再更新。
 
 ## 0x00 介绍
 zola 是一个静态网站生成器，我们用它来生成网页，托管在 github pages 上。
@@ -24,11 +26,11 @@ zola 是一个静态网站生成器，我们用它来生成网页，托管在 gi
 按照文档中的步骤，先创建一个名为 <username>.github.io 的仓库，如我的是 https://github.com/jetjinser/jetjinser.github.io。
 
 新建出来的是一个空的仓库，把它 clone 到本地：
-```shell
+```bash
 git clone https://github.com/<username>/<username>.github.io
 ```
 接下来的所有操作都在这个文件夹内进行：
-```shell
+```bash
 cd <username>.github.io
 ```
 
@@ -36,7 +38,7 @@ cd <username>.github.io
 
 ### init
 初始化 zola 只需要在一个空文件夹内执行下面这句指令：
-```shell
+```bash
 zola init
 ```
 
@@ -56,7 +58,7 @@ zola 文档列出了 [所有主题](https://www.getzola.org/themes/)
 
 这里随便找了一个 [anpu](https://www.getzola.org/themes/anpu/) 主题。
 推荐用 git submodule，不要按照文档里的直接 clone。
-```shell
+```bash
 git submodule add https://github.com/zbrox/anpu-zola-theme.git themes/anpu
 ```
 其余的按照文档配置即可。
