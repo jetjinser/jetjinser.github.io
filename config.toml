@@ -25,10 +25,6 @@ menu = [
     { name = "/about", url = "/about", weight = 2 },
 ]
 
-stylesheets = [
-    "override.css",
-]
-
 # mathjax = true
 # mathjax_dollar_inline_enable = true
 
