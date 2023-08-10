@@ -1,3 +1,8 @@
++++
+title = "CV"
+path = "cv"
++++
+
 # 锦瑟
 
 cmdr.jv@gmail.com | [github.com/jetjinser](https://github.com/jetjinser) | [purejs.icu](https://www.purejs.icu)
