@@ -22,31 +22,32 @@ cmdr.jv@gmail.com | [github.com/jetjinser](https://github.com/jetjinser) | [pure
 是一个使用 Wasmedge 作为运行时的 serverless 平台。
 
 #### server 开发
-针对不同的平台实现不同的 server，我们称其为 `integration`。
-主要的功能为对接 flows.network 与各平台，提供鉴权和监听能力。
+开发语言和框架：
+- `rust/axum`
+- `typescript/next.js`
 
-如 Github integration，为 flows.network 提供监听 Github 事件的能力；
-Slack integration，为 flows.network 提供监听消息和事件的能力。
+持久化：
+- `upstash(redis)`
+- `postgresql`
 
-主要使用 rust/axum 和 typescript/next.js 进行开发，
-前期使用 upstash(redis)，后来使用 postgresql 作为持久化存储。
+对接各平台，根据平台文档实现代码，为 flows.network 提供鉴权和监听能力。
 
 #### sdk 开发
-在 flows.network 中，既有 integration 提供的监听能力，还需要有 action 的能力，
-sdk 即为在 wasm32-wasi 中提供 action 能力的开发套件。
+为 flows.network 提供第三方平台 action 能力。
 
-如 Telegram sdk，封装 Telegram api，发送，修改消息等。
-
-使用 rust 编写，target 为 wasm32-wasi。
+根据第三方平台的文档，使用 rust 编写 http sdk，
+target 为 wasm32-wasi。
 
 #### codegen
-曾使用过 codegen 的技术编写 Github sdk。
+实现 sdk 时常需要 codegen。
 利用 rust 的宏能力和生态（`syn`，`quote`），
-编译时解析 Github openapi spec 文件，展开为对应的 Event struct, http method...
+编译时解析 spec（e.g. Github openapi）文件，
+展开为对应的 Event struct, http method...
 
 #### 魔改 rust 库，使其支持 wasm32-wasi
-wasm32-wasi 的生态并不完善，许多库在开发和维护时并不考虑该 target。
-在 Second State 实习期间，魔改了不少第三方库，使支持 wasm32-wasi。
+魔改 rust 第三方库，使其支持 wasm32-wasi。
+
+主要的缺乏为 https(ssl/tls) 方面。
 
 
 ## 开源贡献
