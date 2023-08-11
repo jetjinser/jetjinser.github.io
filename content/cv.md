@@ -11,7 +11,7 @@ cmdr.jv@gmail.com | [github.com/jetjinser](https://github.com/jetjinser) | [pure
 
 
 ## 教育经历
-- [2022-] 计算机科学与技术，仰恩大学，本科大一在读
+- [2022-] 计算机科学与技术，<!-- 仰恩 -->*大学，本科大一在读
 
 
 ## 实习经历
@@ -30,6 +30,8 @@ Slack integration，为 flows.network 提供监听消息和事件的能力。
 #### sdk 开发
 在 flows.network 中，既有 integration 提供的监听能力，还需要有 action 的能力，
 sdk 即为在 wasm32-wasi 中提供 action 能力的开发套件。
+
+如 Telegram sdk，封装 Telegram api，发送，修改消息等。
 
 我使用 rust 编写，target 为 wasm32-wasi。
 
@@ -65,6 +67,11 @@ wasm32-wasi 的生态并不完善，许多库在开发和维护时并不考虑�
 在 ArrayImpl div 之前将被除数安全化，使被标记为 null 的项都重设为 1 而不是 0。
 这样既解决了除0问题，也保留了自动向量化的能力。
 
+
+### RisingWave
+#### fix array_agg
+[PR](https://github.com/risingwavelabs/risingwave/pull/6084):
+fix(expr, agg): batch array_agg return NULL when there's no input raws
 
 ## 专业技能
 
