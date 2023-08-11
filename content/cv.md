@@ -82,9 +82,17 @@ fix(expr, agg): batch array_agg return NULL when there's no input raws
 
 ### lang
 - Rust
-- Python
 - Haskell
+- Python
 
 ### tech
 - database
 - static analysis
+
+
+## 兴趣
+
+- programming language theory
+- category theory
+- RISC-V
+- typesetting system
