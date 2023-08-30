@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn">
     <title>pure &gt;&gt;= js</title>
     <subtitle>jinser&#x27;s blog</subtitle>
-    <link href="https://www.purejs.icu/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://www.purejs.icu"/>
+    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-08-28T00:00:00+00:00</updated>
-    <id>https://www.purejs.icu/atom.xml</id>
+    <id>/atom.xml</id>
     <entry xml:lang="zh-cn">
         <title>记录第一次面试</title>
         <published>2023-08-28T00:00:00+00:00</published>
@@ -14,8 +14,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://www.purejs.icu/posts/first-interview/" type="text/html"/>
-        <id>https://www.purejs.icu/posts/first-interview/</id>
+        <link rel="alternate" href="/posts/first-interview/" type="text/html"/>
+        <id>/posts/first-interview/</id>
         <content type="html">&lt;h1 id=&quot;mian-shi-qian&quot;&gt;面试前&lt;&#x2F;h1&gt;
 &lt;p&gt;约定 2023-08-25 星期五下午两点钟的 zoom 会议，面试官个人原因稍迟了一点，延后到两点十五分左右开始。顺便一提，他是在附近找了家星巴克加入会议的。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;mian-shi-qa&quot;&gt;面试 QA&lt;&#x2F;h1&gt;
@@ -210,8 +210,8 @@ Richard 告诉我两次面试官都是产品经理（虽然都会写代码）—
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://www.purejs.icu/posts/math-modeling-record/" type="text/html"/>
-        <id>https://www.purejs.icu/posts/math-modeling-record/</id>
+        <link rel="alternate" href="/posts/math-modeling-record/" type="text/html"/>
+        <id>/posts/math-modeling-record/</id>
         <content type="html">&lt;h1 id=&quot;bao-ming&quot;&gt;报名&lt;&#x2F;h1&gt;
 &lt;p&gt;在数模培训的最后一节课开始开通校赛报名，筛选出国赛队伍。
 不报名就没有学分；报名排队到十九队，我担任队长，队员为室友和后来加入的同届电气同学。&lt;&#x2F;p&gt;
@@ -274,8 +274,8 @@ Richard 告诉我两次面试官都是产品经理（虽然都会写代码）—
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://www.purejs.icu/posts/math-modeling-defence-draft/" type="text/html"/>
-        <id>https://www.purejs.icu/posts/math-modeling-defence-draft/</id>
+        <link rel="alternate" href="/posts/math-modeling-defence-draft/" type="text/html"/>
+        <id>/posts/math-modeling-defence-draft/</id>
         <content type="html">&lt;h1 id=&quot;shu-mo-da-bian-cao-gao&quot;&gt;数模答辩草稿&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;di-yi-ti&quot;&gt;第一题&lt;&#x2F;h2&gt;
 &lt;p&gt;已知条件：&lt;&#x2F;p&gt;
@@ -347,8 +347,8 @@ Richard 告诉我两次面试官都是产品经理（虽然都会写代码）—
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://www.purejs.icu/posts/writing/" type="text/html"/>
-        <id>https://www.purejs.icu/posts/writing/</id>
+        <link rel="alternate" href="/posts/writing/" type="text/html"/>
+        <id>/posts/writing/</id>
         <content type="html">&lt;p&gt;不知道，但是有点想写什么。
 &lt;del&gt;别浪费 GitHub action 的配额了。&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;输入不多，没有输出。
@@ -363,8 +363,8 @@ Richard 告诉我两次面试官都是产品经理（虽然都会写代码）—
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://www.purejs.icu/posts/meta-blog/" type="text/html"/>
-        <id>https://www.purejs.icu/posts/meta-blog/</id>
+        <link rel="alternate" href="/posts/meta-blog/" type="text/html"/>
+        <id>/posts/meta-blog/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;2022-06-22 更新：过时的文章，而且没写完，有空再更新。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.purejs.icu/</loc>
+        <loc>/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/about/</loc>
+        <loc>/about/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/categories/</loc>
+        <loc>/categories/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/cv/</loc>
+        <loc>/cv/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/</loc>
+        <loc>/posts/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/first-interview/</loc>
+        <loc>/posts/first-interview/</loc>
         <lastmod>2023-08-28</lastmod>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/math-modeling-defence-draft/</loc>
+        <loc>/posts/math-modeling-defence-draft/</loc>
         <lastmod>2023-06-15</lastmod>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/math-modeling-record/</loc>
+        <loc>/posts/math-modeling-record/</loc>
         <lastmod>2023-06-22</lastmod>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/meta-blog/</loc>
+        <loc>/posts/meta-blog/</loc>
         <lastmod>2021-12-04</lastmod>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/page/1/</loc>
+        <loc>/posts/page/1/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/posts/writing/</loc>
+        <loc>/posts/writing/</loc>
         <lastmod>2023-05-17</lastmod>
     </url>
     <url>
-        <loc>https://www.purejs.icu/projects/</loc>
+        <loc>/projects/</loc>
     </url>
     <url>
-        <loc>https://www.purejs.icu/tags/</loc>
+        <loc>/tags/</loc>
     </url>
 </urlset>
