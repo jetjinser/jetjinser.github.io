@@ -41,6 +41,11 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: ymy-pages
+          path: ./public
   deploy:
     environment:
       name: github-pages
@@ -61,7 +66,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: github-pages
+          name: ymy-pages
           path: ./public
       - name: Push to deploy branch
         uses: peaceiris/actions-gh-pages@v3
