@@ -1,4 +1,5 @@
-base_url = "https://www.purejs.icu"
+# base_url = "https://www.purejs.icu"
+base_url = "/"
 
 title = "pure >>= js"
 description = "jinser's blog"
