@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="dark light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         记录第一次面试
+        
+    </title>
+
+        
+            <meta property="og:title" content="记录第一次面试" />
+        
+     
+
+     
+         
+             <meta property="og:description" content="jinser&#x27;s blog" />
+         
+     
+
+     
+         
+             <meta name="description" content="jinser&#x27;s blog" />
+         
+    
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    
+    
+        <link href=https://www.purejs.icu/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="pure &gt;&gt;= js" href="https://www.purejs.icu/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://www.purejs.icu/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="https://www.purejs.icu/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://www.purejs.icu/main.css />
+
+    
+
+    <script src=https://www.purejs.icu/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;www.purejs.icu>pure &gt;&gt;= js</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;projects style="margin-left: 0.7em">&#x2F;projects</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        记录第一次面试<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2023-08-28</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <h1 id="mian-shi-qian">面试前</h1>
+<p>约定 2023-08-25 星期五下午两点钟的 zoom 会议，面试官个人原因稍迟了一点，延后到两点十五分左右开始。顺便一提，他是在附近找了家星巴克加入会议的。</p>
+<h1 id="mian-shi-qa">面试 QA</h1>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&lt;&gt; 互相打招呼
+</span></code></pre>
+<blockquote>
+<p>提到了我读书的城市，勉强套了一点近乎。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 做一下自我介绍吧。
+</span><span>&lt;&lt; 我从初中毕业开始对计算机感兴趣，学习过若干语言。
+</span></code></pre>
+<blockquote>
+<p>脑子里根本没考虑好要说什么，随便就说出来了。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 这个环节一般是介绍一下简历上的内容。
+</span><span>&lt;&lt; 哦哦，[按照简历介绍了一下教育经历，实习经历，开源贡献和掌握的知识]。
+</span></code></pre>
+<blockquote>
+<p>多亏面试官素质真高吧，还认真听完我说话不打断。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 那么我接下来有几个问题要问。
+</span><span>&gt;&gt; 你对 sql 和 nosql 的理解是什么？它们的区别在哪里？
+</span><span>&lt;&lt; 传统 sql 是以 sql 为查询/定义语言的 dbms，后者现在扩展之下常常也可以是 NotOnlySql，可以做不止传统 sql 的事，比如 redis 也可以做为消息队列，对于一些不方便 sql 的情况可以做特别的优化和特化的保证。
+</span><span>&gt;&gt; 主要的区别是存储模型的不同。前者是关系模型，后者有如 redis 的 KV 模型。
+</span></code></pre>
+<blockquote>
+<p>寄点+1</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 你有过多少写复杂 sql 的经历。
+</span><span>&lt;&lt; 15445 的 homework 1。
+</span></code></pre>
+<blockquote>
+<p>我这个时候还没有感觉到不妙。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 那我现在给你一个经典的模型吧。
+</span><span>&gt;&gt; products (product_id, product_name, category)
+</span><span>&gt;&gt; orders (product_id, sales)
+</span><span>&gt;&gt; 需要的到每一个 category 的最畅销的 5 件商品。
+</span><span>&lt;&lt; ok。
+</span><span>
+</span><span>WITH pro_with_rank (
+</span><span>    SELECT
+</span><span>        category,
+</span><span>        product_id,
+</span><span>        row_number() over (pritition by category ORDER BY SUM(amount) GROUP BY category) as rank_
+</span><span>    FROM products JOIN orders ON products.product_id = orders.product_id
+</span><span>    GROUP BY product_id, category
+</span><span>)
+</span><span>SELECT
+</span><span>    category,
+</span><span>    product_id,
+</span><span>FROM pro_with_rank
+</span><span>WHERE
+</span><span>    rank_ &lt;= 5
+</span><span>
+</span><span>&lt;&lt; 大致没问题，只是为了考察一下 row_number() 和 join 的使用能力。
+</span></code></pre>
+<blockquote>
+<p>这是现场花了好多时间写的第二版，第一版是我直接在 chat 上写的，没写完很着急就发出去了。
+面试官让我共享出屏幕写，因为我刚装的 zoom，mac 没有权限，授权之后重启了一下 zoom，重新入会，在编辑器里写下的第二版。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 那么现在写一个简单的 HashTable 吧。
+</span><span>&lt;&lt; ok。
+</span></code></pre>
+<blockquote>
+<p>啊？还真要写啊？我当时是这么想的。
+总之是新建项目开始用 rust 写了。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 你确定要用 rust 写吗？
+</span><span>&lt;&lt; 呃，类型确实有点麻烦。
+</span></code></pre>
+<blockquote>
+<p>我是很慌的。
+定义 struct: <code>HashMap&lt;K, V&gt; {data: Vec&lt;(K, V)&gt;}</code>；
+impl method：<code>new</code>，<code>insert</code>，<code>get</code>，<code>remove</code>。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 可以不实现 `remove`。
+</span><span>&lt;&lt; 好的。
+</span></code></pre>
+<blockquote>
+<p>约束了 <code>K: Hash</code>，还是大致成功地写出来了。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; Hash 碰撞之后要怎么处理？
+</span><span>&gt;&gt; 桶指向链表或数组；开放地址。
+</span></code></pre>
+<blockquote>
+<p>其实说了一大堆，因为我想不起来了，疯狂回忆。原来面试真的会问数据结构和算法。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 用你喜欢的方式实现碰撞之后的处理。
+</span><span>&lt;&lt; 桶。
+</span></code></pre>
+<blockquote>
+<p>本来是要用链表的。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 桶指的只能是链表吗，其他的可以吗？
+</span><span>&lt;&lt; 能迭代找到对应 K 的都可以。
+</span></code></pre>
+<blockquote>
+<p>这里是我寻思着的。rust 里链表确实非常难处理，还是直接用 vector(array) 了。
+<code>HashMap&lt;K, V&gt; {data: Vec&lt;Option&lt;Vec&lt;(K, V)&gt;&gt;&gt;}</code>
+花了好多时间，勉强写出来了。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 如果太大了要 rehash，实现一下吧。
+</span><span>&lt;&lt; 好的。
+</span></code></pre>
+<blockquote>
+<p>什么？rehash 是什么？我直接凭感觉“嗯嗯嗯”的。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 没事，你可以花 20 分钟来完成。
+</span><span>&lt;&lt; 奥。
+</span></code></pre>
+<blockquote>
+<p>这给的时间是不是太多了，寄点又+1。
+想了半天，硬着头皮写，慢慢回忆起来。
+最后是实现了 <code>fn rehash(&amp;mut self, new_capacity: usize)</code>，
+直接重新声明了一个新的与 HashMap::data 相同类型的空容器，迭代自身的数据插入容器，还是花了很长时间。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 我之前也面过 xx，他是这么处理的，用 HashMap 自己的 insert 方法来做 rehash 的，
+</span><span>&gt;&gt; 因为其实逻辑都已经在 insert 里实现了，不需要你再重新直接写。
+</span><span>&lt;&lt; 哦哦。
+</span></code></pre>
+<blockquote>
+<p>我本来想说我也想过这么做（没说），但是我根本不知道用 insert 要怎么 new_capacity。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 一个 ui 有很多 integration 为用户提供服务，我们的 [产品名] 就是作为 integration。
+</span><span>&gt;&gt; 请问你要如何测试系统，我需要一个系统的工程的方法。
+</span><span>&lt;&lt; 呃，我试图分为健壮性和安全性的测试。前者可用成熟的集成测试和 fuzz test；后者可用渗透测试，sql 注入脚本的方式测试。
+</span><span>&gt;&gt; 我主要是想问整个系统的，所以最好要能检查系统bug，及时写 issue，讨论之后解决，对于 CI/CD 的维护也要到位。
+</span></code></pre>
+<blockquote>
+<p>我说着说着就感觉好像是在说对单独的系统的测试，但是确实没明白这个前端的 ui 是什么关系，这个答案我也觉得蛮奇怪的。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 为什么离职前一家公司？
+</span><span>&lt;&lt; 不想继续做 crud，想做有意思的东西。
+</span></code></pre>
+<blockquote>
+<p>真实想法。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 开学之后时间能怎么安排？
+</span><span>&lt;&lt; 根据前实习的经验，每天有 5-6 小时的可支配时间。
+</span></code></pre>
+<blockquote>
+<p>我寻思应该差不多，这学期的课也差不多的样子。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 学业上有什么安排？
+</span><span>&lt;&lt; 大一大二疯狂实习；大三开始准备考研。
+</span></code></pre>
+<blockquote>
+<p>美好的愿望。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 你面的这个岗位我们不打算招太多人，需要资深的工程师。
+</span><span>&lt;&lt; 哦哦...
+</span></code></pre>
+<blockquote>
+<p>貌似不妙。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 其实不见得会特别的 不 crud。
+</span><span>&lt;&lt; 哦哦...
+</span></code></pre>
+<blockquote>
+<p>应该不至于。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&gt;&gt; 如果你入职，是如果，我们也会对你进行考核，如果一周两周不满足要求，我们也会有一些考虑...
+</span><span>&lt;&lt; 哦哦...理解理解。
+</span></code></pre>
+<blockquote>
+<p>cao。</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&lt;&gt; 扯了一些其他的东西。
+</span><span>&gt;&gt; 我会和 hr 反馈一下，之后给你通知。
+</span><span>&lt;&lt; 好的，谢谢，再见。
+</span></code></pre>
+<blockquote>
+<p>好多问题记不清了。</p>
+</blockquote>
+<h1 id="zong-jie">总结</h1>
+<p>面试了一个半小时左右，总的来说还是很失败的，准备也很不充足（事实上根本就没有准备，在面试前完全不知道准备什么）。没有一个问题是解答得不错的。面试官总是在提示我：还有其他的吗，但是我真的慌张，想不到说什么。两个写的题目也很拉垮，时间花得很多，暴露了很多问题，面试官也指出我工程上的经验不足。我觉得这也是他为什么提到了几次需要“资深的”。</p>
+<p>现在是 2023-08-28 星期一的凌晨。今天开始是工作日，我想法这两天应该就会通知吧...
+虽然理性告诉我大概率没戏唱了，但是希望总还是在心里的，万一呢。</p>
+<hr />
+<h1 id="updates">updates</h1>
+<h2 id="2023-08-29">2023-08-29:</h2>
+<p>上午 hr 微信联系我，约了明天（08-30 星期三）二面。除了还能二面这件事让我很惊讶/惊喜之外，还注意到了另一件事...
+Richard 告诉我两次面试官都是产品经理（虽然都会写代码）——我疑似要转行了，<code>product engineer</code> 是这种职业？？
+突然有了一种，不管面试成功与否都不亏的感觉了😢。</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;jinser_ title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;jetjinser title=Github>
+            <i data-feather=github></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2023 © jinser
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

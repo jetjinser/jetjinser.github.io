@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-cn">
+    <title>pure &gt;&gt;= js</title>
+    <subtitle>jinser&#x27;s blog</subtitle>
+    <link href="https://www.purejs.icu/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://www.purejs.icu"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-28T00:00:00+00:00</updated>
+    <id>https://www.purejs.icu/atom.xml</id>
+    <entry xml:lang="zh-cn">
+        <title>记录第一次面试</title>
+        <published>2023-08-28T00:00:00+00:00</published>
+        <updated>2023-08-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://www.purejs.icu/posts/first-interview/" type="text/html"/>
+        <id>https://www.purejs.icu/posts/first-interview/</id>
+        <content type="html">&lt;h1 id=&quot;mian-shi-qian&quot;&gt;面试前&lt;&#x2F;h1&gt;
+&lt;p&gt;约定 2023-08-25 星期五下午两点钟的 zoom 会议，面试官个人原因稍迟了一点，延后到两点十五分左右开始。顺便一提，他是在附近找了家星巴克加入会议的。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;mian-shi-qa&quot;&gt;面试 QA&lt;&#x2F;h1&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;&amp;gt; 互相打招呼
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提到了我读书的城市，勉强套了一点近乎。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 做一下自我介绍吧。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 我从初中毕业开始对计算机感兴趣，学习过若干语言。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;脑子里根本没考虑好要说什么，随便就说出来了。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 这个环节一般是介绍一下简历上的内容。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦，[按照简历介绍了一下教育经历，实习经历，开源贡献和掌握的知识]。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;多亏面试官素质真高吧，还认真听完我说话不打断。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那么我接下来有几个问题要问。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 你对 sql 和 nosql 的理解是什么？它们的区别在哪里？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 传统 sql 是以 sql 为查询&#x2F;定义语言的 dbms，后者现在扩展之下常常也可以是 NotOnlySql，可以做不止传统 sql 的事，比如 redis 也可以做为消息队列，对于一些不方便 sql 的情况可以做特别的优化和特化的保证。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 主要的区别是存储模型的不同。前者是关系模型，后者有如 redis 的 KV 模型。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;寄点+1&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你有过多少写复杂 sql 的经历。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 15445 的 homework 1。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我这个时候还没有感觉到不妙。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那我现在给你一个经典的模型吧。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; products (product_id, product_name, category)
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; orders (product_id, sales)
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 需要的到每一个 category 的最畅销的 5 件商品。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; ok。
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;WITH pro_with_rank (
+&lt;&#x2F;span&gt;&lt;span&gt;    SELECT
+&lt;&#x2F;span&gt;&lt;span&gt;        category,
+&lt;&#x2F;span&gt;&lt;span&gt;        product_id,
+&lt;&#x2F;span&gt;&lt;span&gt;        row_number() over (pritition by category ORDER BY SUM(amount) GROUP BY category) as rank_
+&lt;&#x2F;span&gt;&lt;span&gt;    FROM products JOIN orders ON products.product_id = orders.product_id
+&lt;&#x2F;span&gt;&lt;span&gt;    GROUP BY product_id, category
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;SELECT
+&lt;&#x2F;span&gt;&lt;span&gt;    category,
+&lt;&#x2F;span&gt;&lt;span&gt;    product_id,
+&lt;&#x2F;span&gt;&lt;span&gt;FROM pro_with_rank
+&lt;&#x2F;span&gt;&lt;span&gt;WHERE
+&lt;&#x2F;span&gt;&lt;span&gt;    rank_ &amp;lt;= 5
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 大致没问题，只是为了考察一下 row_number() 和 join 的使用能力。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是现场花了好多时间写的第二版，第一版是我直接在 chat 上写的，没写完很着急就发出去了。
+面试官让我共享出屏幕写，因为我刚装的 zoom，mac 没有权限，授权之后重启了一下 zoom，重新入会，在编辑器里写下的第二版。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那么现在写一个简单的 HashTable 吧。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; ok。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;啊？还真要写啊？我当时是这么想的。
+总之是新建项目开始用 rust 写了。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你确定要用 rust 写吗？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 呃，类型确实有点麻烦。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我是很慌的。
+定义 struct: &lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;(K, V)&amp;gt;}&lt;&#x2F;code&gt;；
+impl method：&lt;code&gt;new&lt;&#x2F;code&gt;，&lt;code&gt;insert&lt;&#x2F;code&gt;，&lt;code&gt;get&lt;&#x2F;code&gt;，&lt;code&gt;remove&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 可以不实现 `remove`。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;约束了 &lt;code&gt;K: Hash&lt;&#x2F;code&gt;，还是大致成功地写出来了。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; Hash 碰撞之后要怎么处理？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 桶指向链表或数组；开放地址。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实说了一大堆，因为我想不起来了，疯狂回忆。原来面试真的会问数据结构和算法。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 用你喜欢的方式实现碰撞之后的处理。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 桶。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本来是要用链表的。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 桶指的只能是链表吗，其他的可以吗？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 能迭代找到对应 K 的都可以。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里是我寻思着的。rust 里链表确实非常难处理，还是直接用 vector(array) 了。
+&lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;Option&amp;lt;Vec&amp;lt;(K, V)&amp;gt;&amp;gt;&amp;gt;}&lt;&#x2F;code&gt;
+花了好多时间，勉强写出来了。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 如果太大了要 rehash，实现一下吧。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;什么？rehash 是什么？我直接凭感觉“嗯嗯嗯”的。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 没事，你可以花 20 分钟来完成。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 奥。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这给的时间是不是太多了，寄点又+1。
+想了半天，硬着头皮写，慢慢回忆起来。
+最后是实现了 &lt;code&gt;fn rehash(&amp;amp;mut self, new_capacity: usize)&lt;&#x2F;code&gt;，
+直接重新声明了一个新的与 HashMap::data 相同类型的空容器，迭代自身的数据插入容器，还是花了很长时间。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 我之前也面过 xx，他是这么处理的，用 HashMap 自己的 insert 方法来做 rehash 的，
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 因为其实逻辑都已经在 insert 里实现了，不需要你再重新直接写。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我本来想说我也想过这么做（没说），但是我根本不知道用 insert 要怎么 new_capacity。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 一个 ui 有很多 integration 为用户提供服务，我们的 [产品名] 就是作为 integration。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 请问你要如何测试系统，我需要一个系统的工程的方法。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 呃，我试图分为健壮性和安全性的测试。前者可用成熟的集成测试和 fuzz test；后者可用渗透测试，sql 注入脚本的方式测试。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 我主要是想问整个系统的，所以最好要能检查系统bug，及时写 issue，讨论之后解决，对于 CI&#x2F;CD 的维护也要到位。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我说着说着就感觉好像是在说对单独的系统的测试，但是确实没明白这个前端的 ui 是什么关系，这个答案我也觉得蛮奇怪的。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 为什么离职前一家公司？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 不想继续做 crud，想做有意思的东西。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真实想法。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 开学之后时间能怎么安排？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 根据前实习的经验，每天有 5-6 小时的可支配时间。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我寻思应该差不多，这学期的课也差不多的样子。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 学业上有什么安排？
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 大一大二疯狂实习；大三开始准备考研。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;美好的愿望。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你面的这个岗位我们不打算招太多人，需要资深的工程师。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;貌似不妙。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 其实不见得会特别的 不 crud。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应该不至于。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 如果你入职，是如果，我们也会对你进行考核，如果一周两周不满足要求，我们也会有一些考虑...
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...理解理解。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cao。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;&amp;gt; 扯了一些其他的东西。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 我会和 hr 反馈一下，之后给你通知。
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的，谢谢，再见。
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;好多问题记不清了。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;zong-jie&quot;&gt;总结&lt;&#x2F;h1&gt;
+&lt;p&gt;面试了一个半小时左右，总的来说还是很失败的，准备也很不充足（事实上根本就没有准备，在面试前完全不知道准备什么）。没有一个问题是解答得不错的。面试官总是在提示我：还有其他的吗，但是我真的慌张，想不到说什么。两个写的题目也很拉垮，时间花得很多，暴露了很多问题，面试官也指出我工程上的经验不足。我觉得这也是他为什么提到了几次需要“资深的”。&lt;&#x2F;p&gt;
+&lt;p&gt;现在是 2023-08-28 星期一的凌晨。今天开始是工作日，我想法这两天应该就会通知吧...
+虽然理性告诉我大概率没戏唱了，但是希望总还是在心里的，万一呢。&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;updates&quot;&gt;updates&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;2023-08-29&quot;&gt;2023-08-29:&lt;&#x2F;h2&gt;
+&lt;p&gt;上午 hr 微信联系我，约了明天（08-30 星期三）二面。除了还能二面这件事让我很惊讶&#x2F;惊喜之外，还注意到了另一件事...
+Richard 告诉我两次面试官都是产品经理（虽然都会写代码）——我疑似要转行了，&lt;code&gt;product engineer&lt;&#x2F;code&gt; 是这种职业？？
+突然有了一种，不管面试成功与否都不亏的感觉了😢。&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="zh-cn">
+        <title>数学建模参赛记录</title>
+        <published>2023-06-22T00:00:00+00:00</published>
+        <updated>2023-06-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://www.purejs.icu/posts/math-modeling-record/" type="text/html"/>
+        <id>https://www.purejs.icu/posts/math-modeling-record/</id>
+        <content type="html">&lt;h1 id=&quot;bao-ming&quot;&gt;报名&lt;&#x2F;h1&gt;
+&lt;p&gt;在数模培训的最后一节课开始开通校赛报名，筛选出国赛队伍。
+不报名就没有学分；报名排队到十九队，我担任队长，队员为室友和后来加入的同届电气同学。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;jie-ti&quot;&gt;解题&lt;&#x2F;h1&gt;
+&lt;p&gt;因为是一般的校赛，真的很业余。我们拥有一周的时间来解题，但是这一周我们还需要上课。&lt;&#x2F;p&gt;
+&lt;p&gt;校赛有 A，B 题，前者是动态规划，图论相关的问题；后者是关于统计的问题。
+我们三人小群讨论之后一致决定选择 A 题，原因主要是有意思，好操作，统计没得水论文。&lt;&#x2F;p&gt;
+&lt;p&gt;我们直接请了一周的大一晚自习。电气的同学和我们在同一栋宿舍楼，他来我的宿舍与我和室友组成复仇者联盟。&lt;&#x2F;p&gt;
+&lt;p&gt;解题大概的挣扎为：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;到处问群友&lt;&#x2F;li&gt;
+&lt;li&gt;在英语课上画画&lt;&#x2F;li&gt;
+&lt;li&gt;量子速度博客和视频&lt;&#x2F;li&gt;
+&lt;li&gt;疯狂编译 $\LaTeX$&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;在截止时间（22:00）前的四分钟，我通过邮箱把论文发给了老师。嗯，他用的是 qq 邮箱。&lt;&#x2F;p&gt;
+&lt;p&gt;不得不说，踩着 deadline 提交真的很刺激；
+不去上晚自习也是真的舒服。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;chu-sai-jie-guo&quot;&gt;初赛结果&lt;&#x2F;h1&gt;
+&lt;p&gt;初赛成绩就是论文成绩，在提交论文的三天后公布。&lt;&#x2F;p&gt;
+&lt;p&gt;不是特别意外的，93分，与另外一队并列第二；第一有两队，都是 95。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zhun-bei-da-bian&quot;&gt;准备答辩&lt;&#x2F;h1&gt;
+&lt;p&gt;没想到初赛过了之后还有答辩，我还以为只要论文呢。&lt;&#x2F;p&gt;
+&lt;p&gt;刚开始决定是室友去讲 ppt，后来换成我了。&lt;&#x2F;p&gt;
+&lt;p&gt;我希望的样子：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;白板黑字的 ppt&lt;&#x2F;li&gt;
+&lt;li&gt;不念 ppt&lt;&#x2F;li&gt;
+&lt;li&gt;ppt 不要目录&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;还好阻止了小伙伴的花里胡哨 ppt。&lt;&#x2F;p&gt;
+&lt;p&gt;这个 ppt 比论文还难整。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;da-bian&quot;&gt;答辩&lt;&#x2F;h1&gt;
+&lt;p&gt;当天，本周二（6.20），我们是第一队答辩的队伍。&lt;&#x2F;p&gt;
+&lt;p&gt;过程还是很顺利的，我甚至觉得我越讲越行了，手势和其他肢体语言，眼神什么的直接给我用上了。
+五分钟一下子就过去了，时间把握很不错🥳。&lt;&#x2F;p&gt;
+&lt;p&gt;但是其他队伍并不在意5分钟的限制，也没有被阻止。被欺骗了🙃。&lt;&#x2F;p&gt;
+&lt;p&gt;我和室友提前离场去参加 ps 课的期末考试。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;zui-zhong-cheng-ji&quot;&gt;最终成绩&lt;&#x2F;h1&gt;
+&lt;p&gt;最终成绩在答辩当天就出来了：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;[一等奖] 93.85&lt;&#x2F;li&gt;
+&lt;li&gt;[一等奖] 93.6&lt;&#x2F;li&gt;
+&lt;li&gt;[二等奖] 93&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;嗯，论文 70%，答辩 30%，我的答辩成绩也是 93，在所有答辩的队伍中是最高的。
+只是这个二等奖属实是不爽，更不爽的是前两队，一队是大二的，一队是大三的，都是老东西；
+没能干碎他们是本次最大的遗憾😠。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;xie-zai-zui-hou&quot;&gt;写在最后&lt;&#x2F;h1&gt;
+&lt;p&gt;虽然这b比赛很业余，也没啥用，但是一起努力解题的过程还是挺有意思的。
+九月份的国赛今天也报名了，但是并没有什么拿下奖项的信念。&lt;&#x2F;p&gt;
+&lt;p&gt;我给暑假安排的计划暂时没有数学建模的位置。&lt;&#x2F;p&gt;
+&lt;p&gt;认识些朋友也挺好的。&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="zh-cn">
+        <title>数学建模大赛答辩草稿</title>
+        <published>2023-06-15T00:00:00+00:00</published>
+        <updated>2023-06-15T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://www.purejs.icu/posts/math-modeling-defence-draft/" type="text/html"/>
+        <id>https://www.purejs.icu/posts/math-modeling-defence-draft/</id>
+        <content type="html">&lt;h1 id=&quot;shu-mo-da-bian-cao-gao&quot;&gt;数模答辩草稿&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;di-yi-ti&quot;&gt;第一题&lt;&#x2F;h2&gt;
+&lt;p&gt;已知条件：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;各&lt;code&gt;收发点&lt;&#x2F;code&gt;位置&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;运送路径&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;每条&lt;code&gt;运送路径&lt;&#x2F;code&gt;的&lt;code&gt;包裹&lt;&#x2F;code&gt;数&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;假设：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;无视高度&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;定义：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;空飞&lt;&#x2F;code&gt;: 不携带&lt;code&gt;包裹&lt;&#x2F;code&gt;的一次飞行&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;有效飞行&lt;&#x2F;code&gt;：携带&lt;code&gt;包裹&lt;&#x2F;code&gt;，跟随&lt;code&gt;运送路径&lt;&#x2F;code&gt;从一&lt;code&gt;收发点&lt;&#x2F;code&gt;飞行至另一&lt;code&gt;收发点&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;目标：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;最小&lt;code&gt;空飞&lt;&#x2F;code&gt;数&lt;&#x2F;li&gt;
+&lt;li&gt;最小&lt;code&gt;空飞&lt;&#x2F;code&gt;数的&lt;code&gt;完整路径&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;因为假设无视高度，所有我们可以将这个问题简化为二维问题。&lt;&#x2F;p&gt;
+&lt;p&gt;已知各&lt;code&gt;收发点位置&lt;&#x2F;code&gt;和&lt;code&gt;运送路径&lt;&#x2F;code&gt;，很容易地联想到图论这个工具。
+将&lt;code&gt;收发点&lt;&#x2F;code&gt;作为节点，&lt;code&gt;运送路径&lt;&#x2F;code&gt;作为有向边。
+进一步想到每条&lt;code&gt;运送路径&lt;&#x2F;code&gt;的&lt;code&gt;包裹数&lt;&#x2F;code&gt;可作为&lt;code&gt;权&lt;&#x2F;code&gt;，由此构造出一个&lt;code&gt;有向正权图&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;我们现在有了&lt;code&gt;图&lt;&#x2F;code&gt;，可以将问题转变为：&lt;&#x2F;p&gt;
+&lt;p&gt;已知条件:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;各&lt;code&gt;节点&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;有向边&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;有向边&lt;&#x2F;code&gt;的&lt;code&gt;权&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;假设：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;无视高度&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;定义：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;空移&lt;&#x2F;code&gt;：从一&lt;code&gt;节点&lt;&#x2F;code&gt;沿&lt;code&gt;有向边&lt;&#x2F;code&gt;的 &lt;strong&gt;反方向&lt;&#x2F;strong&gt; &lt;em&gt;移动&lt;&#x2F;em&gt; 到另一&lt;code&gt;节点&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;有效移动&lt;&#x2F;code&gt;：从一&lt;code&gt;节点&lt;&#x2F;code&gt;沿&lt;code&gt;有向边&lt;&#x2F;code&gt;的 &lt;strong&gt;正方向&lt;&#x2F;strong&gt; &lt;em&gt;移动&lt;&#x2F;em&gt; 到另一&lt;code&gt;节点&lt;&#x2F;code&gt;。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;目标：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;最小&lt;code&gt;空移&lt;&#x2F;code&gt;数&lt;&#x2F;li&gt;
+&lt;li&gt;最小&lt;code&gt;空移&lt;&#x2F;code&gt;数的&lt;code&gt;完整路径&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;试求解该图论问题，我们联想到求解单源最短路径常用的算法：&lt;code&gt;dijkstra&lt;&#x2F;code&gt;。
+基于该算法的思想，我们可以确定以下三点因素：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;权&lt;&#x2F;code&gt;的含义：&lt;code&gt;包裹&lt;&#x2F;code&gt;数量&lt;&#x2F;li&gt;
+&lt;li&gt;终止条件：当&lt;code&gt;图&lt;&#x2F;code&gt;中每一条&lt;code&gt;边&lt;&#x2F;code&gt;的&lt;code&gt;权&lt;&#x2F;code&gt;的和等于 0 时终止&lt;&#x2F;li&gt;
+&lt;li&gt;每一步的局部最优解：对于当前&lt;code&gt;节点&lt;&#x2F;code&gt;，
+若出度不为 0，则存在&lt;code&gt;有效移动&lt;&#x2F;code&gt;的可能，则经过头为当前&lt;code&gt;节点&lt;&#x2F;code&gt;且&lt;code&gt;权&lt;&#x2F;code&gt;最大的&lt;code&gt;有向边&lt;&#x2F;code&gt;进行一次&lt;code&gt;有效飞行&lt;&#x2F;code&gt;，该&lt;code&gt;有向边&lt;&#x2F;code&gt;的&lt;code&gt;权&lt;&#x2F;code&gt;减一；
+若出度为 0，则必&lt;code&gt;空移&lt;&#x2F;code&gt;一次，回到上一个&lt;code&gt;节点&lt;&#x2F;code&gt;即可。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;此外，为了记录&lt;code&gt;路径&lt;&#x2F;code&gt;序列&lt;code&gt;S&lt;&#x2F;code&gt; 和&lt;code&gt;空飞&lt;&#x2F;code&gt;数&lt;code&gt;n&lt;&#x2F;code&gt;，
+我们规定只要&lt;em&gt;移动&lt;&#x2F;em&gt;，就记录一次当前&lt;code&gt;节点&lt;&#x2F;code&gt;到序列 &lt;code&gt;S&lt;&#x2F;code&gt; 中；仅当&lt;code&gt;空移&lt;&#x2F;code&gt;时，数 &lt;code&gt;n&lt;&#x2F;code&gt; 自增 1。&lt;&#x2F;p&gt;
+&lt;p&gt;假设一起始节点，重复上述的步骤，直到终止条件。
+终止后得到的 &lt;code&gt;S&lt;&#x2F;code&gt; 和 &lt;code&gt;n&lt;&#x2F;code&gt; 即为目标，求解完毕。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;di-er-ti&quot;&gt;第二题&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;di-san-ti&quot;&gt;第三题&lt;&#x2F;h2&gt;
+</content>
+    </entry>
+    <entry xml:lang="zh-cn">
+        <title>Learning Writing (Output)</title>
+        <published>2023-05-17T00:00:00+00:00</published>
+        <updated>2023-05-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://www.purejs.icu/posts/writing/" type="text/html"/>
+        <id>https://www.purejs.icu/posts/writing/</id>
+        <content type="html">&lt;p&gt;不知道，但是有点想写什么。
+&lt;del&gt;别浪费 GitHub action 的配额了。&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;输入不多，没有输出。
+多接受输入，内化成自己的东西，才有输出。
+也许我是个 Monad。&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="zh-cn">
+        <title>使用 zola 和 github pages 搭建静态博客</title>
+        <published>2021-12-04T00:00:00+00:00</published>
+        <updated>2021-12-04T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://www.purejs.icu/posts/meta-blog/" type="text/html"/>
+        <id>https://www.purejs.icu/posts/meta-blog/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;2022-06-22 更新：过时的文章，而且没写完，有空再更新。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;0x00-jie-shao&quot;&gt;0x00 介绍&lt;&#x2F;h2&gt;
+&lt;p&gt;zola 是一个静态网站生成器，我们用它来生成网页，托管在 github pages 上。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;github: https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&lt;&#x2F;p&gt;
+&lt;p&gt;Home page: https:&#x2F;&#x2F;www.getzola.org&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;托管在 github pages 上的好处是，可以很方便地用 github actions 来构建和部署博客。
+也就是说，生成博客的部分，都在云上完成了，我们在本地写文章，只需要关心内容就好了。&lt;&#x2F;p&gt;
+&lt;p&gt;虽然理论上本地不需要安装 zola，但为了方便调试和配置，还是需要先 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;安装&lt;&#x2F;a&gt;，在本地配置。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;0x01-xin-jian-cang-ku&quot;&gt;0x01 新建仓库&lt;&#x2F;h2&gt;
+&lt;p&gt;从 &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&quot;&gt;github pages&lt;&#x2F;a&gt; 继续：
+按照文档中的步骤，先创建一个名为 &lt;username&gt;.github.io 的仓库，如我的是 https:&#x2F;&#x2F;github.com&#x2F;jetjinser&#x2F;jetjinser.github.io。&lt;&#x2F;p&gt;
+&lt;p&gt;新建出来的是一个空的仓库，把它 clone 到本地：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone https:&#x2F;&#x2F;github.com&#x2F;&amp;lt;username&amp;gt;&#x2F;&amp;lt;username&amp;gt;.github.io
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;接下来的所有操作都在这个文件夹内进行：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;username&amp;gt;.github.io
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;0x02-pei-zhi-ben-di-huan-jing&quot;&gt;0x02 配置本地环境&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;init&quot;&gt;init&lt;&#x2F;h3&gt;
+&lt;p&gt;初始化 zola 只需要在一个空文件夹内执行下面这句指令：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;按照交互式的说明，选择 yes 或 no 就行，这些选项后续都可以在 &lt;code&gt;config.toml&lt;&#x2F;code&gt; 里手动修改，所以随便回答也可以。&lt;&#x2F;p&gt;
+&lt;p&gt;执行完毕后除了 &lt;code&gt;config.toml&lt;&#x2F;code&gt;，还会生成几个文件夹，如果没有自己定制主题的需求，只要关注这几个文件夹：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;content&#x2F;&lt;&#x2F;code&gt;: 存放所有的文章&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;static&#x2F;&lt;&#x2F;code&gt;: 存放静态资源&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;themes&#x2F;&lt;&#x2F;code&gt;: 存放主题&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;theme&quot;&gt;theme&lt;&#x2F;h3&gt;
+&lt;p&gt;如果没有配置主题和模版，zola 就不知道该如何生成网站。
+主题其实就是已经配置好了的模版，嫌麻烦直接用就好了。
+zola 文档列出了 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;所有主题&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;每个主题要求的配置不太一样，具体需要查看文档说明。&lt;&#x2F;p&gt;
+&lt;p&gt;这里随便找了一个 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;anpu&#x2F;&quot;&gt;anpu&lt;&#x2F;a&gt; 主题。
+推荐用 git submodule，不要按照文档里的直接 clone。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule add https:&#x2F;&#x2F;github.com&#x2F;zbrox&#x2F;anpu-zola-theme.git themes&#x2F;anpu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;其余的按照文档配置即可。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;content&quot;&gt;content&lt;&#x2F;h3&gt;
+&lt;p&gt;接下来可以填写正文了。
+首先要在 &lt;code&gt;content&#x2F;&lt;&#x2F;code&gt; 文件夹下创建一个 &lt;code&gt;_index.md&lt;&#x2F;code&gt; 文件。这是用来组织 &lt;code&gt;pages&lt;&#x2F;code&gt; 的 &lt;code&gt;section&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;paginate_by = 5
+&lt;&#x2F;span&gt;&lt;span&gt;sort_by = &amp;quot;date&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;这里的 &lt;code&gt;+++&lt;&#x2F;code&gt; 包裹起来的内容，被 zola 称为 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;#front-matter&quot;&gt;Front matter&lt;&#x2F;a&gt;，里面是 TOML 语法，
+如果用 &lt;code&gt;---&lt;&#x2F;code&gt; 包裹起来，里面就是 YAML 语法。zola 推荐使用 TOML。
+相当于每篇文章写配置的地方。&lt;&#x2F;p&gt;
+&lt;p&gt;先写一篇 &lt;code&gt;content&#x2F;test.md&lt;&#x2F;code&gt; 试一下：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Bonjour&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;date = 2021-12-03
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[taxonomies]
+&lt;&#x2F;span&gt;&lt;span&gt;categories = [&amp;quot;article&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;tags = [&amp;quot;shots&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;这里正常填写正文...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;我们可以用 &lt;code&gt;zola build&lt;&#x2F;code&gt; 在 &lt;code&gt;public&#x2F;&lt;&#x2F;code&gt; 文件夹下生成网站，也可以直接用 &lt;code&gt;zola serve&lt;&#x2F;code&gt; 开一个本地的监听。
+我们跑 &lt;code&gt;zola serve&lt;&#x2F;code&gt; 试一下，如果没有报错，在浏览器打开 &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&lt;&#x2F;code&gt; 就可以看到你的网站了。&lt;&#x2F;p&gt;
+&lt;p&gt;本地的博客配置基本完成了。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;0x03-pei-zhi-github-actions&quot;&gt;0x03 配置 GitHub actions&lt;&#x2F;h2&gt;
+&lt;p&gt;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;0x04-zi-ding-yi-yu-ming&quot;&gt;0x04 自定义域名&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;CNAME&lt;&#x2F;code&gt; 放在 &lt;code&gt;static&#x2F;&lt;&#x2F;code&gt; 内。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;0x05-zong-jie&quot;&gt;0x05 总结&lt;&#x2F;h2&gt;
+&lt;p&gt;原始内容在 master 分支，GitHub actions 自动生成静态网页到 gh-pages 分支。&lt;&#x2F;p&gt;
+</content>
+    </entry>
+</feed>

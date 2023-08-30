@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="dark light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         数学建模大赛答辩草稿
+        
+    </title>
+
+        
+            <meta property="og:title" content="数学建模大赛答辩草稿" />
+        
+     
+
+     
+         
+             <meta property="og:description" content="jinser&#x27;s blog" />
+         
+     
+
+     
+         
+             <meta name="description" content="jinser&#x27;s blog" />
+         
+    
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    
+    
+        <link href=https://www.purejs.icu/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="pure &gt;&gt;= js" href="https://www.purejs.icu/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://www.purejs.icu/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="https://www.purejs.icu/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://www.purejs.icu/main.css />
+
+    
+
+    <script src=https://www.purejs.icu/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;www.purejs.icu>pure &gt;&gt;= js</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;projects style="margin-left: 0.7em">&#x2F;projects</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        数学建模大赛答辩草稿<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2023-06-15</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <h1 id="shu-mo-da-bian-cao-gao">数模答辩草稿</h1>
+<h2 id="di-yi-ti">第一题</h2>
+<p>已知条件：</p>
+<ul>
+<li>各<code>收发点</code>位置</li>
+<li><code>运送路径</code></li>
+<li>每条<code>运送路径</code>的<code>包裹</code>数</li>
+</ul>
+<p>假设：</p>
+<ul>
+<li>无视高度</li>
+</ul>
+<p>定义：</p>
+<ul>
+<li><code>空飞</code>: 不携带<code>包裹</code>的一次飞行</li>
+<li><code>有效飞行</code>：携带<code>包裹</code>，跟随<code>运送路径</code>从一<code>收发点</code>飞行至另一<code>收发点</code></li>
+</ul>
+<p>目标：</p>
+<ul>
+<li>最小<code>空飞</code>数</li>
+<li>最小<code>空飞</code>数的<code>完整路径</code></li>
+</ul>
+<p>因为假设无视高度，所有我们可以将这个问题简化为二维问题。</p>
+<p>已知各<code>收发点位置</code>和<code>运送路径</code>，很容易地联想到图论这个工具。
+将<code>收发点</code>作为节点，<code>运送路径</code>作为有向边。
+进一步想到每条<code>运送路径</code>的<code>包裹数</code>可作为<code>权</code>，由此构造出一个<code>有向正权图</code>。</p>
+<p>我们现在有了<code>图</code>，可以将问题转变为：</p>
+<p>已知条件:</p>
+<ul>
+<li>各<code>节点</code></li>
+<li><code>有向边</code></li>
+<li><code>有向边</code>的<code>权</code></li>
+</ul>
+<p>假设：</p>
+<ul>
+<li>无视高度</li>
+</ul>
+<p>定义：</p>
+<ul>
+<li><code>空移</code>：从一<code>节点</code>沿<code>有向边</code>的 <strong>反方向</strong> <em>移动</em> 到另一<code>节点</code></li>
+<li><code>有效移动</code>：从一<code>节点</code>沿<code>有向边</code>的 <strong>正方向</strong> <em>移动</em> 到另一<code>节点</code>。</li>
+</ul>
+<p>目标：</p>
+<ul>
+<li>最小<code>空移</code>数</li>
+<li>最小<code>空移</code>数的<code>完整路径</code></li>
+</ul>
+<p>试求解该图论问题，我们联想到求解单源最短路径常用的算法：<code>dijkstra</code>。
+基于该算法的思想，我们可以确定以下三点因素：</p>
+<ul>
+<li><code>权</code>的含义：<code>包裹</code>数量</li>
+<li>终止条件：当<code>图</code>中每一条<code>边</code>的<code>权</code>的和等于 0 时终止</li>
+<li>每一步的局部最优解：对于当前<code>节点</code>，
+若出度不为 0，则存在<code>有效移动</code>的可能，则经过头为当前<code>节点</code>且<code>权</code>最大的<code>有向边</code>进行一次<code>有效飞行</code>，该<code>有向边</code>的<code>权</code>减一；
+若出度为 0，则必<code>空移</code>一次，回到上一个<code>节点</code>即可。</li>
+</ul>
+<p>此外，为了记录<code>路径</code>序列<code>S</code> 和<code>空飞</code>数<code>n</code>，
+我们规定只要<em>移动</em>，就记录一次当前<code>节点</code>到序列 <code>S</code> 中；仅当<code>空移</code>时，数 <code>n</code> 自增 1。</p>
+<p>假设一起始节点，重复上述的步骤，直到终止条件。
+终止后得到的 <code>S</code> 和 <code>n</code> 即为目标，求解完毕。</p>
+<h2 id="di-er-ti">第二题</h2>
+<h2 id="di-san-ti">第三题</h2>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;jinser_ title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;jetjinser title=Github>
+            <i data-feather=github></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2023 © jinser
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

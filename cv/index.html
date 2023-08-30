@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="dark light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         jinser&#x27;s CV
+        
+    </title>
+
+        
+            <meta property="og:title" content="jinser&#x27;s CV" />
+        
+     
+
+     
+         
+             <meta property="og:description" content="jinser&#x27;s blog" />
+         
+     
+
+     
+         
+             <meta name="description" content="jinser&#x27;s blog" />
+         
+    
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    
+    
+        <link href=https://www.purejs.icu/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="pure &gt;&gt;= js" href="https://www.purejs.icu/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://www.purejs.icu/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="https://www.purejs.icu/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://www.purejs.icu/main.css />
+
+    
+
+    <script src=https://www.purejs.icu/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;www.purejs.icu>pure &gt;&gt;= js</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;projects style="margin-left: 0.7em">&#x2F;projects</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        jinser&#x27;s CV<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <h1 id="jin-se-jinser-kafka">锦瑟 <sub><font color="#808B96">Jinser Kafka</font></sub></h1>
+<p>cmdr.jv@gmail.com | <a href="https://github.com/jetjinser">github.com/jetjinser</a> | <a href="https://www.purejs.icu">purejs.icu</a></p>
+<p>对技术有热情，保持学习冲动。</p>
+<h2 id="jiao-yu-jing-li">教育经历</h2>
+<ul>
+<li>[2022-] 计算机科学与技术，<!-- 仰恩 -->*大学，本科大一在读</li>
+</ul>
+<h2 id="shi-xi-jing-li">实习经历</h2>
+<h3 id="second-state-hou-duan-kai-fa-flows-network"><code>Second State</code> 后端开发：flows.network</h3>
+<p><a href="https://github.com/flows-network/">flows.network</a> 是一个使用 <a href="https://wasmedge.org">WasmEdge</a> 作为运行时的 serverless 平台。</p>
+<h4 id="server-kai-fa">server 开发</h4>
+<p>开发语言和框架：</p>
+<ul>
+<li><code>rust/axum</code></li>
+<li><code>typescript/next.js</code></li>
+</ul>
+<p>持久化：</p>
+<ul>
+<li><code>upstash(redis)</code></li>
+<li><code>postgresql</code></li>
+</ul>
+<p>对接各平台，根据平台文档实现代码，为 flows.network 提供鉴权和监听能力。一般用的手段为 webhook server，websocket server 或 http post 轮训，如 BlockNative server 作为 webhook server 监听地址事件。</p>
+<p>对 server 开发更熟练。</p>
+<p>e.g.</p>
+<ul>
+<li><a href="https://github.com/flows-network/github-flows/tree/master/github-integration">Github server</a></li>
+<li><a href="https://github.com/flows-network/tg-flows/tree/master/tg-integration">Telegram server</a></li>
+</ul>
+<h4 id="sdk-kai-fa">sdk 开发</h4>
+<p>为 flows.network 提供第三方平台 action 能力。</p>
+<p>根据第三方平台的文档，或借助社区生态，使用 rust 编写 http sdk，target 为 wasm32-wasi。如 Github 的 create issue, merge pr 等。</p>
+<p>对 wasm 中的网络环境与请求掌握更熟练。</p>
+<p>e.g.</p>
+<ul>
+<li><a href="https://github.com/flows-network/notion-flows/tree/master/sdk">Notion sdk</a></li>
+<li><a href="https://github.com/flows-network/discord-flows/tree/master/sdk">Discord sdk</a></li>
+</ul>
+<h5 id="codegen">codegen</h5>
+<p>实现 sdk 时常需要 codegen。利用 rust 的宏能力和生态（<code>syn</code>，<code>quote</code>），编译时解析 spec（e.g. Github openapi）文件，展开为对应的 Event struct, http method...加深了对 rust procmacro 的理解。</p>
+<h4 id="mo-gai-rust-ku-shi-qi-zhi-chi-wasm32-wasi">魔改 rust 库，使其支持 wasm32-wasi</h4>
+<p>移植 rust 库到 wasm32-wasi。</p>
+<p>主要的缺乏为 https(ssl/tls) 方面。</p>
+<p>加深对 wasm 开发与加密基本库的认知。</p>
+<p>e.g.</p>
+<ul>
+<li><a href="https://github.com/flows-network/notion-wasi">notion-wasi</a></li>
+<li><a href="https://github.com/jetjinser/firebase-rs/tree/diff-client">Firebase-rs</a></li>
+</ul>
+<h2 id="kai-yuan-gong-xian">开源贡献</h2>
+<h3 id="wasmedge">WasmEdge</h3>
+<h4 id="openssl-plugin">openssl plugin</h4>
+<p>这个 <a href="https://github.com/WasmEdge/WasmEdge/pull/2425">PR</a>
+解决了描述在 openssl/openssl#7147 的问题，这个问题导致的结果是，在缺少 hostname 检验的时候，会发生 SSL connection 错误。</p>
+<p>通过设置 openssl hostname 来解决这个问题，修复了插件对于部分链接无法请求的错误。</p>
+<p>学习到在 WasmEdge 中如何通过 host function 来编写插件。</p>
+<h3 id="risinglight">RisingLight</h3>
+<h4 id="div-0-error">div-0 error</h4>
+<p>这个 <a href="https://github.com/risinglightdb/risinglight/pull/793">PR</a> 解决了描述在<a href="https://github.com/risinglightdb/risinglight/issues/773">risinglight/risinglight#773</a> 的问题，即除 0 错误。</p>
+<p>在 ArrayImpl div 之前将被除数安全化，使被标记为 null 的项都重设为 1 而不是 0。这样既解决了除 0 问题，也保留了自动向量化的能力。</p>
+<h3 id="risingwave">RisingWave</h3>
+<h4 id="fix-array-agg">fix array_agg</h4>
+<p><a href="https://github.com/risingwavelabs/risingwave/pull/6084">PR</a>:
+fix(expr, agg): batch array_agg return NULL when there's no input raws</p>
+<h2 id="zhuan-ye-ji-neng">专业技能</h2>
+<h3 id="lang">lang</h3>
+<ul>
+<li>熟悉 Rust</li>
+<li>熟悉 Python</li>
+<li>了解 Haskell</li>
+</ul>
+<h3 id="tech">tech</h3>
+<ul>
+<li>了解基本的 database 知识</li>
+<li>了解基本的 static analysis 知识</li>
+</ul>
+<h2 id="xing-qu">兴趣</h2>
+<ul>
+<li>programming language theory</li>
+<li>category theory</li>
+<li>RISC-V</li>
+<li>typesetting system</li>
+</ul>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;jinser_ title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;jetjinser title=Github>
+            <i data-feather=github></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2023 © jinser
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>

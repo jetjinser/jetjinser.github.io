@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="dark light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         使用 zola 和 github pages 搭建静态博客
+        
+    </title>
+
+        
+            <meta property="og:title" content="使用 zola 和 github pages 搭建静态博客" />
+        
+     
+
+     
+         
+             <meta property="og:description" content="jinser&#x27;s blog" />
+         
+     
+
+     
+         
+             <meta name="description" content="jinser&#x27;s blog" />
+         
+    
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    
+    
+        <link href=https://www.purejs.icu/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="pure &gt;&gt;= js" href="https://www.purejs.icu/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://www.purejs.icu/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="https://www.purejs.icu/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://www.purejs.icu/main.css />
+
+    
+
+    <script src=https://www.purejs.icu/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;www.purejs.icu>pure &gt;&gt;= js</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;projects style="margin-left: 0.7em">&#x2F;projects</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        使用 zola 和 github pages 搭建静态博客<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2021-12-04</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <blockquote>
+<p>2022-06-22 更新：过时的文章，而且没写完，有空再更新。</p>
+</blockquote>
+<h2 id="0x00-jie-shao">0x00 介绍</h2>
+<p>zola 是一个静态网站生成器，我们用它来生成网页，托管在 github pages 上。</p>
+<blockquote>
+<p>github: https://github.com/getzola/zola</p>
+<p>Home page: https://www.getzola.org</p>
+</blockquote>
+<p>托管在 github pages 上的好处是，可以很方便地用 github actions 来构建和部署博客。
+也就是说，生成博客的部分，都在云上完成了，我们在本地写文章，只需要关心内容就好了。</p>
+<p>虽然理论上本地不需要安装 zola，但为了方便调试和配置，还是需要先 <a href="https://www.getzola.org/documentation/getting-started/installation/">安装</a>，在本地配置。</p>
+<h2 id="0x01-xin-jian-cang-ku">0x01 新建仓库</h2>
+<p>从 <a href="https://pages.github.com">github pages</a> 继续：
+按照文档中的步骤，先创建一个名为 <username>.github.io 的仓库，如我的是 https://github.com/jetjinser/jetjinser.github.io。</p>
+<p>新建出来的是一个空的仓库，把它 clone 到本地：</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> clone https://github.com/&lt;username&gt;/&lt;username&gt;.github.io
+</span></code></pre>
+<p>接下来的所有操作都在这个文件夹内进行：</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">cd </span><span>&lt;username&gt;.github.io
+</span></code></pre>
+<h2 id="0x02-pei-zhi-ben-di-huan-jing">0x02 配置本地环境</h2>
+<h3 id="init">init</h3>
+<p>初始化 zola 只需要在一个空文件夹内执行下面这句指令：</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> init
+</span></code></pre>
+<p>按照交互式的说明，选择 yes 或 no 就行，这些选项后续都可以在 <code>config.toml</code> 里手动修改，所以随便回答也可以。</p>
+<p>执行完毕后除了 <code>config.toml</code>，还会生成几个文件夹，如果没有自己定制主题的需求，只要关注这几个文件夹：</p>
+<ul>
+<li><code>content/</code>: 存放所有的文章</li>
+<li><code>static/</code>: 存放静态资源</li>
+<li><code>themes/</code>: 存放主题</li>
+</ul>
+<h3 id="theme">theme</h3>
+<p>如果没有配置主题和模版，zola 就不知道该如何生成网站。
+主题其实就是已经配置好了的模版，嫌麻烦直接用就好了。
+zola 文档列出了 <a href="https://www.getzola.org/themes/">所有主题</a></p>
+<p>每个主题要求的配置不太一样，具体需要查看文档说明。</p>
+<p>这里随便找了一个 <a href="https://www.getzola.org/themes/anpu/">anpu</a> 主题。
+推荐用 git submodule，不要按照文档里的直接 clone。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/zbrox/anpu-zola-theme.git themes/anpu
+</span></code></pre>
+<p>其余的按照文档配置即可。</p>
+<h3 id="content">content</h3>
+<p>接下来可以填写正文了。
+首先要在 <code>content/</code> 文件夹下创建一个 <code>_index.md</code> 文件。这是用来组织 <code>pages</code> 的 <code>section</code>。</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>paginate_by = 5
+</span><span>sort_by = &quot;date&quot;
+</span><span>+++
+</span></code></pre>
+<p>这里的 <code>+++</code> 包裹起来的内容，被 zola 称为 <a href="https://www.getzola.org/documentation/content/section/#front-matter">Front matter</a>，里面是 TOML 语法，
+如果用 <code>---</code> 包裹起来，里面就是 YAML 语法。zola 推荐使用 TOML。
+相当于每篇文章写配置的地方。</p>
+<p>先写一篇 <code>content/test.md</code> 试一下：</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Bonjour&quot;
+</span><span>date = 2021-12-03
+</span><span>
+</span><span>[taxonomies]
+</span><span>categories = [&quot;article&quot;]
+</span><span>tags = [&quot;shots&quot;]
+</span><span>+++
+</span><span>
+</span><span>这里正常填写正文...
+</span></code></pre>
+<p>我们可以用 <code>zola build</code> 在 <code>public/</code> 文件夹下生成网站，也可以直接用 <code>zola serve</code> 开一个本地的监听。
+我们跑 <code>zola serve</code> 试一下，如果没有报错，在浏览器打开 <code>http://127.0.0.1:1111</code> 就可以看到你的网站了。</p>
+<p>本地的博客配置基本完成了。</p>
+<h2 id="0x03-pei-zhi-github-actions">0x03 配置 GitHub actions</h2>
+<p>https://www.getzola.org/documentation/deployment/github-pages/</p>
+<h2 id="0x04-zi-ding-yi-yu-ming">0x04 自定义域名</h2>
+<p><code>CNAME</code> 放在 <code>static/</code> 内。</p>
+<h2 id="0x05-zong-jie">0x05 总结</h2>
+<p>原始内容在 master 分支，GitHub actions 自动生成静态网页到 gh-pages 分支。</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;jinser_ title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;jetjinser title=Github>
+            <i data-feather=github></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2023 © jinser
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>
