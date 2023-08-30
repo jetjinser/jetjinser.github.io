@@ -1,0 +1,34 @@
+base_url = "https://www.purejs.icu"
+
+title = "pure >>= js"
+description = "jinser's blog"
+default_language = "zh-cn"
+
+taxonomies = [
+    { name = "categories", feed = true, render = true },
+    { name = "tags", feed = true, render = true },
+]
+
+compile_sass = true
+build_search_index = false
+generate_feed = true
+
+[markdown]
+highlight_code = true
+
+[extra]
+copyright = "jinser"
+theme = "auto"
+
+menu = [
+    { name = "/projects", url = "/projects", weight = 1 },
+    { name = "/about", url = "/about", weight = 2 },
+]
+
+mathjax = true
+mathjax_dollar_inline_enable = true
+
+socials = [
+    { name = "Twitter", url = "https://twitter.com/jinser_", icon = "twitter" },
+    { name = "Github", url = "https://github.com/jetjinser", icon = "github" },
+]
