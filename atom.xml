@@ -20,176 +20,157 @@
 &lt;p&gt;面试一家使用 rust 开发的数据库公司。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;mian-shi-qian&quot;&gt;面试前&lt;&#x2F;h1&gt;
 &lt;p&gt;约定 2023-08-25 星期五下午两点钟的 zoom 会议，面试官个人原因稍迟了一点，延后到两点十五分左右开始。顺便一提，他是在附近找了家星巴克加入会议的。&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;mian-shi-qa&quot;&gt;面试 QA&lt;&#x2F;h1&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;&amp;gt; 互相打招呼
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;mian-shi-conversations&quot;&gt;面试 conversations&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;面试官&lt;&#x2F;code&gt;: &lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;我&lt;&#x2F;code&gt;: &lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int &amp;amp; 🥺Me&lt;&#x2F;strong&gt;: [互相打招呼]&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;提到了我读书的城市，勉强套了一点近乎。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 做一下自我介绍吧。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 我从初中毕业开始对计算机感兴趣，学习过若干语言。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 做一下自我介绍吧。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 我从初中毕业开始对计算机感兴趣，学习过若干语言。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;脑子里根本没考虑好要说什么，随便就说出来了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 这个环节一般是介绍一下简历上的内容。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦，[按照简历介绍了一下教育经历，实习经历，开源贡献和掌握的知识]。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 这个环节一般是介绍一下简历上的内容。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 哦哦，[按照简历介绍了一下教育经历，实习经历，开源贡献和掌握的知识]。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;多亏面试官素质真高吧，还认真听完我说话不打断。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那么我接下来有几个问题要问。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 你对 sql 和 nosql 的理解是什么？它们的区别在哪里？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 传统 sql 是以 sql 为查询&#x2F;定义语言的 dbms，后者现在扩展之下常常也可以是 NotOnlySql，可以做不止传统 sql 的事，比如 redis 也可以做为消息队列，对于一些不方便 sql 的情况可以做特别的优化和特化的保证。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 主要的区别是存储模型的不同。前者是关系模型，后者有如 redis 的 KV 模型。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 那么我接下来有几个问题要问。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 你对 &lt;code&gt;sql&lt;&#x2F;code&gt; 和 &lt;code&gt;nosql&lt;&#x2F;code&gt; 的理解是什么？它们的区别在哪里？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: &lt;code&gt;传统 sql&lt;&#x2F;code&gt; 是以 &lt;code&gt;sql&lt;&#x2F;code&gt; 为查询&#x2F;定义语言的 &lt;code&gt;dbms&lt;&#x2F;code&gt;，后者现在扩展之下常常也可以是 &lt;code&gt;NotOnlySql&lt;&#x2F;code&gt;，可以做不止传统 &lt;code&gt;sql&lt;&#x2F;code&gt; 的事，比如 &lt;code&gt;redis&lt;&#x2F;code&gt; 也可以做为消息队列，对于一些不方便 &lt;code&gt;sql&lt;&#x2F;code&gt; 的情况可以做特别的优化和特化的保证。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 主要的区别是存储模型的不同。前者是关系模型，后者有如 &lt;code&gt;redis&lt;&#x2F;code&gt; 的 &lt;code&gt;KV 模型&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;寄点+1&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你有过多少写复杂 sql 的经历。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 15445 的 homework 1。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 你有过多少写复杂 &lt;code&gt;sql&lt;&#x2F;code&gt; 的经历。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: cmu 15445 的 homework 1。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这个时候还没有感觉到不妙。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那我现在给你一个经典的模型吧。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; products (product_id, product_name, category)
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; orders (product_id, sales)
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 需要的到每一个 category 的最畅销的 5 件商品。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; ok。
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;WITH pro_with_rank (
-&lt;&#x2F;span&gt;&lt;span&gt;    SELECT
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 那我现在给你一个经典的模型吧。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: &lt;code&gt;products (product_id, product_name, category)&lt;&#x2F;code&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: &lt;code&gt;orders (product_id, sales)&lt;&#x2F;code&gt;&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 需要的到每一个 &lt;code&gt;category&lt;&#x2F;code&gt; 的最畅销的 &lt;code&gt;5&lt;&#x2F;code&gt; 件商品。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: ok。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sql&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;WITH&lt;&#x2F;span&gt;&lt;span&gt; pro_with_rank (
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;SELECT
 &lt;&#x2F;span&gt;&lt;span&gt;        category,
 &lt;&#x2F;span&gt;&lt;span&gt;        product_id,
-&lt;&#x2F;span&gt;&lt;span&gt;        row_number() over (pritition by category ORDER BY SUM(amount) GROUP BY category) as rank_
-&lt;&#x2F;span&gt;&lt;span&gt;    FROM products JOIN orders ON products.product_id = orders.product_id
-&lt;&#x2F;span&gt;&lt;span&gt;    GROUP BY product_id, category
+&lt;&#x2F;span&gt;&lt;span&gt;        row_number() over (pritition by category &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;ORDER BY &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;SUM&lt;&#x2F;span&gt;&lt;span&gt;(amount) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;GROUP BY&lt;&#x2F;span&gt;&lt;span&gt; category) as rank_
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; products &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;JOIN&lt;&#x2F;span&gt;&lt;span&gt; orders ON &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;products&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;product_id &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;product_id
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;GROUP BY&lt;&#x2F;span&gt;&lt;span&gt; product_id, category
 &lt;&#x2F;span&gt;&lt;span&gt;)
-&lt;&#x2F;span&gt;&lt;span&gt;SELECT
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;SELECT
 &lt;&#x2F;span&gt;&lt;span&gt;    category,
 &lt;&#x2F;span&gt;&lt;span&gt;    product_id,
-&lt;&#x2F;span&gt;&lt;span&gt;FROM pro_with_rank
-&lt;&#x2F;span&gt;&lt;span&gt;WHERE
-&lt;&#x2F;span&gt;&lt;span&gt;    rank_ &amp;lt;= 5
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 大致没问题，只是为了考察一下 row_number() 和 join 的使用能力。
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; pro_with_rank
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;WHERE
+&lt;&#x2F;span&gt;&lt;span&gt;    rank_ &amp;lt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🥺Int&lt;&#x2F;strong&gt;: 大致没问题，只是为了考察一下 &lt;code&gt;row_number()&lt;&#x2F;code&gt; 和 &lt;code&gt;join&lt;&#x2F;code&gt; 的使用能力。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这是现场花了好多时间写的第二版，第一版是我直接在 chat 上写的，没写完很着急就发出去了。
 面试官让我共享出屏幕写，因为我刚装的 zoom，mac 没有权限，授权之后重启了一下 zoom，重新入会，在编辑器里写下的第二版。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 那么现在写一个简单的 HashTable 吧。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; ok。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 那么现在写一个简单的 &lt;code&gt;HashTable&lt;&#x2F;code&gt; 吧。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: ok。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;啊？还真要写啊？我当时是这么想的。
 总之是新建项目开始用 rust 写了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你确定要用 rust 写吗？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 呃，类型确实有点麻烦。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 你确定要用 rust 写吗？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 呃，类型确实有点麻烦。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我是很慌的。
 定义 struct: &lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;(K, V)&amp;gt;}&lt;&#x2F;code&gt;；
 impl method：&lt;code&gt;new&lt;&#x2F;code&gt;，&lt;code&gt;insert&lt;&#x2F;code&gt;，&lt;code&gt;get&lt;&#x2F;code&gt;，&lt;code&gt;remove&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 可以不实现 `remove`。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 可以不实现 &lt;code&gt;remove&lt;&#x2F;code&gt;。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 好的。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;约束了 &lt;code&gt;K: Hash&lt;&#x2F;code&gt;，还是大致成功地写出来了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; Hash 碰撞之后要怎么处理？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 桶指向链表或数组；开放地址。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: Hash 碰撞之后要怎么处理？&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 桶指向链表或数组；开放地址。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;其实说了一大堆，因为我想不起来了，疯狂回忆。原来面试真的会问数据结构和算法。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 用你喜欢的方式实现碰撞之后的处理。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 桶。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 用你喜欢的方式实现碰撞之后的处理。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 桶。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本来是要用链表的。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 桶指的只能是链表吗，其他的可以吗？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 能迭代找到对应 K 的都可以。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 桶指的只能是链表吗，其他的可以吗？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 能迭代找到对应 K 的都可以。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里是我寻思着的。rust 里链表确实非常难处理，还是直接用 vector(array) 了。
-&lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;Option&amp;lt;Vec&amp;lt;(K, V)&amp;gt;&amp;gt;&amp;gt;}&lt;&#x2F;code&gt;
+&lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;Option&amp;lt;Vec&amp;lt;(K, V)**🤔Int**:&amp;gt;}&lt;&#x2F;code&gt;
 花了好多时间，勉强写出来了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 如果太大了要 rehash，实现一下吧。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 如果太大了要 &lt;code&gt;rehash&lt;&#x2F;code&gt;，实现一下吧。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 好的。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;什么？rehash 是什么？我直接凭感觉“嗯嗯嗯”的。&lt;&#x2F;p&gt;
+&lt;p&gt;什么？&lt;code&gt;rehash&lt;&#x2F;code&gt; 是什么？我直接凭感觉“嗯嗯嗯”的。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 没事，你可以花 20 分钟来完成。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 奥。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 没事，你可以花 20 分钟来完成。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 奥。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这给的时间是不是太多了，寄点又+1。
 想了半天，硬着头皮写，慢慢回忆起来。
 最后是实现了 &lt;code&gt;fn rehash(&amp;amp;mut self, new_capacity: usize)&lt;&#x2F;code&gt;，
-直接重新声明了一个新的与 HashMap::data 相同类型的空容器，迭代自身的数据插入容器，还是花了很长时间。&lt;&#x2F;p&gt;
+直接重新声明了一个新的与 &lt;code&gt;HashMap { data }&lt;&#x2F;code&gt; 相同类型的空容器，迭代自身的数据插入容器，还是花了很长时间。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 我之前也面过 xx，他是这么处理的，用 HashMap 自己的 insert 方法来做 rehash 的，
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 因为其实逻辑都已经在 insert 里实现了，不需要你再重新直接写。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 我之前也面过 xx，他是这么处理的，用 &lt;code&gt;HashMap&lt;&#x2F;code&gt; 自己的 &lt;code&gt;insert&lt;&#x2F;code&gt; 方法来做 &lt;code&gt;rehash&lt;&#x2F;code&gt; 的，&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 因为其实逻辑都已经在 &lt;code&gt;insert&lt;&#x2F;code&gt; 里实现了，不需要你再重新直接写。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 哦哦。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;我本来想说我也想过这么做（没说），但是我根本不知道用 insert 要怎么 new_capacity。&lt;&#x2F;p&gt;
+&lt;p&gt;我本来想说我也想过这么做（没说），但是我根本不知道用 &lt;code&gt;insert&lt;&#x2F;code&gt; 要怎么 &lt;code&gt;new_capacity&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 一个 ui 有很多 integration 为用户提供服务，我们的 [产品名] 就是作为 integration。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 请问你要如何测试系统，我需要一个系统的工程的方法。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 呃，我试图分为健壮性和安全性的测试。前者可用成熟的集成测试和 fuzz test；后者可用渗透测试，sql 注入脚本的方式测试。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 我主要是想问整个系统的，所以最好要能检查系统bug，及时写 issue，讨论之后解决，对于 CI&#x2F;CD 的维护也要到位。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 一个 ui 有很多 &lt;code&gt;integration&lt;&#x2F;code&gt; 为用户提供服务，我们的 [产品名] 就是作为 &lt;code&gt;integration&lt;&#x2F;code&gt;。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 请问你要如何测试系统，我需要一个系统的工程的方法。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 呃，我试图分为健壮性和安全性的测试。前者可用成熟的集成测试和 &lt;code&gt;fuzz test&lt;&#x2F;code&gt;；后者可用渗透测试，&lt;code&gt;sql 注入&lt;&#x2F;code&gt;脚本的方式测试。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 我主要是想问整个系统的，所以最好要能检查系统bug，及时写 issue，讨论之后解决，对于 &lt;code&gt;CI&#x2F;CD&lt;&#x2F;code&gt; 的维护也要到位。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我说着说着就感觉好像是在说对单独的系统的测试，但是确实没明白这个前端的 ui 是什么关系，这个答案我也觉得蛮奇怪的。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 为什么离职前一家公司？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 不想继续做 crud，想做有意思的东西。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 为什么离职前一家公司？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 不想继续做 &lt;code&gt;crud&lt;&#x2F;code&gt;，想做有意思的东西。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;真实想法。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 开学之后时间能怎么安排？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 根据前实习的经验，每天有 5-6 小时的可支配时间。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 开学之后时间能怎么安排？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 根据前实习的经验，每天有 5-6 小时的可支配时间。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我寻思应该差不多，这学期的课也差不多的样子。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 学业上有什么安排？
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 大一大二疯狂实习；大三开始准备考研。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 学业上有什么安排？&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 大一大二疯狂实习；大三开始准备考研。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;美好的愿望。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 你面的这个岗位我们不打算招太多人，需要资深的工程师。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 你面的这个岗位我们不打算招太多人，需要资深的工程师。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 哦哦...&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;貌似不妙。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 其实不见得会特别的 不 crud。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 其实不见得会特别的 不 &lt;code&gt;crud&lt;&#x2F;code&gt;。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 哦哦...&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;应该不至于。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;gt;&amp;gt; 如果你入职，是如果，我们也会对你进行考核，如果一周两周不满足要求，我们也会有一些考虑...
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 哦哦...理解理解。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 如果你入职，是如果，我们也会对你进行考核，如果一周两周不满足要求，我们也会有一些考虑...&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 哦哦...理解理解。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;cao。&lt;&#x2F;p&gt;
+&lt;p&gt;...。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;&amp;gt; 扯了一些其他的东西。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; 我会和 hr 反馈一下，之后给你通知。
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; 好的，谢谢，再见。
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&amp;lt;&amp;gt; 扯了一些其他的东西。
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 我会和 hr 反馈一下，之后给你通知。&lt;br &#x2F;&gt;
+&lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 好的，谢谢，再见。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;好多问题记不清了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -201,14 +182,14 @@ impl method：&lt;code&gt;new&lt;&#x2F;code&gt;，&lt;code&gt;insert&lt;&#x2F;co
 &lt;h1 id=&quot;updates&quot;&gt;updates&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;2023-08-29&quot;&gt;2023-08-29:&lt;&#x2F;h2&gt;
 &lt;p&gt;上午 hr 微信联系我，约了明天（08-30 星期三）二面。除了还能二面这件事让我很惊讶&#x2F;惊喜之外，还注意到了另一件事...
-Richard 告诉我两次面试官都是产品经理（虽然都会写代码）——我疑似要转行了，&lt;code&gt;product engineer&lt;&#x2F;code&gt; 是这种职业？？
+R 告诉我两次面试官都是产品经理（虽然都会写代码）——我疑似要转行了，&lt;code&gt;product engineer&lt;&#x2F;code&gt; 是这种职业？？
 突然有了一种，不管面试成功与否都不亏的感觉了😢。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;2023-08-30&quot;&gt;2023-08-30&lt;&#x2F;h2&gt;
 &lt;p&gt;二面结束，没有太多可以说的，比第一次还失败。
 面试官很努力在带了，问了两个题目。一道 medium 的算法题，一个非常简单的 SQL 查询。
 前者当场没写出来，结束后通过邮件发给他了。
 其实比一面要简单很多，但是一面的 &lt;code&gt;HashMap&lt;&#x2F;code&gt; 是运气好正好知道。这次算法确实没刷过题，出不来手。&lt;&#x2F;p&gt;
-&lt;p&gt;进一步问了关于这个岗位的情况：只对接 Wu 和 Liu 两位产品经理，不接触 kernel 开发，但是也没有界限分明；
+&lt;p&gt;进一步问了关于这个岗位的情况：只对接 W 和 L 两位产品经理，不接触 kernel 开发，但是也没有界限分明；
 如果有能力 cover kernel，可以参与&#x2F;慢慢转过去，没有限制。&lt;&#x2F;p&gt;
 &lt;p&gt;工作安排是弹性的，只会要求一段时间内的产出，不要求什么时间什么会议，也不要求打卡。&lt;&#x2F;p&gt;
 &lt;p&gt;面试结果快则本周内，迟则下周内通过 hr 通知。&lt;&#x2F;p&gt;
