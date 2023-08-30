@@ -166,7 +166,7 @@
 <p><strong>🤔Int</strong>: 那我现在给你一个经典的模型吧。<br />
 <strong>🤔Int</strong>: <code>products (product_id, product_name, category)</code><br />
 <strong>🤔Int</strong>: <code>orders (product_id, sales)</code><br />
-<strong>🤔Int</strong>: 需要的到每一个 <code>category</code> 的最畅销的 <code>5</code> 件商品。<br />
+<strong>🤔Int</strong>: 写一个 <code>sql</code>，查询每一个 <code>category</code> 的最畅销的 <code>5</code> 件商品。<br />
 <strong>🥺Me</strong>: ok。</p>
 <pre data-lang="sql" style="background-color:#2b303b;color:#c0c5ce;" class="language-sql "><code class="language-sql" data-lang="sql"><span style="color:#b48ead;">WITH</span><span> pro_with_rank (
 </span><span>    </span><span style="color:#b48ead;">SELECT
@@ -220,7 +220,7 @@ impl method：<code>new</code>，<code>insert</code>，<code>get</code>，<code>
 <strong>🥺Me</strong>: 能迭代找到对应 K 的都可以。</p>
 <blockquote>
 <p>这里是我寻思着的。rust 里链表确实非常难处理，还是直接用 vector(array) 了。
-<code>HashMap&lt;K, V&gt; {data: Vec&lt;Option&lt;Vec&lt;(K, V)**🤔Int**:&gt;}</code>
+<code>HashMap&lt;K, V&gt; {data: Vec&lt;Option&lt;Vec&lt;(K, V)&gt;&gt;&gt;}</code>
 花了好多时间，勉强写出来了。</p>
 </blockquote>
 <p><strong>🤔Int</strong>: 如果太大了要 <code>rehash</code>，实现一下吧。<br />

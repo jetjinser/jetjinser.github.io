@@ -55,7 +55,7 @@
 &lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 那我现在给你一个经典的模型吧。&lt;br &#x2F;&gt;
 &lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: &lt;code&gt;products (product_id, product_name, category)&lt;&#x2F;code&gt;&lt;br &#x2F;&gt;
 &lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: &lt;code&gt;orders (product_id, sales)&lt;&#x2F;code&gt;&lt;br &#x2F;&gt;
-&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 需要的到每一个 &lt;code&gt;category&lt;&#x2F;code&gt; 的最畅销的 &lt;code&gt;5&lt;&#x2F;code&gt; 件商品。&lt;br &#x2F;&gt;
+&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 写一个 &lt;code&gt;sql&lt;&#x2F;code&gt;，查询每一个 &lt;code&gt;category&lt;&#x2F;code&gt; 的最畅销的 &lt;code&gt;5&lt;&#x2F;code&gt; 件商品。&lt;br &#x2F;&gt;
 &lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: ok。&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sql&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sql &quot;&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;WITH&lt;&#x2F;span&gt;&lt;span&gt; pro_with_rank (
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;SELECT
@@ -109,7 +109,7 @@ impl method：&lt;code&gt;new&lt;&#x2F;code&gt;，&lt;code&gt;insert&lt;&#x2F;co
 &lt;strong&gt;🥺Me&lt;&#x2F;strong&gt;: 能迭代找到对应 K 的都可以。&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里是我寻思着的。rust 里链表确实非常难处理，还是直接用 vector(array) 了。
-&lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;Option&amp;lt;Vec&amp;lt;(K, V)**🤔Int**:&amp;gt;}&lt;&#x2F;code&gt;
+&lt;code&gt;HashMap&amp;lt;K, V&amp;gt; {data: Vec&amp;lt;Option&amp;lt;Vec&amp;lt;(K, V)&amp;gt;&amp;gt;&amp;gt;}&lt;&#x2F;code&gt;
 花了好多时间，勉强写出来了。&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;🤔Int&lt;&#x2F;strong&gt;: 如果太大了要 &lt;code&gt;rehash&lt;&#x2F;code&gt;，实现一下吧。&lt;br &#x2F;&gt;
