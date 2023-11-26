@@ -5,8 +5,195 @@
     <link href="/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-08-28T00:00:00+00:00</updated>
+    <updated>2023-11-26T00:00:00+00:00</updated>
     <id>/atom.xml</id>
+    <entry xml:lang="zh-cn">
+        <title>self-hosted hastebin</title>
+        <published>2023-11-26T00:00:00+00:00</published>
+        <updated>2023-11-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="/posts/host-hastebin/" type="text/html"/>
+        <id>/posts/host-hastebin/</id>
+        <content type="html">&lt;h1 id=&quot;ye-xu-shi-bian-yi-vps-zui-shi-yong-de-self-hosted-fu-wu&quot;&gt;也许是便宜 vps 最实用的 self-hosted 服务&lt;&#x2F;h1&gt;
+&lt;p&gt;前几天阿里云发短信给我推销了99元&#x2F;年的 1c2g vps，不能让它闲着。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pastebin&quot;&gt;Pastebin&lt;&#x2F;h2&gt;
+&lt;p&gt;self-hosted 是个热门话题，我也折腾过不少服务，但是最后总会感到是在自己创造需求；很少有能在平时真的会很自然地用到的。
+直到我意识到我每天都在使用的一个服务 -- &lt;strong&gt;pastebin&lt;&#x2F;strong&gt;：&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A pastebin or text storage site is a type of online content-hosting service where users can store plain text.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;我常用 pastebin 的地方：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;只是需要某个区域输入文本。&lt;&#x2F;li&gt;
+&lt;li&gt;临时记一下某段 snippet 或数据。&lt;&#x2F;li&gt;
+&lt;li&gt;贴上长段 log 方便 debug。&lt;&#x2F;li&gt;
+&lt;li&gt;分享大段代码到群组。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;有不少在线 pastebin 服务，比如 #1 的 &lt;a href=&quot;https:&#x2F;&#x2F;pastebin.com&#x2F;&quot;&gt;pastebin.com&lt;&#x2F;a&gt;，
+一些社区比如 &lt;a href=&quot;https:&#x2F;&#x2F;paste.debian.net&#x2F;&quot;&gt;debian&lt;&#x2F;a&gt;，&lt;a href=&quot;https:&#x2F;&#x2F;pastebin.mozilla.org&#x2F;&quot;&gt;mozilla&lt;&#x2F;a&gt; 也会维护。&lt;&#x2F;p&gt;
+&lt;p&gt;但他们要么是页面太丑，操作复杂，要么是有恼人的登陆，特别是 &lt;a href=&quot;https:&#x2F;&#x2F;pastebin.ubuntu.com&#x2F;&quot;&gt;ubuntu&lt;&#x2F;a&gt; 的 pastebin 甚至要求登陆才能上传文本。
+最好用的 pastebin 应该是 &lt;a href=&quot;https:&#x2F;&#x2F;fars.ee&#x2F;&quot;&gt;fars.ee&lt;&#x2F;a&gt; 和 &lt;a href=&quot;http:&#x2F;&#x2F;sprunge.us&#x2F;&quot;&gt;sprunge&lt;&#x2F;a&gt;
+以及我想 self-hosted 的 hastebin。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hastebin&quot;&gt;Hastebin&lt;&#x2F;h2&gt;
+&lt;p&gt;我并不了解 Hastebin 的历史，只是在一次偶然发现了 &lt;a href=&quot;https:&#x2F;&#x2F;hastebin.skyra.pw&#x2F;&quot;&gt;hastebin.skyra.pw&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;这里总结一下我为什么偏好它：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开就能直接编辑（类似 &lt;a href=&quot;https:&#x2F;&#x2F;paste.sh&#x2F;&quot;&gt;paste.sh&lt;&#x2F;a&gt;, 这里得提一句 paste.sh 也很好用，但是它没有高亮，且有我不太喜欢的自动更新）&lt;&#x2F;li&gt;
+&lt;li&gt;页面很好看，没有多余的选框&lt;&#x2F;li&gt;
+&lt;li&gt;没有烦人的登录和账号&lt;&#x2F;li&gt;
+&lt;li&gt;没有几乎派不上用场的 history，&lt;&#x2F;li&gt;
+&lt;li&gt;以及适当的高亮。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;不过我后来发现，hastebin 官方 host 的域名应该是 &lt;a href=&quot;https:&#x2F;&#x2F;hastebin.com&quot;&gt;hastebin.com&lt;&#x2F;a&gt;，
+而它已经 301 到 &lt;a href=&quot;https:&#x2F;&#x2F;www.toptal.com&#x2F;developers&#x2F;hastebin&quot;&gt;toptal.com&lt;&#x2F;a&gt; 了。&lt;&#x2F;p&gt;
+&lt;p&gt;从&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toptal&#x2F;haste-server&quot;&gt;仓库&lt;&#x2F;a&gt;的 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toptal&#x2F;haste-server&#x2F;issues&#x2F;429&quot;&gt;issue#492&lt;&#x2F;a&gt; 来看，确实已经被 toptal 收购了，接着它似乎就走向了开源社区的死亡。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;hastebin.skyra.pw&lt;&#x2F;code&gt; 和专门的 pastebin 域名不太一样，就像前面提到的 debian 和 mozilla 一样，它确实是由一个社区 host 的。
+从 &lt;a href=&quot;https:&#x2F;&#x2F;hastebin.skyra.pw&#x2F;about&quot;&gt;about&lt;&#x2F;a&gt; 中可以看到：&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The HasteServer image used to provide a reliable, self-controlled and self-hosted HasteServer for Skyra&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;打开 &lt;a href=&quot;https:&#x2F;&#x2F;skyra.pw&#x2F;&quot;&gt;skyra.pw&lt;&#x2F;a&gt; 也可以看到 skyra 是一个 discord mod bot。&lt;&#x2F;p&gt;
+&lt;p&gt;skyra 项目需要一个稳定好用的 pastebin，而 haste-server 已经过时，无人维护，于是他们重新维护了一个更新的仓库，
+用来提供他们的需要。(谢谢 skyra)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-serve&quot;&gt;How to serve&lt;&#x2F;h2&gt;
+&lt;p&gt;最简单的方式就是使用 docker compose 启动，并且这应该也是推荐的做法，应该会更安全一点？&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;qian-zhi-yao-qiu&quot;&gt;前置要求&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;机器上装有 docker compose。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;xia-zai-he-qi-dong&quot;&gt;下载和启动&lt;&#x2F;h3&gt;
+&lt;p&gt;随便创建一个目录：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir &lt;&#x2F;span&gt;&lt;span&gt;haste-server
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span&gt;haste-server
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;从 skyra 维护的 haste-server 仓库中下载 docker-compose.yml：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -LO &lt;&#x2F;span&gt;&lt;span&gt;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;skyra-project&#x2F;haste-server&#x2F;main&#x2F;docker-compose.yml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;很短，在这里贴出来：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;version&lt;&#x2F;span&gt;&lt;span&gt;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;3.9&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;services&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;redis&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;container_name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis:alpine
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;restart&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;always
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ports&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;8287:8287&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# &amp;lt;-- redis 的端口
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;command&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis-server --port 8287 --requirepass redis
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;haste&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;container_name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;hasteserver
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ghcr.io&#x2F;skyra-project&#x2F;haste-server:latest
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;.
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;restart&lt;&#x2F;span&gt;&lt;span&gt;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;no&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;depends_on&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ports&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;8290:8290&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# &amp;lt;-- haste-server 从 docker 中暴露出的端口
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;environment&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PORT&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8290 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# &amp;lt;-- haste-server listen 的端口
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_TYPE&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_HOST&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_PORT&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8287
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_PASSWORD&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;redis
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_DB&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;STORAGE_EXPIRE_SECONDS&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;21600
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;要注意的地方只有 redis 和 haste-server 的端口，
+前者如果不想暴露出来可以直接删除那两行，后者随意。&lt;&#x2F;p&gt;
+&lt;p&gt;没有多余的设置，直接通过 docker compose 启动：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;docker &lt;&#x2F;span&gt;&lt;span&gt;compose up &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-d
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;等 docker pull 下 image，就可以通过 &lt;code&gt;localhost:&amp;lt;haste-server port&amp;gt;&lt;&#x2F;code&gt; 访问了，如果没有修改过端口，那么默认就是 &lt;code&gt;localhost:8290&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;如果 redis 端口有暴露出来，可以通过 &lt;code&gt;redis-cli&lt;&#x2F;code&gt; 访问来查看存储的数据：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;redis-cli -p 8287 -a redis -n 2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;-p&lt;&#x2F;code&gt; 指定端口，&lt;code&gt;-a&lt;&#x2F;code&gt; 指定密码，&lt;code&gt;-n&lt;&#x2F;code&gt; 指定数据库编号。&lt;&#x2F;p&gt;
+&lt;p&gt;一些简单的操作：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;keys
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;列出所有 &lt;code&gt;key&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;get &amp;lt;key&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;获取 &lt;code&gt;key&lt;&#x2F;code&gt; 的 &lt;code&gt;value&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;append &amp;lt;key&amp;gt; &amp;quot;any string&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;在 &lt;code&gt;key&lt;&#x2F;code&gt; 的 &lt;code&gt;value&lt;&#x2F;code&gt; 后加上 &lt;code&gt;any string&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;INFO: 如果你想修改 &lt;code&gt;localhost&#x2F;about&lt;&#x2F;code&gt; 的文字，可以通过修改 &lt;code&gt;about&lt;&#x2F;code&gt; &lt;code&gt;key&lt;&#x2F;code&gt; 的 &lt;code&gt;value&lt;&#x2F;code&gt; 来实现。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;kai-fang-fu-wu&quot;&gt;开放服务&lt;&#x2F;h3&gt;
+&lt;p&gt;我使用 cloudflare 的 tunnel 服务暴露出 haste-server，&lt;&#x2F;p&gt;
+&lt;p&gt;这不是本文的重点，只作简单记述一下：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cloudflared &lt;&#x2F;span&gt;&lt;span&gt;tunnel create chez-ali
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cloudflared &lt;&#x2F;span&gt;&lt;span&gt;tunnel dns chez-ali *.purejs.icu
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;cloudflared&#x2F;config.yaml&lt;&#x2F;code&gt;：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tunnel&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;4732xxxx-xxxx-xxxx-xxxx-xxxxxxxxe044
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;credentials-file&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;home&#x2F;jinser&#x2F;.cloudflared&#x2F;4732xxxx-xxxx-xxxx-xxxx-xxxxxxxxe044.json
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ingress&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hostname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;note.purejs.icu
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;127.0.0.1:2718
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hostname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;box.purejs.icu
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;127.0.0.1:8000
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hostname&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;hastebin.purejs.icu
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;127.0.0.1:8290
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;service&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http_status:404
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;how-to-use&quot;&gt;How to use&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;zai-liu-lan-qi-zhong-shi-yong&quot;&gt;在浏览器中使用&lt;&#x2F;h3&gt;
+&lt;p&gt;只需要从浏览器直接打开 haste-server 的地址，比如我用的是 &lt;code&gt;hastebin.purejs.icu&lt;&#x2F;code&gt;，一切 ok。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tong-guo-zhong-duan-shi-yong&quot;&gt;通过终端使用&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;haste-client-bu-tui-jian&quot;&gt;haste-client (不推荐)&lt;&#x2F;h4&gt;
+&lt;p&gt;hastebin 提供了一个名为 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;toptal&#x2F;haste-client&quot;&gt;haste-client&lt;&#x2F;a&gt; 的命令行工具，由 ruby 编写。
+不确认一般的包管理工具的默认仓库有没有，但是我试过 &lt;code&gt;brew&lt;&#x2F;code&gt;，可以直接通过它安装：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;brew &lt;&#x2F;span&gt;&lt;span&gt;install haste-client
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;如何使用可以参考仓库的 README。
+需要注意的是，haste-client 会构造出一个 &lt;code&gt;&amp;lt;domain&amp;gt;&#x2F;share&#x2F;xxx&lt;&#x2F;code&gt; 的 URL，
+这个 &lt;code&gt;&#x2F;share&#x2F;&lt;&#x2F;code&gt; 路径在 skyra hastebin 中没有意义，正确的的 URL 应该是 &lt;code&gt;&amp;lt;domain&amp;gt;&#x2F;xxx&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;curl&quot;&gt;curl&lt;&#x2F;h4&gt;
+&lt;p&gt;haste-client 的功能非常简单，事实上通过一个简单的 shell 脚本就可以实现相同的功能。&lt;&#x2F;p&gt;
+&lt;p&gt;这里贴出 fish 的代码，其他的 shell 大同小异。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;hst
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;set -q &lt;&#x2F;span&gt;&lt;span&gt;HASTE_SERVER
+&lt;&#x2F;span&gt;&lt;span&gt;    and &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;set -f &lt;&#x2F;span&gt;&lt;span&gt;server &amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;HASTE_SERVER&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    or &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;set -f &lt;&#x2F;span&gt;&lt;span&gt;server &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;hastebin.purejs.icu&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;isatty &lt;&#x2F;span&gt;&lt;span&gt;stdin
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;set -f &lt;&#x2F;span&gt;&lt;span&gt;json (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -s &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;documents&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--data-binary &lt;&#x2F;span&gt;&lt;span&gt;@$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;argv&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;else
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cat &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;argv &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&#x2F;dev&#x2F;null | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;read -l -z &lt;&#x2F;span&gt;&lt;span&gt;content
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;set -f &lt;&#x2F;span&gt;&lt;span&gt;json (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -s &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;documents&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;--data-binary &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;json &lt;&#x2F;span&gt;&lt;span&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s|{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;\:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;\(.*\)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;}|&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;server&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;\1\n|&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;hst&lt;&#x2F;code&gt; function 做了两件事情：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;curl POST &amp;quot;$server&#x2F;documents&amp;quot; (e.g. &lt;code&gt;https:&#x2F;&#x2F;hastebin.purejs.icu&#x2F;documents&lt;&#x2F;code&gt;)，这里有两点可以说；
+&lt;ol&gt;
+&lt;li&gt;curl 带 &lt;code&gt;--data-binary&lt;&#x2F;code&gt; 参数而不是 &lt;code&gt;--data&lt;&#x2F;code&gt; 参数，因为后者会删去所有的 newline。&lt;&#x2F;li&gt;
+&lt;li&gt;当 &lt;code&gt;--data[-binary, -ascii]&lt;&#x2F;code&gt; 后跟随的参数以为 &lt;code&gt;@&lt;&#x2F;code&gt; 开头，curl 会将其之后的字符视为 filename，并从中读取内容。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;将 curl 返回的 json &lt;code&gt;{&amp;quot;key&amp;quot;:&amp;quot;xxx&amp;quot;}&lt;&#x2F;code&gt; 用 sed 拼成 &lt;code&gt;$server&#x2F;xxx&lt;&#x2F;code&gt;。&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hst &lt;&#x2F;span&gt;&lt;span&gt;filename.txt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dmesg &lt;&#x2F;span&gt;&lt;span&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hst
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;一切 ok。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tips: 可以在生成的 URL 后加入高亮的语法来告诉 hastebin 如何渲染： &lt;code&gt;https:&#x2F;&#x2F;hastebin.purejs.icu&#x2F;piqosotiyo.racket&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;self-hosted 的意义也许就是有趣和随便造吧。&lt;&#x2F;p&gt;
+</content>
+    </entry>
     <entry xml:lang="zh-cn">
         <title>记录第一次面试</title>
         <published>2023-08-28T00:00:00+00:00</published>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="dark light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         self-hosted hastebin
+        
+    </title>
+
+        
+            <meta property="og:title" content="self-hosted hastebin" />
+        
+     
+
+     
+         
+             <meta property="og:description" content="jinser&#x27;s blog" />
+         
+     
+
+     
+         
+             <meta name="description" content="jinser&#x27;s blog" />
+         
+    
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    
+    
+        <link href=/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="pure &gt;&gt;= js" href="/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=/theme/light.css />
+        <link rel="stylesheet" type="text/css" href="/theme/dark.css" media="(prefers-color-scheme: dark)" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=/main.css />
+
+    
+
+    <script src=/js/feather.min.js></script>
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=&#x2F;>pure &gt;&gt;= js</a>
+    </div>
+
+    <nav>
+        
+            <a href=&#x2F;projects style="margin-left: 0.7em">&#x2F;projects</a>
+        
+            <a href=&#x2F;about style="margin-left: 0.7em">&#x2F;about</a>
+        
+    </nav>
+
+    
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        self-hosted hastebin<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2023-11-26</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+
+        <section class="body">
+            <h1 id="ye-xu-shi-bian-yi-vps-zui-shi-yong-de-self-hosted-fu-wu">也许是便宜 vps 最实用的 self-hosted 服务</h1>
+<p>前几天阿里云发短信给我推销了99元/年的 1c2g vps，不能让它闲着。</p>
+<h2 id="pastebin">Pastebin</h2>
+<p>self-hosted 是个热门话题，我也折腾过不少服务，但是最后总会感到是在自己创造需求；很少有能在平时真的会很自然地用到的。
+直到我意识到我每天都在使用的一个服务 -- <strong>pastebin</strong>：</p>
+<blockquote>
+<p>A pastebin or text storage site is a type of online content-hosting service where users can store plain text.</p>
+</blockquote>
+<p>我常用 pastebin 的地方：</p>
+<ul>
+<li>只是需要某个区域输入文本。</li>
+<li>临时记一下某段 snippet 或数据。</li>
+<li>贴上长段 log 方便 debug。</li>
+<li>分享大段代码到群组。</li>
+</ul>
+<p>有不少在线 pastebin 服务，比如 #1 的 <a href="https://pastebin.com/">pastebin.com</a>，
+一些社区比如 <a href="https://paste.debian.net/">debian</a>，<a href="https://pastebin.mozilla.org/">mozilla</a> 也会维护。</p>
+<p>但他们要么是页面太丑，操作复杂，要么是有恼人的登陆，特别是 <a href="https://pastebin.ubuntu.com/">ubuntu</a> 的 pastebin 甚至要求登陆才能上传文本。
+最好用的 pastebin 应该是 <a href="https://fars.ee/">fars.ee</a> 和 <a href="http://sprunge.us/">sprunge</a>
+以及我想 self-hosted 的 hastebin。</p>
+<h2 id="hastebin">Hastebin</h2>
+<p>我并不了解 Hastebin 的历史，只是在一次偶然发现了 <a href="https://hastebin.skyra.pw/">hastebin.skyra.pw</a>。</p>
+<p>这里总结一下我为什么偏好它：</p>
+<ul>
+<li>打开就能直接编辑（类似 <a href="https://paste.sh/">paste.sh</a>, 这里得提一句 paste.sh 也很好用，但是它没有高亮，且有我不太喜欢的自动更新）</li>
+<li>页面很好看，没有多余的选框</li>
+<li>没有烦人的登录和账号</li>
+<li>没有几乎派不上用场的 history，</li>
+<li>以及适当的高亮。</li>
+</ul>
+<p>不过我后来发现，hastebin 官方 host 的域名应该是 <a href="https://hastebin.com">hastebin.com</a>，
+而它已经 301 到 <a href="https://www.toptal.com/developers/hastebin">toptal.com</a> 了。</p>
+<p>从<a href="https://github.com/toptal/haste-server">仓库</a>的 <a href="https://github.com/toptal/haste-server/issues/429">issue#492</a> 来看，确实已经被 toptal 收购了，接着它似乎就走向了开源社区的死亡。</p>
+<p><code>hastebin.skyra.pw</code> 和专门的 pastebin 域名不太一样，就像前面提到的 debian 和 mozilla 一样，它确实是由一个社区 host 的。
+从 <a href="https://hastebin.skyra.pw/about">about</a> 中可以看到：</p>
+<blockquote>
+<p>The HasteServer image used to provide a reliable, self-controlled and self-hosted HasteServer for Skyra</p>
+</blockquote>
+<p>打开 <a href="https://skyra.pw/">skyra.pw</a> 也可以看到 skyra 是一个 discord mod bot。</p>
+<p>skyra 项目需要一个稳定好用的 pastebin，而 haste-server 已经过时，无人维护，于是他们重新维护了一个更新的仓库，
+用来提供他们的需要。(谢谢 skyra)</p>
+<h2 id="how-to-serve">How to serve</h2>
+<p>最简单的方式就是使用 docker compose 启动，并且这应该也是推荐的做法，应该会更安全一点？</p>
+<h3 id="qian-zhi-yao-qiu">前置要求</h3>
+<ul>
+<li>机器上装有 docker compose。</li>
+</ul>
+<h3 id="xia-zai-he-qi-dong">下载和启动</h3>
+<p>随便创建一个目录：</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">mkdir </span><span>haste-server
+</span><span style="color:#bf616a;">cd </span><span>haste-server
+</span></code></pre>
+<p>从 skyra 维护的 haste-server 仓库中下载 docker-compose.yml：</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">curl -LO </span><span>https://raw.githubusercontent.com/skyra-project/haste-server/main/docker-compose.yml
+</span></code></pre>
+<p>很短，在这里贴出来：</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &#39;</span><span style="color:#a3be8c;">3.9</span><span>&#39;
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#bf616a;">redis</span><span>:
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">redis
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">redis:alpine
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">always
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &#39;</span><span style="color:#a3be8c;">8287:8287</span><span>&#39; </span><span style="color:#65737e;"># &lt;-- redis 的端口
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">redis-server --port 8287 --requirepass redis
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">haste</span><span>:
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">hasteserver
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">ghcr.io/skyra-project/haste-server:latest
+</span><span>    </span><span style="color:#bf616a;">build</span><span>: </span><span style="color:#d08770;">.
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: &#39;</span><span style="color:#a3be8c;">no</span><span>&#39;
+</span><span>    </span><span style="color:#bf616a;">depends_on</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">redis
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &#39;</span><span style="color:#a3be8c;">8290:8290</span><span>&#39; </span><span style="color:#65737e;"># &lt;-- haste-server 从 docker 中暴露出的端口
+</span><span>    </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>      </span><span style="color:#bf616a;">PORT</span><span>: </span><span style="color:#d08770;">8290 </span><span style="color:#65737e;"># &lt;-- haste-server listen 的端口
+</span><span>      </span><span style="color:#bf616a;">STORAGE_TYPE</span><span>: </span><span style="color:#a3be8c;">redis
+</span><span>      </span><span style="color:#bf616a;">STORAGE_HOST</span><span>: </span><span style="color:#a3be8c;">redis
+</span><span>      </span><span style="color:#bf616a;">STORAGE_PORT</span><span>: </span><span style="color:#d08770;">8287
+</span><span>      </span><span style="color:#bf616a;">STORAGE_PASSWORD</span><span>: </span><span style="color:#a3be8c;">redis
+</span><span>      </span><span style="color:#bf616a;">STORAGE_DB</span><span>: </span><span style="color:#d08770;">2
+</span><span>      </span><span style="color:#bf616a;">STORAGE_EXPIRE_SECONDS</span><span>: </span><span style="color:#d08770;">21600
+</span></code></pre>
+<p>要注意的地方只有 redis 和 haste-server 的端口，
+前者如果不想暴露出来可以直接删除那两行，后者随意。</p>
+<p>没有多余的设置，直接通过 docker compose 启动：</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">docker </span><span>compose up </span><span style="color:#bf616a;">-d
+</span></code></pre>
+<p>等 docker pull 下 image，就可以通过 <code>localhost:&lt;haste-server port&gt;</code> 访问了，如果没有修改过端口，那么默认就是 <code>localhost:8290</code>。</p>
+<p>如果 redis 端口有暴露出来，可以通过 <code>redis-cli</code> 访问来查看存储的数据：</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>redis-cli -p 8287 -a redis -n 2
+</span></code></pre>
+<p><code>-p</code> 指定端口，<code>-a</code> 指定密码，<code>-n</code> 指定数据库编号。</p>
+<p>一些简单的操作：</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>keys
+</span></code></pre>
+<p>列出所有 <code>key</code>。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>get &lt;key&gt;
+</span></code></pre>
+<p>获取 <code>key</code> 的 <code>value</code>。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>append &lt;key&gt; &quot;any string&quot;
+</span></code></pre>
+<p>在 <code>key</code> 的 <code>value</code> 后加上 <code>any string</code>。</p>
+<blockquote>
+<p>INFO: 如果你想修改 <code>localhost/about</code> 的文字，可以通过修改 <code>about</code> <code>key</code> 的 <code>value</code> 来实现。</p>
+</blockquote>
+<h3 id="kai-fang-fu-wu">开放服务</h3>
+<p>我使用 cloudflare 的 tunnel 服务暴露出 haste-server，</p>
+<p>这不是本文的重点，只作简单记述一下：</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">cloudflared </span><span>tunnel create chez-ali
+</span><span style="color:#bf616a;">cloudflared </span><span>tunnel dns chez-ali *.purejs.icu
+</span></code></pre>
+<p><code>cloudflared/config.yaml</code>：</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">tunnel</span><span>: </span><span style="color:#a3be8c;">4732xxxx-xxxx-xxxx-xxxx-xxxxxxxxe044
+</span><span style="color:#bf616a;">credentials-file</span><span>: </span><span style="color:#a3be8c;">/home/jinser/.cloudflared/4732xxxx-xxxx-xxxx-xxxx-xxxxxxxxe044.json
+</span><span>
+</span><span style="color:#bf616a;">ingress</span><span>:
+</span><span>  - </span><span style="color:#bf616a;">hostname</span><span>: </span><span style="color:#a3be8c;">note.purejs.icu
+</span><span>    </span><span style="color:#bf616a;">service</span><span>: </span><span style="color:#a3be8c;">http://127.0.0.1:2718
+</span><span>  - </span><span style="color:#bf616a;">hostname</span><span>: </span><span style="color:#a3be8c;">box.purejs.icu
+</span><span>    </span><span style="color:#bf616a;">service</span><span>: </span><span style="color:#a3be8c;">http://127.0.0.1:8000
+</span><span>  - </span><span style="color:#bf616a;">hostname</span><span>: </span><span style="color:#a3be8c;">hastebin.purejs.icu
+</span><span>    </span><span style="color:#bf616a;">service</span><span>: </span><span style="color:#a3be8c;">http://127.0.0.1:8290
+</span><span>  - </span><span style="color:#bf616a;">service</span><span>: </span><span style="color:#a3be8c;">http_status:404
+</span></code></pre>
+<h2 id="how-to-use">How to use</h2>
+<h3 id="zai-liu-lan-qi-zhong-shi-yong">在浏览器中使用</h3>
+<p>只需要从浏览器直接打开 haste-server 的地址，比如我用的是 <code>hastebin.purejs.icu</code>，一切 ok。</p>
+<h3 id="tong-guo-zhong-duan-shi-yong">通过终端使用</h3>
+<h4 id="haste-client-bu-tui-jian">haste-client (不推荐)</h4>
+<p>hastebin 提供了一个名为 <a href="https://github.com/toptal/haste-client">haste-client</a> 的命令行工具，由 ruby 编写。
+不确认一般的包管理工具的默认仓库有没有，但是我试过 <code>brew</code>，可以直接通过它安装：</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">brew </span><span>install haste-client
+</span></code></pre>
+<p>如何使用可以参考仓库的 README。
+需要注意的是，haste-client 会构造出一个 <code>&lt;domain&gt;/share/xxx</code> 的 URL，
+这个 <code>/share/</code> 路径在 skyra hastebin 中没有意义，正确的的 URL 应该是 <code>&lt;domain&gt;/xxx</code>。</p>
+<h4 id="curl">curl</h4>
+<p>haste-client 的功能非常简单，事实上通过一个简单的 shell 脚本就可以实现相同的功能。</p>
+<p>这里贴出 fish 的代码，其他的 shell 大同小异。</p>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">hst
+</span><span>    </span><span style="color:#bf616a;">set -q </span><span>HASTE_SERVER
+</span><span>    and </span><span style="color:#bf616a;">set -f </span><span>server &quot;$</span><span style="color:#bf616a;">HASTE_SERVER</span><span>&quot;
+</span><span>    or </span><span style="color:#bf616a;">set -f </span><span>server &#39;</span><span style="color:#a3be8c;">https://hastebin.purejs.icu</span><span>&#39;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">isatty </span><span>stdin
+</span><span>        </span><span style="color:#bf616a;">set -f </span><span>json (</span><span style="color:#bf616a;">curl -s </span><span>&quot;$</span><span style="color:#bf616a;">server</span><span style="color:#a3be8c;">/documents</span><span>&quot; </span><span style="color:#bf616a;">--data-binary </span><span>@$</span><span style="color:#bf616a;">argv</span><span>)
+</span><span>    </span><span style="color:#b48ead;">else
+</span><span>        </span><span style="color:#bf616a;">cat </span><span>$</span><span style="color:#bf616a;">argv </span><span style="color:#d08770;">2</span><span>&gt;/dev/null | </span><span style="color:#bf616a;">read -l -z </span><span>content
+</span><span>        </span><span style="color:#bf616a;">set -f </span><span>json (</span><span style="color:#bf616a;">curl -s </span><span>&quot;$</span><span style="color:#bf616a;">server</span><span style="color:#a3be8c;">/documents</span><span>&quot; </span><span style="color:#bf616a;">--data-binary </span><span>$</span><span style="color:#bf616a;">content</span><span>)
+</span><span>    </span><span style="color:#b48ead;">end
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">echo </span><span>$</span><span style="color:#bf616a;">json </span><span>| </span><span style="color:#bf616a;">sed </span><span>&quot;</span><span style="color:#a3be8c;">s|{</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">key</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">\:</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">\(.*\)</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">}|</span><span>$</span><span style="color:#bf616a;">server</span><span style="color:#a3be8c;">/\1\n|</span><span>&quot;
+</span><span style="color:#b48ead;">end
+</span><span>
+</span></code></pre>
+<p><code>hst</code> function 做了两件事情：</p>
+<ol>
+<li>curl POST &quot;$server/documents&quot; (e.g. <code>https://hastebin.purejs.icu/documents</code>)，这里有两点可以说；
+<ol>
+<li>curl 带 <code>--data-binary</code> 参数而不是 <code>--data</code> 参数，因为后者会删去所有的 newline。</li>
+<li>当 <code>--data[-binary, -ascii]</code> 后跟随的参数以为 <code>@</code> 开头，curl 会将其之后的字符视为 filename，并从中读取内容。</li>
+</ol>
+</li>
+<li>将 curl 返回的 json <code>{&quot;key&quot;:&quot;xxx&quot;}</code> 用 sed 拼成 <code>$server/xxx</code>。</li>
+</ol>
+<pre data-lang="fish" style="background-color:#2b303b;color:#c0c5ce;" class="language-fish "><code class="language-fish" data-lang="fish"><span style="color:#bf616a;">hst </span><span>filename.txt
+</span><span style="color:#bf616a;">dmesg </span><span>| </span><span style="color:#bf616a;">hst
+</span></code></pre>
+<p>一切 ok。</p>
+<blockquote>
+<p>tips: 可以在生成的 URL 后加入高亮的语法来告诉 hastebin 如何渲染： <code>https://hastebin.purejs.icu/piqosotiyo.racket</code>。</p>
+</blockquote>
+<h2 id="conclusion">Conclusion</h2>
+<p>self-hosted 的意义也许就是有趣和随便造吧。</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+
+        <footer>
+  <div style="display:flex">
+    
+        <a class="soc" href=https:&#x2F;&#x2F;twitter.com&#x2F;jinser_ title=Twitter>
+            <i data-feather=twitter></i>
+        </a>
+    
+        <a class="soc" href=https:&#x2F;&#x2F;github.com&#x2F;jetjinser title=Github>
+            <i data-feather=github></i>
+        </a>
+    
+  </div>
+  <div class="footer-info">
+    2023 © jinser
+  </div>
+</footer>
+
+
+<script>
+    feather.replace();
+</script>
+
+
+    </div>
+</body>
+
+</html>
